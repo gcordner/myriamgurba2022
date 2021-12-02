@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+
+#jwdm-adminmenu-menuitems li .jwdm-menuitem-title * { display: none; }
+#jwdm-adminmenu-menuitems .jwdm-menuitem-title { font-weight: bold; }
+#jwdm-adminmenu-menuitems li ul { margin-left: 16px;}
+#jwdm-adminmenu-menuitems li li { margin-bottom: 0px;}
+#jwdm-adminmenu-menuitems li ul .jwdm-menuitem-title { font-weight: normal; }
