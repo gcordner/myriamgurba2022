@@ -21,7 +21,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('compile-styles', function() {
-    return gulp.src('./theme.scss')
+    return gulp.src('src/scss/theme.scss')
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(autoprefixer('last 2 versions'))
         .pipe(gulp.dest('.'))
