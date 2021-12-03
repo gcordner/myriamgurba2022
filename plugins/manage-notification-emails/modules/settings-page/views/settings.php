@@ -35,7 +35,20 @@ global $famne_options;
 <div class="section-part">
 <?php
 	print_start_table_form();
-	print_checkbox( $famne_options, 'wp_new_user_notification_to_admin', __( 'New user notification to admin', 'manage-notification-emails' ), __( 'Sends an e-mail to the site admin after a new user is registered.', 'manage-notification-emails' ) );
+	$user_noti_title = __( 'New user notification to site admin', 'manage-notification-emails' );
+	$user_noti_label = __( 'Sends an e-mail to the site admin after a new user is registered.', 'manage-notification-emails' );
+if ( is_multisite() && ! FAMNE::network_managed() ) {
+	$user_noti = get_site_option( 'registrationnotification' ) === 'yes' ? true : false;
+	print '<div class="option-container">';
+	print '<label><input type="checkbox" disabled ' . ( $user_noti ? 'checked="checked"' : '' ) . ' />';
+
+	// translators: Adding network settings link.
+	print '<strong>' . $user_noti_title . '</strong><br/><em>' . sprintf( __( 'Globally managed in the multisite %1$snetwork settings menu%2$s.', 'manage-notification-emails' ), '<a href="' . network_admin_url( 'settings.php' ) . '">', '</a>' ) . '</em><br/>' . $user_noti_label;
+	print '</label>';
+	print '</div>';
+} else {
+	print_checkbox( $famne_options, 'wp_new_user_notification_to_admin', $user_noti_title, $user_noti_label );
+}
 	print_checkbox( $famne_options, 'wp_password_change_notification', __( 'Password change notification to admin', 'manage-notification-emails' ), __( 'Send e-mail to the blog admin of a user changing his or her password.', 'manage-notification-emails' ) );
 
 	print_checkbox( $famne_options, 'auto_core_update_send_email', __( 'automatic WordPress core update e-mail', 'manage-notification-emails' ), __( 'Sends an e-mail after a successful automatic WordPress core update to administrators. E-mails about failed updates will always be sent to the administrators and cannot be disabled.', 'manage-notification-emails' ) );

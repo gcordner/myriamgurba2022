@@ -409,7 +409,7 @@ msgstr "E-mail address changed by user"
 
 #: modules/user-email-changed.php:54
 msgid "Request to change e-mailadress notification to admin"
-msgstr "Request to change e-mailadress notification to admin"
+msgstr "Request to change e-mail address notification to admin"
 
 #: modules/user-email-changed.php:54
 msgid ""
@@ -417,7 +417,7 @@ msgid ""
 "her e-mailaddress."
 msgstr ""
 "Sends an e-mail to administrators after a user requested to update his or "
-"her e-mailaddress."
+"her e-mail address."
 
 #: modules/user-email-changed.php:55
 msgid "User changed (confirmed) e-mail notification to admin"
@@ -429,7 +429,7 @@ msgid ""
 "her e-mailaddress."
 msgstr ""
 "Sends an e-mail to administrators after a user successfully updated his or "
-"her e-mailaddress."
+"her e-mail address."
 
 #: modules/user-email-changed.php:79
 msgid ""

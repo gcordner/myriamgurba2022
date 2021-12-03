@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Ele Custom Skin
- * Version: 3.1.3
+ * Version: 3.1.4
  * Description: Elementor Custom Skin for Posts and Archive Posts. You can create a skin as you want.
  * Plugin URI: https://dudaster.com
  * Author: Dudaster.com
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 define( 'ELECS_DIR', plugin_dir_path( __FILE__ ));
 define( 'ELECS_NAME', plugin_basename( __FILE__ ));
 define( 'ELECS_URL', plugin_dir_url( __FILE__ ));
-define ('ELECS_VER','3.1.3');
+define ('ELECS_VER','3.1.4');
 
 include_once ELECS_DIR.'includes/ecs-notices.php';
 include_once ELECS_DIR.'includes/ecs-dependencies.php';

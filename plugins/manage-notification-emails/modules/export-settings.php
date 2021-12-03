@@ -49,19 +49,20 @@ function load_mod_famne_export_settings() {
 
 		?>
 	<div class="card">
-		<h2 class="title"><?php _e( 'Export and import settings', 'manage-notification-emails' ); ?></h2>
-		<?php _e( 'Here you can export or import your Manage notification e-mails settings.' ); ?>
-		<br/><br/><strong>Export your settings in JSON format</strong><br/>
-		<a href="<?php echo $downloadlink; ?>" class="button" target="_blank" rel="noopener">Export settings file</a>
-		<br/><br/><strong>Import setting in JSON format</strong><br/>
-		<input type="file" id="settings-upload-file" name="settings-upload-file" accept="application/JSON" data-message="<?php _e( 'Do you want to overwrite your current settings?', 'manage-notification-emails' );?>"/>
-		<input type="submit" class="button button-primary" id="settings-upload-submit" disabled="disabled" value="<?php _e( 'Start import', 'manage-notification-emails' );?>" />
+		<h2 class="title"><?php esc_html_e( 'Export and import settings', 'manage-notification-emails' ); ?></h2>
+		<?php esc_html_e( 'Here you can export or import your Manage notification e-mails settings.', 'manage-notification-emails' ); ?>
+		<br/><br/><strong><?php esc_html_e( 'Export your settings in JSON format', 'manage-notification-emails' ); ?></strong><br/>
+		<a href="<?php echo $downloadlink; ?>" class="button" target="_blank" rel="noopener"><?php esc_html_e( 'Export settings file', 'manage-notification-emails' ); ?></a>
+		<br/><br/><strong><?php esc_html_e( 'Import setting in JSON format', 'manage-notification-emails' ); ?></strong><br/>
+		<input type="file" id="settings-upload-file" name="settings-upload-file" accept="application/JSON" data-message="<?php esc_html_e( 'Do you want to overwrite your current settings?', 'manage-notification-emails' ); ?>"/>
+		<input type="submit" class="button button-primary" id="settings-upload-submit" disabled="disabled" value="<?php esc_html_e( 'Start import', 'manage-notification-emails' ); ?>" />
 		<div class="spacer"></div>
 	</div>
 		<?php
 	}
 
-	if ( ! empty( $_GET['export-settings'] ) && 'famne' === $_GET['export-settings'] ) :
+	$get_export_settings = ! empty( $_GET['export-settings'] ) ? sanitize_text_field( $_GET['export-settings'] ) : '';
+	if ( 'famne' === $get_export_settings ) :
 		if ( ! headers_sent() ) {
 			global $famne_options;
 

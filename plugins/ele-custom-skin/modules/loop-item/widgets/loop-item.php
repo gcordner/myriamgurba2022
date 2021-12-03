@@ -107,7 +107,7 @@ class Ele_Custom_Loop_Item_Widget extends \Elementor\Widget_Base {
 	protected function render() {
 
     if ( $this->show_nice() ) {
-     $this->_content_template();
+     $this->content_template();
     } else {
        echo "{{ecs-article}}";
     }
@@ -124,7 +124,7 @@ class Ele_Custom_Loop_Item_Widget extends \Elementor\Widget_Base {
       return $is_preview;
     }
   
-  protected function _content_template() {
+  protected function content_template() {
     
   ?>
     <div class="ecs-loop-preview">

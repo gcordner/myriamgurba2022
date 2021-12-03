@@ -1,19 +1,19 @@
-=== Post Expirator: Automatically Unpublish WordPress Posts ===
-Contributors: publishpress, kevinB, stevejburge, andergmartins, rozroz
+=== PublishPress Future: Automatically Unpublish Posts and Pages on a Future Date ===
+Contributors: publishpress, kevinB, stevejburge, andergmartins
 Author: publishpress
 Author URI: https://publishpress.com
-Tags: expire, posts, pages, schedule
+Tags: expire, posts, pages, schedule, unpublish
 Requires at least: 5.0
 Tested up to: 5.8
-Stable tag: 2.6.2
+Stable tag: 2.7.0
 
 Add an expiration date to posts. When your post is automatically unpublished, you can delete the post, change the status, or update the post categories.
 
 == Description ==
 
-The Post Expirator plugin allows you to add an expiration date to posts. pages and other content type. When your post is automatically unpublished, you can delete the post, change the status, or update the post categories.
+The PublishPress Future plugin allows you to add an expiration date to posts. pages and other content type. When your post is automatically unpublished, you can delete the post, change the status, or update the post categories.
 
-Here's an overview of what you can do with Post Expirator:
+Here's an overview of what you can do with PublishPress Future:
 
 * Choose expiry dates for content in any post type.
 * Select expiry dates in the right sidebar when editing posts.
@@ -21,6 +21,8 @@ Here's an overview of what you can do with Post Expirator:
 * Modify expiry dates using "Quick Edit" and "Bulk Edit".
 * Receive email notifications when your content expires.
 * Show expiry dates in your content, automatically or with shortcodes.
+
+This plugin was previously known as "Post Expirator".
 
 ## Options for Expiring Posts
 
@@ -40,7 +42,7 @@ When your posts expire, you can perform these changes on your content:
 
 ## Display the Expiry Date in Your Content
 
-Post Expirator allows you to place automatically show the expiry date inside your articles. The expiry will be added at the bottom of your post.
+PublishPress Future allows you to automatically show the expiry date inside your articles. The expiry will be added at the bottom of your post.
 
 [Click here to see the Footer Display options](https://publishpress.com/knowledge-base/footer-display/).
 
@@ -50,19 +52,19 @@ You can use shortcodes to show the expiration date inside your posts. You can cu
 
 ## Expiry Defaults for Post Types
 
-Post Expirator can support any post type in WordPress. Go to Settings > Post Expirator > Defaults and you can choose default expiry options for each post type.
+PublishPress Future can support any post type in WordPress. Go to Settings > PublishPress Future > Defaults and you can choose default expiry options for each post type.
 
 [Click here to see the default options](https://publishpress.com/knowledge-base/defaults-for-post-types/).
 
-## Post Expirator Email Notifications
+## PublishPress Future Email Notifications
 
-The Post Expirator plugin can send you email notifications when your content is unpublished. You can control the emails by going to Settings > Post Expirator > General Settings.
+The PublishPress Future plugin can send you email notifications when your content is unpublished. You can control the emails by going to Settings > PublishPress Future > General Settings.
 
 [Click here to see the notification options](https://publishpress.com/knowledge-base/email-notifications/).
 
 ## Details on How Post Expiry Works
 
-For each expiration event, a custom cron job is scheduled. This can help reduce server overhead for busy sites. This plugin REQUIRES that WP-CRON is setup and functional on your webhost.  Some hosts do not support this, so please check and confirm if you run into issues using the plugin.
+For each expiration event, a custom cron job is scheduled. This can help reduce server overhead for busy sites. This plugin REQUIRES that WP-CRON is set up and functional on your webhost.  Some hosts do not support this, so please check and confirm if you run into issues using the plugin.
 
 [Click here to see the technical details for this plugin](https://publishpress.com/knowledge-base/scheduling-cron-jobs/).
 
@@ -80,6 +82,26 @@ This section describes how to install the plugin and get it working.
 3. Settings screen
 
 == Changelog ==
+
+= [2.7.0] - 02 Dec 2021 =
+
+* Changed: Rename the plugin from Post Expirator to PublishpPress Future, #14;
+* Changed: Add the PublishPress footer and branding, #68;
+* Changed: Separate the settings into different tabs, #97, #98;
+* Changed: Rename the "General Settings" tab to "Default", #99;
+* Added: Add new admin menu item: Future, #8;
+* Fixed: Fix the 1hr diff between expiration time when editing and shown in post list, #138;
+* Fixed: Post Expirator is adding wrong expiry dates to old posts, #160;
+* Fixed: Post Expirator is setting unwanted expire time for posts, #187;
+
+= [2.6.3] - 18 Nov 2021 =
+
+* Fixed: Fix the timezone applied to time fields, #134;
+* Fixed: Add the timezone string to the time fields, #134;
+* Fixed: Fix the selected expiring categories on the quick edit panel, #160;
+* Added: Add setting field for choosing between preserve or delete data when the plugin is deactivated, #137;
+* Fixed: Fix E_COMPILER_ERROR when cleaning up the debug table, #183;
+* Fixed: Fix translation and localization of date and time, #150;
 
 = [2.6.2] - 04 Nov 2021 =
 
@@ -119,7 +141,7 @@ This section describes how to install the plugin and get it working.
 = [2.5.0] - 08 Aug 2021 =
 
 * Fixed: Appearance Widgets screen shows PHP Notice, #92;
-* Fixed: Stop the Post Expirator box from appearing in non-public post types, #78;
+* Fixed: Stop the PublishPress Future box from appearing in non-public post types, #78;
 * Added: Add "How to Expire" to Quick Edit, #62;
 * Changed: Settings UI enhancement, #14;
 * Fixed: Hide metabox from Media Library files, #56;

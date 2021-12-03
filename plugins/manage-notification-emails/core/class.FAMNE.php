@@ -36,9 +36,13 @@ if ( ! class_exists( 'FAMNE' ) ) :
 			self::$network_managed = self::get_option( 'famne_network_managed' ) ? true : false;
 		}
 
-		public static function network_managed()
-		{
-			return self::$network_managed;
+		/**
+		 * Network managed
+		 *
+		 * @return boolean
+		 */
+		public static function network_managed() {
+			return self::get_option( 'famne_network_managed' ) ? true : false;
 		}
 
 		/**
@@ -125,7 +129,7 @@ if ( ! class_exists( 'FAMNE' ) ) :
 				return get_site_option( $name );
 			}
 
-			return self::$network_managed ? get_site_option( $name ) : get_option( $name );
+			return self::network_managed() ? get_site_option( $name ) : get_option( $name );
 		}
 
 		/**
@@ -144,7 +148,7 @@ if ( ! class_exists( 'FAMNE' ) ) :
 				self::$network_managed = '1' === $options ? true : false;
 				return update_site_option( $name, $options );
 			}
-			return self::$network_managed ? update_site_option( $name, $options ) : update_option( $name, $options );
+			return self::network_managed() ? update_site_option( $name, $options ) : update_option( $name, $options );
 		}
 
 		/**
@@ -183,6 +187,13 @@ if ( ! class_exists( 'FAMNE' ) ) :
 				if ( false === $options ) {
 					self::install();
 					return;
+				}
+
+				if ( version_compare( $current_version, '1.8.0' ) <= 0 && self::network_managed() ) {
+					/** Update to 1.8.1
+					 * setting the registrationnotification
+					 */
+					update_site_option( 'registrationnotification', ! empty( $options['wp_new_user_notification_to_admin'] ) ? 'yes' : 'no' );
 				}
 
 				if ( version_compare( $current_version, '1.5.1' ) <= 0 ) {

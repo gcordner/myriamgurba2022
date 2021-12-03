@@ -12,7 +12,7 @@ class customGrid extends Theme_Section_Document {
 		$properties = parent::get_properties();
 
 		$properties['condition_type'] = 'custom_grid';
-		$properties['location'] = 'custom_grid';
+		$properties['location'] = 'single';
     		$properties['support_kit'] = true;
 		$properties['support_site_editor'] = true;
 
@@ -28,6 +28,10 @@ class customGrid extends Theme_Section_Document {
 	}
   
 	public function get_name() {
+		return 'custom_grid';
+	}
+  
+  public static function get_type() {
 		return 'custom_grid';
 	}
 

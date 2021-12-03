@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: virgial
-Tags: notification,notify,email,user,password,moderator,postauthor,automatic updates, admin e-mail,switch
+Tags: notification,notify,email,user,password,moderator,postauthor,automatic updates,admin e-mail,switch
 Requires at least: 4.0.0
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TYG56SLWNG42N
-Tested up to: 5.7
-Stable tag: 1.8.0
+Tested up to: 5.8.2
+Stable tag: 1.8.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ Watch this nice tut made by Robert Orzanna:
 
 1. New user notification to admin
 2. New user notification to user
-3. Notify postauthor
+3. Notify post author
 4. Notify moderator
 5. Password change notification to admin
 6. Password change notification to user
@@ -32,9 +32,9 @@ Watch this nice tut made by Robert Orzanna:
 10. Automatic WordPress core update e-mail
 11. Automatic WordPress plugin update e-mail
 12. Automatic WordPress theme update e-mail
-13. Send admin notifications to extra admin e-mailadresses *(1.7.0)*
-14. Send an e-mail to administrators after a user requested to update his or her e-mailaddress *(1.7.0)*
-15. Send an e-mail to administrators after a user successfully updated his or her e-mailaddress *(1.7.0)*
+13. Send admin notifications to extra admin e-mail adresses *(1.7.0)*
+14. Send an e-mail to administrators after a user requested to update his or her e-mail address *(1.7.0)*
+15. Send an e-mail to administrators after a user successfully updated his or her e-mail address *(1.7.0)*
 16. Multi-site support! Now you can manage your notification settings in one single environment *(1.8.0)*
 17. Export and import settings *(1.8.0)*
 
@@ -74,6 +74,11 @@ Some other plugins also use their custom notifications which overwrite the core 
 If you're one of the early installers, than you'll be happy to see that de new user notification is now splitted in admin and user e-mail management.
 
 == Changelog ==
+= 1.8.2 =
+FIXED: fixed an issue with automatic plugin update notification.
+FIXED: fixed issues with not correct activating options in multisite environment.
+UPDATED: language corrections.
+
 = 1.8.0 =
 ADDED: Multi-site support.
 ADDED: Import and export of settings.
@@ -84,9 +89,9 @@ FIXED: Email automatic plugin update notification to admin sometimes still send 
 
 = 1.7.0 =
 UPGRADED: Refactored the plugin and added a more suitable modular system for adding new features.
-ADDED: Send admin notifications to extra admin e-mailadresses
-ADDED: Send an e-mail to administrators after a user requested to update his or her e-mailaddress
-ADDED: Send an e-mail to administrators after a user successfully updated his or her e-mailaddress
+ADDED: Send admin notifications to extra admin e-mail addresses
+ADDED: Send an e-mail to administrators after a user requested to update his or her e-mail address
+ADDED: Send an e-mail to administrators after a user successfully updated his or her e-mail address
 
 = 1.6.1 =
 FIXED: Email automatic plugin update notification to admin sometimes still send out.

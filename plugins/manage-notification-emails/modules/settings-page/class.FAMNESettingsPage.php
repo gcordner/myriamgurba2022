@@ -84,7 +84,7 @@ if ( ! class_exists( 'FAMNESettingsPage' ) ) :
 		public function custom_notices() {
 
 			if ( self::is_famne_network_settings_page() && isset( $_GET['updated'] ) ) {
-				echo '<div id="message" class="updated notice is-dismissible"><p>Settings updated.</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>';
+				echo '<div id="message" class="updated notice is-dismissible"><p>' . esc_html__( 'Settings updated.', 'manage-notification-emails' ) . '</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">' . esc_html__( 'Dismiss this notice.', 'manage-notification-emails' ) . '</span></button></div>';
 			}
 		}
 
@@ -237,6 +237,13 @@ if ( ! class_exists( 'FAMNESettingsPage' ) ) :
 					endif;
 
 					$options = $this->sanitize( $options );
+
+					/* Since 1.8.1 */
+					if ( ! empty( $options['wp_new_user_notification_to_admin'] ) ) {
+						update_site_option( 'registrationnotification', 'yes' );
+					} else {
+						update_site_option( 'registrationnotification', 'no' );
+					}
 
 					FAMNE::update_option( 'famne_options', $options );
 				endif;

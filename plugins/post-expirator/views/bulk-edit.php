@@ -13,7 +13,7 @@ $minute = $defaults['minute'];
     <div class="inline-edit-col">
         <div class="inline-edit-group">
             <legend class="inline-edit-legend"><?php
-                _e('Post Expirator', 'post-expirator'); ?></legend>
+                _e('PublishPress Future', 'post-expirator'); ?></legend>
             <fieldset class="inline-edit-date">
                 <div class="pe-qe-fields">
                     <div>
@@ -51,8 +51,8 @@ $minute = $defaults['minute'];
                             <?php
                             for ($x = 1; $x <= 12; $x++) {
                                 $now = mktime(0, 0, 0, $x, 1, date_i18n('Y'));
-                                $monthNumeric = date_i18n('m', $now);
-                                $monthStr = date_i18n('M', $now);
+                                $monthNumeric = PostExpirator_Util::get_wp_date('m', $now);
+                                $monthStr = PostExpirator_Util::get_wp_date('M', $now);
                                 // phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison
                                 $selected = $monthNumeric == $defaults['month'] ? 'selected' : '';
                                 ?>
@@ -96,6 +96,9 @@ $minute = $defaults['minute'];
                                 echo $minute; ?>" value=""
                                        size="2" maxlength="2" autocomplete="off" type="text">
                             </label>
+
+                            <?php
+                            echo PostExpirator_Util::wp_timezone_string(); ?>
                         </span>
                     </div>
                     <div class="post-expirator-date-fields">

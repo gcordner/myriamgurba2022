@@ -44,9 +44,9 @@ function load_mod_famne_custom_recipients() {
 		?>
 	<div class="card">
 		<label class="switch"><div class="slider round <?php echo ( ! empty( $famne_options['custom_admin_recipients'] ) ? 'active' : '' ); ?>"><span class="on">ON</span><span class="off">OFF</span></div></label>
-		<h2 class="title"><?php _e( 'Extra admin recipients', 'manage-notification-emails' ); ?></h2>
-		<?php _e( 'Here you can add extra admin recipients who will also receive all admin notifications.' ); ?>
-		<?php print_textbox( $famne_options, 'custom_admin_recipients', __( 'E-mail address(es)', 'manage-notification-emails' ), '', 'For multiple addresses separate by comma.', 'text', 'email1@domain.com,email2@otherdomain.com' ); ?>
+		<h2 class="title"><?php esc_html_e( 'Extra admin recipients', 'manage-notification-emails' ); ?></h2>
+		<?php _e( 'Here you can add extra admin recipients who will also receive all admin notifications.', 'manage-notification-emails' ); ?>
+		<?php print_textbox( $famne_options, 'custom_admin_recipients', __( 'E-mail address(es)', 'manage-notification-emails' ), '', __( 'For multiple addresses separate by comma.', 'manage-notification-emails' ), 'text', 'email1@domain.com,email2@otherdomain.com' ); ?>
 	</div>
 		<?php
 	}

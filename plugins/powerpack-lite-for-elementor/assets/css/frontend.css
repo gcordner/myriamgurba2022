@@ -141,14 +141,12 @@ div[class*=' pa-'] {
   flex-wrap: wrap;
   position: relative; }
   .pp-elementor-grid .pp-grid-item {
-    transition: all 0.25s linear 0s;
     position: relative; }
   .pp-elementor-grid .pp-grid-item-wrap {
     float: left;
     margin-bottom: 0;
     margin-left: 0;
-    text-align: center;
-    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
+    transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 /*--------------------------------------------------------------
 ## Widgets
@@ -1990,10 +1988,11 @@ div[class*=' pa-'] {
   color: inherit; }
 
 .pp-logo-grid {
-  display: flex;
-  flex-wrap: wrap;
   position: relative; }
   .pp-logo-grid .pp-grid-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     transition: all 0.25s linear 0s;
     width: 100%; }
   .pp-logo-grid .pp-grid-item-wrap {
@@ -2001,9 +2000,11 @@ div[class*=' pa-'] {
     float: left;
     flex-wrap: wrap;
     text-align: center;
-    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .pp-logo-grid .pp-logo-grid-title a {
-    color: inherit; }
+    transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .pp-logo-grid .pp-logo-grid-title {
+    margin-bottom: 0; }
+    .pp-logo-grid .pp-logo-grid-title a {
+      color: inherit; }
   .pp-logo-grid.grayscale-normal img {
     filter: grayscale(100%); }
   .pp-logo-grid.grayscale-normal .pp-grid-item:hover img {
@@ -2199,54 +2200,6 @@ div[class*=' pa-'] {
 .pp-wpforms-form-button-full-width .wpforms-submit-container .wpforms-submit {
   width: 100%; }
 
-.swiper-container-wrap .swiper-slide,
-.swiper-container .swiper-slide {
-  text-align: center; }
-
-.swiper-container-wrap-dots-outside .swiper-pagination,
-.swiper-container-dots-outside .swiper-pagination {
-  position: static; }
-
-.swiper-container-wrap .swiper-button-next,
-.swiper-container-wrap .swiper-button-prev,
-.swiper-container .swiper-button-next,
-.swiper-container .swiper-button-prev {
-  background-image: none;
-  font-size: 20px;
-  height: auto;
-  line-height: 1;
-  margin: 0;
-  text-align: center;
-  transform: translateY(-50%);
-  width: auto; }
-  .swiper-container-wrap .swiper-button-next .fa,
-  .swiper-container-wrap .swiper-button-prev .fa,
-  .swiper-container .swiper-button-next .fa,
-  .swiper-container .swiper-button-prev .fa {
-    vertical-align: top; }
-
-.swiper-button-next:focus,
-.swiper-button-prev:focus {
-  outline: 0; }
-
-.swiper-container-wrap .swiper-pagination {
-  bottom: 10px;
-  left: 0;
-  width: 100%; }
-
-.swiper-container-wrap-dots-outside .swiper-pagination {
-  position: static; }
-
-.swiper-container-wrap .swiper-pagination-bullet {
-  background: #ccc;
-  margin: 0 4px;
-  opacity: 1;
-  height: 8px;
-  width: 8px; }
-
-.swiper-container-wrap .swiper-pagination-bullet-active {
-  background: #000; }
-
 .pp-slider-arrow {
   align-items: center;
   justify-content: center;
@@ -2257,48 +2210,17 @@ div[class*=' pa-'] {
   display: inline-flex;
   font-size: 22px;
   line-height: 22px;
-  padding: 20px;
   position: absolute;
   top: 50%;
-  width: 22px;
-  height: 22px;
+  width: 1.8182em;
+  height: 1.8182em;
   transform: translateY(-50%);
   z-index: 1;
   transition: all 0.25s linear 0s; }
-
-.pp-slider-arrow,
-.pp-slider-arrow:focus,
-.swiper-pagination-bullet,
-.swiper-pagination-bullet:focus {
-  outline: 0; }
-
-.pp-arrow-next {
-  right: 20px; }
-
-.pp-arrow-prev {
-  left: 20px; }
-
-.pp-swiper-slider-pagination-outside .swiper-pagination {
-  position: static; }
-
-.pp-slider-arrow {
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 50%;
-  color: #000;
-  cursor: pointer;
-  display: inline-flex;
-  font-size: 22px;
-  line-height: 22px;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  width: 22px;
-  height: 22px;
-  transform: translateY(-50%);
-  z-index: 1;
-  transition: all 0.25s linear 0s; }
+  .pp-slider-arrow svg {
+    fill: currentColor;
+    width: auto;
+    height: 1em; }
 
 .pp-arrow-next {
   right: 20px; }
@@ -2353,12 +2275,77 @@ div[class*=' pa-'] {
     padding: 0;
     outline: none;
     transition: 0.3s; }
+    .pp-slick-slider li button:hover, .pp-slick-slider li button:focus {
+      background: transparent;
+      border: 0; }
 
 .pp-slick-slider-dots-inside .slick-dots {
   position: absolute;
   bottom: 15px;
   left: 0;
   right: 0; }
+
+.swiper-container-wrap .swiper-slide,
+.swiper-container .swiper-slide {
+  text-align: center; }
+
+.swiper-container-wrap-dots-outside .swiper-pagination,
+.swiper-container-dots-outside .swiper-pagination {
+  position: static; }
+
+.swiper-container-wrap .swiper-button-next,
+.swiper-container-wrap .swiper-button-prev,
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev {
+  background-image: none;
+  font-size: 20px;
+  height: 1.8182em;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  transform: translateY(-50%);
+  width: 1.8182em; }
+  .swiper-container-wrap .swiper-button-next .fa,
+  .swiper-container-wrap .swiper-button-prev .fa,
+  .swiper-container .swiper-button-next .fa,
+  .swiper-container .swiper-button-prev .fa {
+    vertical-align: top; }
+
+.pp-swiper-button svg {
+  fill: currentColor;
+  width: auto;
+  height: 1em; }
+
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  outline: 0; }
+
+.swiper-container-wrap .swiper-pagination {
+  bottom: 10px;
+  left: 0;
+  width: 100%; }
+
+.swiper-container-wrap-dots-outside .swiper-pagination {
+  position: static; }
+
+.swiper-container-wrap .swiper-pagination-bullet {
+  background: #ccc;
+  margin: 0 4px;
+  opacity: 1;
+  height: 8px;
+  width: 8px; }
+
+.swiper-container-wrap .swiper-pagination-bullet-active {
+  background: #000; }
+
+.pp-slider-arrow,
+.pp-slider-arrow:focus,
+.swiper-pagination-bullet,
+.swiper-pagination-bullet:focus {
+  outline: 0; }
+
+.pp-swiper-slider-pagination-outside .swiper-pagination {
+  position: static; }
 
 .pp-info-table-container .pp-info-table-link {
   text-decoration: none !important; }
@@ -3426,53 +3413,71 @@ div[class*=' pa-'] {
   /* For Desktop: */
   .elementor-element.elementor-grid-1 {
     position: relative; }
-    .elementor-element.elementor-grid-1 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-1 .pp-elementor-grid .pp-grid-item-wrap {
       width: 100%;
       float: left; }
   .elementor-element.elementor-grid-2 {
     position: relative; }
-    .elementor-element.elementor-grid-2 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-2 .pp-elementor-grid .pp-grid-item-wrap {
       width: 50%;
       float: left; }
-      .elementor-element.elementor-grid-2 .pp-grid-item-wrap:nth-of-type(2n) {
+      .elementor-element.elementor-grid-2 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(2n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-2 .pp-grid-item-wrap:nth-of-type(2n+1) {
+      .elementor-element.elementor-grid-2 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(2n+1) {
         clear: left; }
   .elementor-element.elementor-grid-3 {
     position: relative; }
-    .elementor-element.elementor-grid-3 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-3 .pp-elementor-grid .pp-grid-item-wrap {
       width: 33.3333%;
       float: left; }
-      .elementor-element.elementor-grid-3 .pp-grid-item-wrap:nth-of-type(3n) {
+      .elementor-element.elementor-grid-3 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(3n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-3 .pp-grid-item-wrap:nth-of-type(3n+1) {
+      .elementor-element.elementor-grid-3 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(3n+1) {
         clear: left; }
   .elementor-element.elementor-grid-4 {
     position: relative; }
-    .elementor-element.elementor-grid-4 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-4 .pp-elementor-grid .pp-grid-item-wrap {
       width: 25%;
       float: left; }
-      .elementor-element.elementor-grid-4 .pp-grid-item-wrap:nth-of-type(4n) {
+      .elementor-element.elementor-grid-4 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(4n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-4 .pp-grid-item-wrap:nth-of-type(4n+1) {
+      .elementor-element.elementor-grid-4 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(4n+1) {
         clear: left; }
   .elementor-element.elementor-grid-5 {
     position: relative; }
-    .elementor-element.elementor-grid-5 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-5 .pp-elementor-grid .pp-grid-item-wrap {
       width: 20%;
       float: left; }
-      .elementor-element.elementor-grid-5 .pp-grid-item-wrap:nth-of-type(5n) {
+      .elementor-element.elementor-grid-5 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(5n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-5 .pp-grid-item-wrap:nth-of-type(5n+1) {
+      .elementor-element.elementor-grid-5 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(5n+1) {
         clear: left; }
   .elementor-element.elementor-grid-6 {
     position: relative; }
-    .elementor-element.elementor-grid-6 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-6 .pp-elementor-grid .pp-grid-item-wrap {
       width: 16.6667%;
       float: left; }
-      .elementor-element.elementor-grid-6 .pp-grid-item-wrap:nth-of-type(6n) {
+      .elementor-element.elementor-grid-6 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(6n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-6 .pp-grid-item-wrap:nth-of-type(6n+1) {
+      .elementor-element.elementor-grid-6 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(6n+1) {
+        clear: left; }
+  .elementor-element.elementor-grid-7 {
+    position: relative; }
+    .elementor-element.elementor-grid-7 .pp-elementor-grid .pp-grid-item-wrap {
+      width: 14.285%;
+      float: left; }
+      .elementor-element.elementor-grid-7 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(7n) {
+        margin-right: 0 !important; }
+      .elementor-element.elementor-grid-7 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(7n+1) {
+        clear: left; }
+  .elementor-element.elementor-grid-8 {
+    position: relative; }
+    .elementor-element.elementor-grid-8 .pp-elementor-grid .pp-grid-item-wrap {
+      width: 12.5%;
+      float: left; }
+      .elementor-element.elementor-grid-8 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(8n) {
+        margin-right: 0 !important; }
+      .elementor-element.elementor-grid-8 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(8n+1) {
         clear: left; } }
 
 @media (max-width: 1024px) {
@@ -3541,53 +3546,71 @@ div[class*=' pa-'] {
   /* For tablets: */
   .elementor-element.elementor-grid-tablet-1 {
     position: relative; }
-    .elementor-element.elementor-grid-tablet-1 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-tablet-1 .pp-elementor-grid .pp-grid-item-wrap {
       width: 100%;
       float: left; }
   .elementor-element.elementor-grid-tablet-2 {
     position: relative; }
-    .elementor-element.elementor-grid-tablet-2 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-tablet-2 .pp-elementor-grid .pp-grid-item-wrap {
       width: 50%;
       float: left; }
-      .elementor-element.elementor-grid-tablet-2 .pp-grid-item-wrap:nth-of-type(2n) {
+      .elementor-element.elementor-grid-tablet-2 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(2n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-tablet-2 .pp-grid-item-wrap:nth-of-type(2n+1) {
+      .elementor-element.elementor-grid-tablet-2 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(2n+1) {
         clear: left; }
   .elementor-element.elementor-grid-tablet-3 {
     position: relative; }
-    .elementor-element.elementor-grid-tablet-3 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-tablet-3 .pp-elementor-grid .pp-grid-item-wrap {
       width: 33.3333%;
       float: left; }
-      .elementor-element.elementor-grid-tablet-3 .pp-grid-item-wrap:nth-of-type(3n) {
+      .elementor-element.elementor-grid-tablet-3 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(3n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-tablet-3 .pp-grid-item-wrap:nth-of-type(3n+1) {
+      .elementor-element.elementor-grid-tablet-3 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(3n+1) {
         clear: left; }
   .elementor-element.elementor-grid-tablet-4 {
     position: relative; }
-    .elementor-element.elementor-grid-tablet-4 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-tablet-4 .pp-elementor-grid .pp-grid-item-wrap {
       width: 25%;
       float: left; }
-      .elementor-element.elementor-grid-tablet-4 .pp-grid-item-wrap:nth-of-type(4n) {
+      .elementor-element.elementor-grid-tablet-4 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(4n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-tablet-4 .pp-grid-item-wrap:nth-of-type(4n+1) {
+      .elementor-element.elementor-grid-tablet-4 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(4n+1) {
         clear: left; }
   .elementor-element.elementor-grid-tablet-5 {
     position: relative; }
-    .elementor-element.elementor-grid-tablet-5 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-tablet-5 .pp-elementor-grid .pp-grid-item-wrap {
       width: 20%;
       float: left; }
-      .elementor-element.elementor-grid-tablet-5 .pp-grid-item-wrap:nth-of-type(5n) {
+      .elementor-element.elementor-grid-tablet-5 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(5n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-tablet-5 .pp-grid-item-wrap:nth-of-type(5n+1) {
+      .elementor-element.elementor-grid-tablet-5 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(5n+1) {
         clear: left; }
   .elementor-element.elementor-grid-tablet-6 {
     position: relative; }
-    .elementor-element.elementor-grid-tablet-6 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-tablet-6 .pp-elementor-grid .pp-grid-item-wrap {
       width: 16.6667%;
       float: left; }
-      .elementor-element.elementor-grid-tablet-6 .pp-grid-item-wrap:nth-of-type(6n) {
+      .elementor-element.elementor-grid-tablet-6 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(6n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-tablet-6 .pp-grid-item-wrap:nth-of-type(6n+1) {
+      .elementor-element.elementor-grid-tablet-6 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(6n+1) {
+        clear: left; }
+  .elementor-element.elementor-grid-tablet-7 {
+    position: relative; }
+    .elementor-element.elementor-grid-tablet-7 .pp-elementor-grid .pp-grid-item-wrap {
+      width: 14.285%;
+      float: left; }
+      .elementor-element.elementor-grid-tablet-7 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(7n) {
+        margin-right: 0 !important; }
+      .elementor-element.elementor-grid-tablet-7 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(7n+1) {
+        clear: left; }
+  .elementor-element.elementor-grid-tablet-8 {
+    position: relative; }
+    .elementor-element.elementor-grid-tablet-8 .pp-elementor-grid .pp-grid-item-wrap {
+      width: 12.5%;
+      float: left; }
+      .elementor-element.elementor-grid-tablet-8 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(8n) {
+        margin-right: 0 !important; }
+      .elementor-element.elementor-grid-tablet-8 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(8n+1) {
         clear: left; } }
 
 @media only screen and (max-width: 767px) {
@@ -3653,53 +3676,71 @@ div[class*=' pa-'] {
       top: auto; }
   .elementor-element.elementor-grid-mobile-1 {
     position: relative; }
-    .elementor-element.elementor-grid-mobile-1 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-mobile-1 .pp-elementor-grid .pp-grid-item-wrap {
       width: 100%;
       float: left; }
   .elementor-element.elementor-grid-mobile-2 {
     position: relative; }
-    .elementor-element.elementor-grid-mobile-2 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-mobile-2 .pp-elementor-grid .pp-grid-item-wrap {
       width: 50%;
       float: left; }
-      .elementor-element.elementor-grid-mobile-2 .pp-grid-item-wrap:nth-of-type(2n) {
+      .elementor-element.elementor-grid-mobile-2 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(2n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-mobile-2 .pp-grid-item-wrap:nth-of-type(2n+1) {
+      .elementor-element.elementor-grid-mobile-2 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(2n+1) {
         clear: left; }
   .elementor-element.elementor-grid-mobile-3 {
     position: relative; }
-    .elementor-element.elementor-grid-mobile-3 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-mobile-3 .pp-elementor-grid .pp-grid-item-wrap {
       width: 33.3333%;
       float: left; }
-      .elementor-element.elementor-grid-mobile-3 .pp-grid-item-wrap:nth-of-type(3n) {
+      .elementor-element.elementor-grid-mobile-3 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(3n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-mobile-3 .pp-grid-item-wrap:nth-of-type(3n+1) {
+      .elementor-element.elementor-grid-mobile-3 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(3n+1) {
         clear: left; }
   .elementor-element.elementor-grid-mobile-4 {
     position: relative; }
-    .elementor-element.elementor-grid-mobile-4 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-mobile-4 .pp-elementor-grid .pp-grid-item-wrap {
       width: 25%;
       float: left; }
-      .elementor-element.elementor-grid-mobile-4 .pp-grid-item-wrap:nth-of-type(4n) {
+      .elementor-element.elementor-grid-mobile-4 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(4n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-mobile-4 .pp-grid-item-wrap:nth-of-type(4n+1) {
+      .elementor-element.elementor-grid-mobile-4 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(4n+1) {
         clear: left; }
   .elementor-element.elementor-grid-mobile-5 {
     position: relative; }
-    .elementor-element.elementor-grid-mobile-5 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-mobile-5 .pp-elementor-grid .pp-grid-item-wrap {
       width: 20%;
       float: left; }
-      .elementor-element.elementor-grid-mobile-5 .pp-grid-item-wrap:nth-of-type(5n) {
+      .elementor-element.elementor-grid-mobile-5 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(5n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-mobile-5 .pp-grid-item-wrap:nth-of-type(5n+1) {
+      .elementor-element.elementor-grid-mobile-5 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(5n+1) {
         clear: left; }
   .elementor-element.elementor-grid-mobile-6 {
     position: relative; }
-    .elementor-element.elementor-grid-mobile-6 .pp-grid-item-wrap {
+    .elementor-element.elementor-grid-mobile-6 .pp-elementor-grid .pp-grid-item-wrap {
       width: 16.6667%;
       float: left; }
-      .elementor-element.elementor-grid-mobile-6 .pp-grid-item-wrap:nth-of-type(6n) {
+      .elementor-element.elementor-grid-mobile-6 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(6n) {
         margin-right: 0 !important; }
-      .elementor-element.elementor-grid-mobile-6 .pp-grid-item-wrap:nth-of-type(6n+1) {
+      .elementor-element.elementor-grid-mobile-6 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(6n+1) {
+        clear: left; }
+  .elementor-element.elementor-grid-mobile-7 {
+    position: relative; }
+    .elementor-element.elementor-grid-mobile-7 .pp-elementor-grid .pp-grid-item-wrap {
+      width: 14.285%;
+      float: left; }
+      .elementor-element.elementor-grid-mobile-7 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(7n) {
+        margin-right: 0 !important; }
+      .elementor-element.elementor-grid-mobile-7 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(7n+1) {
+        clear: left; }
+  .elementor-element.elementor-grid-mobile-8 {
+    position: relative; }
+    .elementor-element.elementor-grid-mobile-8 .pp-elementor-grid .pp-grid-item-wrap {
+      width: 12.5%;
+      float: left; }
+      .elementor-element.elementor-grid-mobile-8 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(8n) {
+        margin-right: 0 !important; }
+      .elementor-element.elementor-grid-mobile-8 .pp-elementor-grid .pp-grid-item-wrap:nth-of-type(8n+1) {
         clear: left; } }
 
 /*--------------------------------------------------------------

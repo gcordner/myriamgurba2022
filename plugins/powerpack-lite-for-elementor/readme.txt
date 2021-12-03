@@ -2,7 +2,7 @@
 Contributors: ideaboxcreations, simrandeep, puneetsahalot, ibachal, jainnidhi, prash17, nirbhay18, wpamitkumar
 Tags: elementor, addons, elementor addon, elementor widgets, elements, powerpack elementor addon, essential addons
 Requires at least: 5.0
-Tested up to: 5.8
+Tested up to: 5.8.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,11 +11,11 @@ A collection of 30+ Free Elementor addons widgets. Take Elementor to the next le
 
 == Description ==
 
-Extend Elementor with 60+ Creative Elementor Widgets and extensions with [PowerPack Elementor addons](https://powerpackelements.com/?utm_medium=powerpack-lite&utm_source=repo-readme&utm_campaign=repo-demo-link) - The fastest-growing Elementor addon. Get 30+ Free Elementor widgets with PowerPack Lite. These Elementor widgets are designed with a focus on creativity and usability. With PowerPack, building Elementor websites will be faster than ever!  
+Extend Elementor with 60+ Creative Elementor Widgets and extensions with [PowerPack Addons for Elementor](https://powerpackelements.com/?utm_medium=powerpack-lite&utm_source=repo-readme&utm_campaign=repo-demo-link) - The fastest-growing Elementor addon. Get 30+ Free Elementor widgets with PowerPack Lite. These Elementor widgets are designed with a focus on creativity and usability. With PowerPack, building Elementor websites will be faster than ever!  
 
 PowerPack Elementor addon is built by [IdeaBox Creations](https://ideabox.io/?utm_medium=powerpack-lite&utm_source=repo-readme&utm_campaign=repo-demo-link).
 
-Head over to [PowerPack for Elementor](https://powerpackelements.com/?utm_medium=powerpack-lite&utm_source=repo-readme&utm_campaign=repo-demo-link) website to explore addon.
+Head over to [PowerPack Addons for Elementor](https://powerpackelements.com/?utm_medium=powerpack-lite&utm_source=repo-readme&utm_campaign=repo-demo-link) website to explore addon.
 
 ## Top Features of PowerPack Elementor Addon
 
@@ -227,6 +227,27 @@ Not at all! All the widgets and settings are easy to use with drag & drop interf
 
 
 == Changelog ==
+
+= 2.6.3 - December 1, 2021 =
+* 	Hotfix: PowerPack admin settings error
+
+= 2.6.2 - December 1, 2021 =
+* 	Fixed: Settings panel navigation issue in PowerPack admin
+
+= 2.6.1 - November 24, 2021 =
+* 	Added: Display Conditions - Option to show Display conditions on columns
+* 	Added: Display Conditions - Output HTML option for sections
+* 	Added: Logo Grid - Option to apply custom styles to logo image or logo container
+* 	Added: Logo Carousel - Background and padding options for logo title
+* 	Fixed: Logo Carousel - Choose Arrow option was not working in the editor
+* 	Fixed: Logo Carousel - Issue with Additional Custom Breakpoints
+* 	Fixed: Gravity Forms - Empty validation error field was showing below file upload field
+* 	Fixed: Info Box Carousel - Issue with Additional Custom Breakpoints
+* 	Added: Info Box - Text shadow option for title, subtitle and description
+* 	Added: Info Box - Content padding option
+* 	Enhancement: Info Box - Rearranged options
+* 	Enhancement: Logo Grid - Updated grid CSS code
+* 	Enhancement: Posts - Updated carousel arrow control
 
 = 2.6.0 - October 7, 2021 =
 * 	New: Animated Gradient Background extension

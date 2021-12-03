@@ -1,17 +1,17 @@
 <?php
 /*
-Plugin Name: Post Expirator
+Plugin Name: PublishPress Future
 Plugin URI: http://wordpress.org/extend/plugins/post-expirator/
 Description: Allows you to add an expiration date (minute) to posts which you can configure to either delete the post, change it to a draft, or update the post categories at expiration time.
 Author: PublishPress
-Version: 2.6.2
+Version: 2.7.0
 Author URI: http://publishpress.com
 Text Domain: post-expirator
 Domain Path: /languages
 */
 
 // Default Values
-define('POSTEXPIRATOR_VERSION', '2.6.2');
+define('POSTEXPIRATOR_VERSION', '2.7.0');
 define('POSTEXPIRATOR_DATEFORMAT', __('l F jS, Y', 'post-expirator'));
 define('POSTEXPIRATOR_TIMEFORMAT', __('g:ia', 'post-expirator'));
 define('POSTEXPIRATOR_FOOTERCONTENTS', __('Post expires at EXPIRATIONTIME on EXPIRATIONDATE', 'post-expirator'));
@@ -29,7 +29,6 @@ define('POSTEXPIRATOR_BASEURL', plugins_url('/', __FILE__));
 require_once POSTEXPIRATOR_BASEDIR . '/functions.php';
 require_once POSTEXPIRATOR_BASEDIR . '/vendor/autoload.php';
 
-
 /**
  * Adds links to the plugin listing screen.
  *
@@ -41,7 +40,7 @@ function postexpirator_plugin_action_links($links, $file)
 {
     $this_plugin = basename(plugin_dir_url(__FILE__)) . '/post-expirator.php';
     if ($file === $this_plugin) {
-        $links[] = '<a href="options-general.php?page=post-expirator">' . __('Settings', 'post-expirator') . '</a>';
+        $links[] = '<a href="admin.php?page=publishpress-future">' . __('Settings', 'post-expirator') . '</a>';
     }
 
     return $links;
@@ -347,7 +346,7 @@ function postexpirator_meta_custom()
                 ) && $defaults['activeMetaBox'] === 'active')) {
             add_meta_box(
                 'expirationdatediv',
-                __('Post Expirator', 'post-expirator'),
+                __('PublishPress Future', 'post-expirator'),
                 'postexpirator_meta_box',
                 $type,
                 'side',
@@ -553,18 +552,15 @@ function postexpirator_update_post_meta($id)
         $ts = get_gmt_from_date("$year-$month-$day $hour:$minute:0", 'U');
 
         if (isset($_POST['expirationdate_quickedit'])) {
-            $ed = get_post_meta($id, '_expiration-date', true);
-            if ($ed) {
-                $opts = PostExpirator_Facade::get_expire_principles($id);
-                if (isset($_POST['expirationdate_expiretype'])) {
-                    $opts['expireType'] = $_POST['expirationdate_expiretype'];
-                    if (in_array($opts['expireType'], array(
-                        'category',
-                        'category-add',
-                        'category-remove'
-                    ), true)) {
-                        $opts['category'] = $_POST['expirationdate_category'];
-                    }
+            $opts = PostExpirator_Facade::get_expire_principles($id);
+            if (isset($_POST['expirationdate_expiretype'])) {
+                $opts['expireType'] = $_POST['expirationdate_expiretype'];
+                if (in_array($opts['expireType'], array(
+                    'category',
+                    'category-add',
+                    'category-remove'
+                ), true)) {
+                    $opts['category'] = $_POST['expirationdate_category'];
                 }
             }
         } else {
@@ -679,10 +675,9 @@ function postexpirator_schedule_event($id, $ts, $opts)
     if (POSTEXPIRATOR_DEBUG) {
         $debug->save(
             array(
-                'message' => $id . ' -> SCHEDULED at ' . date_i18n(
-                        'r',
-                        $ts
-                    ) . ' ' . '(' . $ts . ') with options ' . print_r($opts, true) . ' ' . (is_wp_error(
+                'message' => $id . ' -> SCHEDULED at ' .
+                    PostExpirator_Util::get_wp_date('r', $ts)
+                    . ' ' . '(' . $ts . ') with options ' . print_r($opts, true) . ' ' . (is_wp_error(
                         $error
                     ) ? $error->get_error_message() : 'no error')
             )
@@ -1411,8 +1406,9 @@ function postexpirator_shortcode($atts)
 {
     global $post;
 
+    $enabled = PostExpirator_Facade::is_expiration_enabled_for_post($post->ID);
     $expirationdatets = get_post_meta($post->ID, '_expiration-date', true);
-    if (empty($expirationdatets)) {
+    if (! $enabled || empty($expirationdatets)) {
         return false;
     }
 
@@ -1448,7 +1444,7 @@ function postexpirator_shortcode($atts)
         $format = $timeformat;
     }
 
-    return date_i18n($format, $expirationdatets + (get_option('gmt_offset') * HOUR_IN_SECONDS));
+    return PostExpirator_Util::get_wp_date($format, $expirationdatets);
 }
 
 add_shortcode('postexpirator', 'postexpirator_shortcode');
@@ -1472,6 +1468,12 @@ function postexpirator_add_footer($text)
         return $text;
     }
 
+    $enabled = PostExpirator_Facade::is_expiration_enabled_for_post($post->ID);
+
+    if (empty($enabled)) {
+        return $text;
+    }
+
     $expirationdatets = get_post_meta($post->ID, '_expiration-date', true);
     if (! is_numeric($expirationdatets)) {
         return $text;
@@ -1487,10 +1489,11 @@ function postexpirator_add_footer($text)
         'EXPIRATIONDATE',
         'EXPIRATIONTIME',
     );
+
     $replace = array(
-        get_date_from_gmt(gmdate('Y-m-d H:i:s', $expirationdatets), "$dateformat $timeformat"),
-        get_date_from_gmt(gmdate('Y-m-d H:i:s', $expirationdatets), $dateformat),
-        get_date_from_gmt(gmdate('Y-m-d H:i:s', $expirationdatets), $timeformat),
+        PostExpirator_Util::get_wp_date("$dateformat $timeformat", $expirationdatets),
+        PostExpirator_Util::get_wp_date($dateformat, $expirationdatets),
+        PostExpirator_Util::get_wp_date($timeformat, $expirationdatets)
     );
 
     $add_to_footer = '<p style="' . $expirationdateFooterStyle . '">' . str_replace(
@@ -1519,7 +1522,7 @@ function postexpirator_debug()
         if (! defined('POSTEXPIRATOR_DEBUG')) {
             define('POSTEXPIRATOR_DEBUG', 1);
         }
-        require_once(plugin_dir_path(__FILE__) . 'post-expirator-debug.php'); // Load Class
+        require_once(POSTEXPIRATOR_BASEDIR . '/post-expirator-debug.php'); // Load Class
 
         return new PostExpiratorDebug();
     } else {
@@ -1566,7 +1569,7 @@ function postexpirator_css($screen_id)
 add_action('admin_enqueue_scripts', 'postexpirator_css', 10, 1);
 
 /**
- * Post Expirator Activation/Upgrade
+ * PublishPress Future Activation/Upgrade
  *
  * @internal
  *
@@ -1708,6 +1711,12 @@ function postexpirator_activate()
  */
 function expirationdate_deactivate()
 {
+    $preserveData = (bool)get_option('expirationdatePreserveData', true);
+
+    if ($preserveData) {
+        return;
+    }
+
     global $current_blog;
     delete_option('expirationdateExpiredPostStatus');
     delete_option('expirationdateExpiredPageStatus');
@@ -1727,13 +1736,14 @@ function expirationdate_deactivate()
     delete_option('expirationdateDefaultsPage');
     delete_option('expirationdateDefaultsPost');
     delete_option('expirationdateGutenbergSupport');
+    delete_option('expirationdatePreserveData');
     // what about custom post types? - how to cleanup?
     if (is_multisite()) {
         wp_clear_scheduled_hook('expirationdate_delete_' . $current_blog->blog_id);
     } else {
         wp_clear_scheduled_hook('expirationdate_delete');
     }
-    require_once(plugin_dir_path(__FILE__) . 'post-expirator-debug.php');
+    require_once(POSTEXPIRATOR_BASEDIR . '/post-expirator-debug.php');
     $debug = new PostExpiratorDebug();
     $debug->removeDbTable();
 }
@@ -2058,7 +2068,7 @@ function postexpirator_autoload($class)
     foreach ($namespaces as $namespace) {
         if (substr($class, 0, strlen($namespace)) === $namespace) {
             $class = str_replace('_', '', strstr($class, '_'));
-            $filename = plugin_dir_path(__FILE__) . 'classes/' . sprintf('%s.class.php', $class);
+            $filename = POSTEXPIRATOR_BASEDIR . '/classes/' . sprintf('%s.class.php', $class);
             if (is_readable($filename)) {
                 require_once $filename;
 

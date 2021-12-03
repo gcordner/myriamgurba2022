@@ -37,7 +37,7 @@ if ( current_user_can( 'manage_network_options' ) ) :
 	<div class="card" style="text-align:center">
 		<div style="text-align:center;height:60px;padding-top:20px;padding-right:50px"><span class="dashicons dashicons-admin-multisite" style="font-size:50px"></span></div>
 		<h3 class="title" style="color:#76d450"><?php _e( 'Multisite managed settings available', 'manage-notification-emails' ); ?></h3>
-		<?php _e( 'For this environment, it is possible for you to manage all settings globally in the network settings menu.' ); ?>
+		<?php _e( 'For this environment, it is possible for you to manage all settings globally in the network settings menu.', 'manage-notification-emails' ); ?>
 		<div class="spacer"></div>
 	</div>
 <?php endif; ?>
