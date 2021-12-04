@@ -260,5 +260,16 @@ body {
 
 .site-header {
   width: 100%;
-  border: 1px solid red;
+  padding: 15px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .site-title {
+    font-size: 32px;
+  }
 }

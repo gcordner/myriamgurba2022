@@ -42,10 +42,7 @@ if ( ! is_front_page()){
     );
 
     
-} else {
-
-    echo "<b>fRONT pAGE</b>";
-}
+} 
 ?>
 	</header><!-- .entry-header -->
 
