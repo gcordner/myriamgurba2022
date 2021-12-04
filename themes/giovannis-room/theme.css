@@ -1,0 +1,57 @@
+/* ------------------------
+ADD ADDITIONAL STYLES BELOW 
+------------------------- */
+/* COLORS
+=========================== */
+/*$orange: #FFB13D;*/
+/* Text */
+/* Forms */
+/* SCREEN WIDTHS
+=========================== */
+/* FONTS
+=========================== */
+.eyebrow {
+  color: #6838F8;
+  font-size: 16px;
+  line-height: 14px;
+  letter-spacing: 0.5px;
+  font-weight: bold !important;
+}
+
+.lede-bold {
+  /*@extend %h4;*/
+  color: #0F0051;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  letter-spacing: -0.1px;
+  line-height: 32px;
+}
+
+p {
+  color: #0F0051;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.has-large-font-size {
+  color: #0F0051;
+  font-size: 20px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0 !important;
+  line-height: 28px !important;
+}
+
+a {
+  color: #0F0051;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* MISC
+=========================== */
+body {
+  color: #0F0051;
+}
