@@ -1,1 +1,18 @@
-body {color: $text;}
+body {color: $text;
+font-family: 'Work Sans';
+font-weight: 400;}
+
+.site-title {
+	font-family: 'Anton', 'Times New Roman';
+	text-transform: inherit;
+    font-weight: 400;
+	a {
+		font-family: 'Anton', 'Times New Roman';
+		text-transform: uppercase;
+	}
+}
+
+//** ONE PAGE HEADER STUFF **//
+
+.site-header {width: 100%;
+border:1px solid red;}
