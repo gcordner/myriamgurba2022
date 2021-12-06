@@ -3,6 +3,7 @@ ADD ADDITIONAL STYLES BELOW
 ------------------------- */
 /* COLORS
 =========================== */
+/* SPACE DOLPHINS: */
 /*$orange: #FFB13D;*/
 /* Text */
 /* Forms */
@@ -11,7 +12,7 @@ ADD ADDITIONAL STYLES BELOW
 /* FONTS
 =========================== */
 .eyebrow {
-  color: #6838F8;
+  color: #732991;
   font-size: 16px;
   line-height: 14px;
   letter-spacing: 0.5px;
@@ -20,7 +21,7 @@ ADD ADDITIONAL STYLES BELOW
 
 .lede-bold {
   /*@extend %h4;*/
-  color: #0F0051;
+  color: #732991;
   font-size: 24px !important;
   font-weight: bold !important;
   letter-spacing: -0.1px;
@@ -28,14 +29,14 @@ ADD ADDITIONAL STYLES BELOW
 }
 
 p {
-  color: #0F0051;
+  color: #732991;
   font-size: 18px;
   letter-spacing: 0;
   line-height: 24px;
 }
 
 .has-large-font-size {
-  color: #0F0051;
+  color: #732991;
   font-size: 20px !important;
   font-weight: 300 !important;
   letter-spacing: 0 !important;
@@ -43,7 +44,7 @@ p {
 }
 
 a {
-  color: #0F0051;
+  color: #732991;
   font-weight: 600;
 }
 a:hover {
@@ -242,16 +243,100 @@ a:hover {
   src: local(""), url("css/fonts/work-sans-v9-latin-900italic.eot?#iefix") format("embedded-opentype"), url("css/fonts/work-sans-v9-latin-900italic.woff2") format("woff2"), url("css/fonts/work-sans-v9-latin-900italic.woff") format("woff"), url("css/fonts/work-sans-v9-latin-900italic.ttf") format("truetype"), url("css/fonts/work-sans-v9-latin-900italic.svg#WorkSans") format("svg");
   /* Legacy iOS */
 }
+h1 {
+  color: #732991;
+}
+
+.entry-content h1 {
+  color: #732991;
+}
+.entry-content h2 {
+  color: #732991;
+}
+.entry-content h3 {
+  color: #732991;
+}
+.entry-content h4 {
+  color: #732991;
+}
+.entry-content h5 {
+  color: #732991;
+}
+.entry-content h6 {
+  color: #732991;
+}
+
+h2 {
+  color: #732991;
+}
+
+h3 {
+  color: #732991;
+}
+
+h4 {
+  color: #732991;
+}
+
+h5 {
+  color: #732991;
+}
+
+h6 {
+  color: #732991;
+}
+
+.lede p {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+  line-height: 32px;
+}
+
 body {
-  color: #0F0051;
+  color: #732991;
+  background-color: #ffffff;
   font-family: "Work Sans";
   font-weight: 400;
+}
+
+@media only screen and (min-width: 501px) {
+  .home-lede {
+    max-width: 250px;
+    margin: auto;
+    margin-top: 100px;
+  }
+}
+.social-footer li {
+  display: inline-block;
+}
+.social-footer a {
+  color: #DF038B;
+  padding: 0 10px 0 10px;
+}
+.social-footer a:hover {
+  color: #0C97D3;
+}
+
+.ast-footer-copyright p {
+  color: #ffffff;
+  font-size: 15px;
+}
+.ast-footer-copyright p a {
+  color: #ffffff;
+}
+.ast-footer-copyright p a:hover {
+  text-decoration: underline;
+  color: #FFE509;
 }
 
 .site-title {
   font-family: "Anton", "Times New Roman";
   text-transform: inherit;
-  font-weight: 400;
+  font-size: 52px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #DF038B;
 }
 .site-title a {
   font-family: "Anton", "Times New Roman";
@@ -262,14 +347,26 @@ body {
   width: 100%;
   padding: 15px;
   text-align: center;
+  background-color: #FFE509;
 }
 
 @media only screen and (max-width: 500px) {
   h1 {
-    font-size: 30px;
+    font-size: 42px;
   }
 
   .site-title {
-    font-size: 32px;
+    font-size: 42px;
+  }
+
+  .lede p {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    line-height: 26px;
+  }
+
+  .site-header {
+    text-align: left;
   }
 }

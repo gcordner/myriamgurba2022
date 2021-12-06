@@ -1,0 +1,26 @@
+.social-footer {
+    li {
+        display: inline-block;
+    }
+    a {
+        color: $pink;
+        padding: 0 10px 0 10px;
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+.ast-footer-copyright {
+    p {
+        color: $white;
+        font-size: 15px;
+        a {
+            color: $white;
+            &:hover {
+                text-decoration: underline;
+                color: $yellow;
+            }
+        }
+    }
+}

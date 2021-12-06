@@ -124,7 +124,9 @@ wp-content/ai1wm-backups/*
 
 # ODDS AND ENDS FROM MY LOCAL REPO
 /themes/astra-child/node_modules/
+/themes/giovannis-room/node_modules/
 /themes/astra-child/package-lock.json
+/themes/giovannis-room/package-lock.json
 /_plugins/
 /sd-themes/
 /themes/astra-child-old/
