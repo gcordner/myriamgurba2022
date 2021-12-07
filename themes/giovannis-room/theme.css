@@ -307,6 +307,9 @@ body {
     margin-top: 100px;
   }
 }
+.social-footer {
+  padding: 10px;
+}
 .social-footer li {
   display: inline-block;
 }
@@ -328,6 +331,41 @@ body {
 .ast-footer-copyright p a:hover {
   text-decoration: underline;
   color: #FFE509;
+}
+
+.site-primary-footer-wrap {
+  padding: 0px;
+}
+
+.mailing-list-footer {
+  margin-top: 10px;
+}
+
+#mailchimp-top-bar.mctb-big label {
+  font-size: 15px;
+  padding: 10px !important;
+}
+
+#mailchimp-top-bar.mctb-big .mctb-email {
+  margin-top: -2px !important;
+  padding-top: 15px !important;
+  padding-right: 9px;
+  padding-bottom: 15px !important;
+  padding-left: 9px;
+}
+#mailchimp-top-bar.mctb-big .mctb-label {
+  margin-top: -2px !important;
+  padding-top: 15px !important;
+  padding-right: 9px;
+  padding-bottom: 15px !important;
+  padding-left: 9px;
+}
+#mailchimp-top-bar.mctb-big input {
+  margin-top: -2px !important;
+  padding-top: 15px !important;
+  padding-right: 9px;
+  padding-bottom: 15px !important;
+  padding-left: 9px;
 }
 
 .site-title {
