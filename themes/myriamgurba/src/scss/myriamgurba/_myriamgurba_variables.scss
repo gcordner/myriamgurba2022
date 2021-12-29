@@ -1,0 +1,36 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+
+$primary: $black;
+$black: #290600;
+$white: #ffffff;
+
+/* Mexican Jeweler ColorblindSafe: */
+$red: #C2210E;
+$olive: #9FA66A;
+$tan: #D9CAAD;
+$brown: #5C4333;
+$dark-red: #8F190B;
+
+
+/*Autumn Landscape of the Sangre de Cristo Mountains in New Mexico*/
+$blue: #0597F2;
+$lightblue: #05AFF2;
+$lightorange: #F29F05;
+$darkorange: #D97904;
+$cristo-brown: #733702;
+
+
+/* Text */
+
+$text: $black;
+$link: #0F0051;
+$hover: #0F0051;
+
+/* Forms */
+
+$focus: #280E7F;
+$success: #25ce83;
+$error: #f60;
