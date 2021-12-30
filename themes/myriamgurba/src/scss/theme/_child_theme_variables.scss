@@ -1,7 +1,6 @@
-// Use this file to overwrite the basic Bootstrap variables and add your own variables
-// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
-// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
-
-
-$purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
-$primary: $purple;  // Once we've changed the value, we'll also make it the primary brand color.
+// Myriam Gurba Files //
+@import "theme/child_theme_variables";             // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import "theme/fonts";
+@import "theme/child_theme";           // <---- Add your styles into this file
+@import "theme/typography";               // <--- All custom navbar styles
+@import "theme/navbar";               // <--- All custom navbar stylesa

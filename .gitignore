@@ -130,3 +130,23 @@ wp-content/ai1wm-backups/*
 /_plugins/
 /sd-themes/
 /themes/astra-child-old/
+
+# UNDESTRAP STUFF (TO IGNORE UNDERSTRAP GIT)
+themes/understrap/.git
+themes/understrap/.gitattributes
+themes/understrap/.github
+themes/understrap/.gitignore
+themes/myriamgurba/.git
+themes/myriamgurba/.gitattributes
+themes/myriamgurba/.github
+themes/myriamgurba/.gitignore
+/themes/myriamgurba/.git
+/themes/myriamgurba/.gitattributes
+/themes/myriamgurba/.github
+/themes/myriamgurba/.gitignore
+/themes/understrap/node_modules/*
+themes/understap/node_modules/*
+themes/myriamgurba/node_modules/*
+/themes/myriamgurba/node_modules/*
+
+

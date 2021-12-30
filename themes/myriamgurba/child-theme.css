@@ -2430,24 +2430,7 @@ progress {
   color: #6c757d;
 }
 
-.form-control, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=text],
-.wpcf7 input[type=search],
-.wpcf7 input[type=url],
-.wpcf7 input[type=tel],
-.wpcf7 input[type=number],
-.wpcf7 input[type=range],
-.wpcf7 input[type=date],
-.wpcf7 input[type=month],
-.wpcf7 input[type=week],
-.wpcf7 input[type=time],
-.wpcf7 input[type=datetime],
-.wpcf7 input[type=datetime-local],
-.wpcf7 input[type=color],
-.wpcf7 input[type=email],
-.wpcf7 input[type=file],
-.wpcf7 input[type=submit],
-.wpcf7 select,
-.wpcf7 textarea, .widget_categories select,
+.form-control, .widget_categories select,
 .widget_archive select {
   display: block;
   width: 100%;
@@ -2469,61 +2452,21 @@ progress {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=text],
-.wpcf7 input[type=search],
-.wpcf7 input[type=url],
-.wpcf7 input[type=tel],
-.wpcf7 input[type=number],
-.wpcf7 input[type=range],
-.wpcf7 input[type=date],
-.wpcf7 input[type=month],
-.wpcf7 input[type=week],
-.wpcf7 input[type=time],
-.wpcf7 input[type=datetime],
-.wpcf7 input[type=datetime-local],
-.wpcf7 input[type=color],
-.wpcf7 input[type=email],
-.wpcf7 input[type=file],
-.wpcf7 input[type=submit],
-.wpcf7 select,
-.wpcf7 textarea, .widget_categories select,
+  .form-control, .widget_categories select,
 .widget_archive select {
     -webkit-transition: none;
     transition: none;
   }
 }
-.form-control[type=file], .wpcf7 [type=file].wpcf7-validation-errors,
-.wpcf7 input[type=file],
-.wpcf7 select[type=file],
-.wpcf7 textarea[type=file], .widget_categories select[type=file],
+.form-control[type=file], .widget_categories select[type=file],
 .widget_archive select[type=file] {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]), .wpcf7 [type=file].wpcf7-validation-errors:not(:disabled):not([readonly]),
-.wpcf7 input[type=file]:not(:disabled):not([readonly]),
-.wpcf7 select[type=file]:not(:disabled):not([readonly]),
-.wpcf7 textarea[type=file]:not(:disabled):not([readonly]), .widget_categories select[type=file]:not(:disabled):not([readonly]),
+.form-control[type=file]:not(:disabled):not([readonly]), .widget_categories select[type=file]:not(:disabled):not([readonly]),
 .widget_archive select[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control:focus, .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 input[type=text]:focus,
-.wpcf7 input[type=search]:focus,
-.wpcf7 input[type=url]:focus,
-.wpcf7 input[type=tel]:focus,
-.wpcf7 input[type=number]:focus,
-.wpcf7 input[type=range]:focus,
-.wpcf7 input[type=date]:focus,
-.wpcf7 input[type=month]:focus,
-.wpcf7 input[type=week]:focus,
-.wpcf7 input[type=time]:focus,
-.wpcf7 input[type=datetime]:focus,
-.wpcf7 input[type=datetime-local]:focus,
-.wpcf7 input[type=color]:focus,
-.wpcf7 input[type=email]:focus,
-.wpcf7 input[type=file]:focus,
-.wpcf7 input[type=submit]:focus,
-.wpcf7 select:focus,
-.wpcf7 textarea:focus, .widget_categories select:focus,
+.form-control:focus, .widget_categories select:focus,
 .widget_archive select:focus {
   color: #212529;
   background-color: #fff;
@@ -2532,173 +2475,37 @@ progress {
   -webkit-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
           box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-control::-webkit-date-and-time-value, .wpcf7 .wpcf7-validation-errors::-webkit-date-and-time-value, .wpcf7 input[type=text]::-webkit-date-and-time-value,
-.wpcf7 input[type=search]::-webkit-date-and-time-value,
-.wpcf7 input[type=url]::-webkit-date-and-time-value,
-.wpcf7 input[type=tel]::-webkit-date-and-time-value,
-.wpcf7 input[type=number]::-webkit-date-and-time-value,
-.wpcf7 input[type=range]::-webkit-date-and-time-value,
-.wpcf7 input[type=date]::-webkit-date-and-time-value,
-.wpcf7 input[type=month]::-webkit-date-and-time-value,
-.wpcf7 input[type=week]::-webkit-date-and-time-value,
-.wpcf7 input[type=time]::-webkit-date-and-time-value,
-.wpcf7 input[type=datetime]::-webkit-date-and-time-value,
-.wpcf7 input[type=datetime-local]::-webkit-date-and-time-value,
-.wpcf7 input[type=color]::-webkit-date-and-time-value,
-.wpcf7 input[type=email]::-webkit-date-and-time-value,
-.wpcf7 input[type=file]::-webkit-date-and-time-value,
-.wpcf7 input[type=submit]::-webkit-date-and-time-value,
-.wpcf7 select::-webkit-date-and-time-value,
-.wpcf7 textarea::-webkit-date-and-time-value, .widget_categories select::-webkit-date-and-time-value,
+.form-control::-webkit-date-and-time-value, .widget_categories select::-webkit-date-and-time-value,
 .widget_archive select::-webkit-date-and-time-value {
   height: 1.5em;
 }
-.form-control::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder, .wpcf7 input[type=text]::-webkit-input-placeholder,
-.wpcf7 input[type=search]::-webkit-input-placeholder,
-.wpcf7 input[type=url]::-webkit-input-placeholder,
-.wpcf7 input[type=tel]::-webkit-input-placeholder,
-.wpcf7 input[type=number]::-webkit-input-placeholder,
-.wpcf7 input[type=range]::-webkit-input-placeholder,
-.wpcf7 input[type=date]::-webkit-input-placeholder,
-.wpcf7 input[type=month]::-webkit-input-placeholder,
-.wpcf7 input[type=week]::-webkit-input-placeholder,
-.wpcf7 input[type=time]::-webkit-input-placeholder,
-.wpcf7 input[type=datetime]::-webkit-input-placeholder,
-.wpcf7 input[type=datetime-local]::-webkit-input-placeholder,
-.wpcf7 input[type=color]::-webkit-input-placeholder,
-.wpcf7 input[type=email]::-webkit-input-placeholder,
-.wpcf7 input[type=file]::-webkit-input-placeholder,
-.wpcf7 input[type=submit]::-webkit-input-placeholder,
-.wpcf7 select::-webkit-input-placeholder,
-.wpcf7 textarea::-webkit-input-placeholder, .widget_categories select::-webkit-input-placeholder,
+.form-control::-webkit-input-placeholder, .widget_categories select::-webkit-input-placeholder,
 .widget_archive select::-webkit-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder,
-.wpcf7 input[type=search]::-moz-placeholder,
-.wpcf7 input[type=url]::-moz-placeholder,
-.wpcf7 input[type=tel]::-moz-placeholder,
-.wpcf7 input[type=number]::-moz-placeholder,
-.wpcf7 input[type=range]::-moz-placeholder,
-.wpcf7 input[type=date]::-moz-placeholder,
-.wpcf7 input[type=month]::-moz-placeholder,
-.wpcf7 input[type=week]::-moz-placeholder,
-.wpcf7 input[type=time]::-moz-placeholder,
-.wpcf7 input[type=datetime]::-moz-placeholder,
-.wpcf7 input[type=datetime-local]::-moz-placeholder,
-.wpcf7 input[type=color]::-moz-placeholder,
-.wpcf7 input[type=email]::-moz-placeholder,
-.wpcf7 input[type=file]::-moz-placeholder,
-.wpcf7 input[type=submit]::-moz-placeholder,
-.wpcf7 select::-moz-placeholder,
-.wpcf7 textarea::-moz-placeholder, .widget_categories select::-moz-placeholder,
+.form-control::-moz-placeholder, .widget_categories select::-moz-placeholder,
 .widget_archive select::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder,
-.wpcf7 input[type=search]::-ms-input-placeholder,
-.wpcf7 input[type=url]::-ms-input-placeholder,
-.wpcf7 input[type=tel]::-ms-input-placeholder,
-.wpcf7 input[type=number]::-ms-input-placeholder,
-.wpcf7 input[type=range]::-ms-input-placeholder,
-.wpcf7 input[type=date]::-ms-input-placeholder,
-.wpcf7 input[type=month]::-ms-input-placeholder,
-.wpcf7 input[type=week]::-ms-input-placeholder,
-.wpcf7 input[type=time]::-ms-input-placeholder,
-.wpcf7 input[type=datetime]::-ms-input-placeholder,
-.wpcf7 input[type=datetime-local]::-ms-input-placeholder,
-.wpcf7 input[type=color]::-ms-input-placeholder,
-.wpcf7 input[type=email]::-ms-input-placeholder,
-.wpcf7 input[type=file]::-ms-input-placeholder,
-.wpcf7 input[type=submit]::-ms-input-placeholder,
-.wpcf7 select::-ms-input-placeholder,
-.wpcf7 textarea::-ms-input-placeholder, .widget_categories select::-ms-input-placeholder,
+.form-control::-ms-input-placeholder, .widget_categories select::-ms-input-placeholder,
 .widget_archive select::-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::placeholder, .wpcf7 .wpcf7-validation-errors::placeholder, .wpcf7 input[type=text]::placeholder,
-.wpcf7 input[type=search]::placeholder,
-.wpcf7 input[type=url]::placeholder,
-.wpcf7 input[type=tel]::placeholder,
-.wpcf7 input[type=number]::placeholder,
-.wpcf7 input[type=range]::placeholder,
-.wpcf7 input[type=date]::placeholder,
-.wpcf7 input[type=month]::placeholder,
-.wpcf7 input[type=week]::placeholder,
-.wpcf7 input[type=time]::placeholder,
-.wpcf7 input[type=datetime]::placeholder,
-.wpcf7 input[type=datetime-local]::placeholder,
-.wpcf7 input[type=color]::placeholder,
-.wpcf7 input[type=email]::placeholder,
-.wpcf7 input[type=file]::placeholder,
-.wpcf7 input[type=submit]::placeholder,
-.wpcf7 select::placeholder,
-.wpcf7 textarea::placeholder, .widget_categories select::placeholder,
+.form-control::placeholder, .widget_categories select::placeholder,
 .widget_archive select::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .wpcf7 .wpcf7-validation-errors:disabled, .wpcf7 input[type=text]:disabled,
-.wpcf7 input[type=search]:disabled,
-.wpcf7 input[type=url]:disabled,
-.wpcf7 input[type=tel]:disabled,
-.wpcf7 input[type=number]:disabled,
-.wpcf7 input[type=range]:disabled,
-.wpcf7 input[type=date]:disabled,
-.wpcf7 input[type=month]:disabled,
-.wpcf7 input[type=week]:disabled,
-.wpcf7 input[type=time]:disabled,
-.wpcf7 input[type=datetime]:disabled,
-.wpcf7 input[type=datetime-local]:disabled,
-.wpcf7 input[type=color]:disabled,
-.wpcf7 input[type=email]:disabled,
-.wpcf7 input[type=file]:disabled,
-.wpcf7 input[type=submit]:disabled,
-.wpcf7 select:disabled,
-.wpcf7 textarea:disabled, .widget_categories select:disabled,
-.widget_archive select:disabled, .form-control[readonly], .wpcf7 [readonly].wpcf7-validation-errors, .wpcf7 input[readonly][type=text],
-.wpcf7 input[readonly][type=search],
-.wpcf7 input[readonly][type=url],
-.wpcf7 input[readonly][type=tel],
-.wpcf7 input[readonly][type=number],
-.wpcf7 input[readonly][type=range],
-.wpcf7 input[readonly][type=date],
-.wpcf7 input[readonly][type=month],
-.wpcf7 input[readonly][type=week],
-.wpcf7 input[readonly][type=time],
-.wpcf7 input[readonly][type=datetime],
-.wpcf7 input[readonly][type=datetime-local],
-.wpcf7 input[readonly][type=color],
-.wpcf7 input[readonly][type=email],
-.wpcf7 input[readonly][type=file],
-.wpcf7 input[readonly][type=submit],
-.wpcf7 select[readonly],
-.wpcf7 textarea[readonly], .widget_categories select[readonly],
+.form-control:disabled, .widget_categories select:disabled,
+.widget_archive select:disabled, .form-control[readonly], .widget_categories select[readonly],
 .widget_archive select[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
-.form-control::file-selector-button, .wpcf7 .wpcf7-validation-errors::file-selector-button, .wpcf7 input[type=text]::file-selector-button,
-.wpcf7 input[type=search]::file-selector-button,
-.wpcf7 input[type=url]::file-selector-button,
-.wpcf7 input[type=tel]::file-selector-button,
-.wpcf7 input[type=number]::file-selector-button,
-.wpcf7 input[type=range]::file-selector-button,
-.wpcf7 input[type=date]::file-selector-button,
-.wpcf7 input[type=month]::file-selector-button,
-.wpcf7 input[type=week]::file-selector-button,
-.wpcf7 input[type=time]::file-selector-button,
-.wpcf7 input[type=datetime]::file-selector-button,
-.wpcf7 input[type=datetime-local]::file-selector-button,
-.wpcf7 input[type=color]::file-selector-button,
-.wpcf7 input[type=email]::file-selector-button,
-.wpcf7 input[type=file]::file-selector-button,
-.wpcf7 input[type=submit]::file-selector-button,
-.wpcf7 select::file-selector-button,
-.wpcf7 textarea::file-selector-button, .widget_categories select::file-selector-button,
+.form-control::file-selector-button, .widget_categories select::file-selector-button,
 .widget_archive select::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
@@ -2718,68 +2525,17 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::file-selector-button, .wpcf7 .wpcf7-validation-errors::file-selector-button, .wpcf7 input[type=text]::file-selector-button,
-.wpcf7 input[type=search]::file-selector-button,
-.wpcf7 input[type=url]::file-selector-button,
-.wpcf7 input[type=tel]::file-selector-button,
-.wpcf7 input[type=number]::file-selector-button,
-.wpcf7 input[type=range]::file-selector-button,
-.wpcf7 input[type=date]::file-selector-button,
-.wpcf7 input[type=month]::file-selector-button,
-.wpcf7 input[type=week]::file-selector-button,
-.wpcf7 input[type=time]::file-selector-button,
-.wpcf7 input[type=datetime]::file-selector-button,
-.wpcf7 input[type=datetime-local]::file-selector-button,
-.wpcf7 input[type=color]::file-selector-button,
-.wpcf7 input[type=email]::file-selector-button,
-.wpcf7 input[type=file]::file-selector-button,
-.wpcf7 input[type=submit]::file-selector-button,
-.wpcf7 select::file-selector-button,
-.wpcf7 textarea::file-selector-button, .widget_categories select::file-selector-button,
+  .form-control::file-selector-button, .widget_categories select::file-selector-button,
 .widget_archive select::file-selector-button {
     -webkit-transition: none;
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .wpcf7 .wpcf7-validation-errors:hover:not(:disabled):not([readonly])::file-selector-button, .wpcf7 input[type=text]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=search]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=url]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=tel]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=number]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=range]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=date]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=month]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=week]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=time]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=datetime]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=datetime-local]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=color]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=email]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=file]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 input[type=submit]:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 select:hover:not(:disabled):not([readonly])::file-selector-button,
-.wpcf7 textarea:hover:not(:disabled):not([readonly])::file-selector-button, .widget_categories select:hover:not(:disabled):not([readonly])::file-selector-button,
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .widget_categories select:hover:not(:disabled):not([readonly])::file-selector-button,
 .widget_archive select:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
-.form-control::-webkit-file-upload-button, .wpcf7 .wpcf7-validation-errors::-webkit-file-upload-button, .wpcf7 input[type=text]::-webkit-file-upload-button,
-.wpcf7 input[type=search]::-webkit-file-upload-button,
-.wpcf7 input[type=url]::-webkit-file-upload-button,
-.wpcf7 input[type=tel]::-webkit-file-upload-button,
-.wpcf7 input[type=number]::-webkit-file-upload-button,
-.wpcf7 input[type=range]::-webkit-file-upload-button,
-.wpcf7 input[type=date]::-webkit-file-upload-button,
-.wpcf7 input[type=month]::-webkit-file-upload-button,
-.wpcf7 input[type=week]::-webkit-file-upload-button,
-.wpcf7 input[type=time]::-webkit-file-upload-button,
-.wpcf7 input[type=datetime]::-webkit-file-upload-button,
-.wpcf7 input[type=datetime-local]::-webkit-file-upload-button,
-.wpcf7 input[type=color]::-webkit-file-upload-button,
-.wpcf7 input[type=email]::-webkit-file-upload-button,
-.wpcf7 input[type=file]::-webkit-file-upload-button,
-.wpcf7 input[type=submit]::-webkit-file-upload-button,
-.wpcf7 select::-webkit-file-upload-button,
-.wpcf7 textarea::-webkit-file-upload-button, .widget_categories select::-webkit-file-upload-button,
+.form-control::-webkit-file-upload-button, .widget_categories select::-webkit-file-upload-button,
 .widget_archive select::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
@@ -2799,47 +2555,13 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button, .wpcf7 .wpcf7-validation-errors::-webkit-file-upload-button, .wpcf7 input[type=text]::-webkit-file-upload-button,
-.wpcf7 input[type=search]::-webkit-file-upload-button,
-.wpcf7 input[type=url]::-webkit-file-upload-button,
-.wpcf7 input[type=tel]::-webkit-file-upload-button,
-.wpcf7 input[type=number]::-webkit-file-upload-button,
-.wpcf7 input[type=range]::-webkit-file-upload-button,
-.wpcf7 input[type=date]::-webkit-file-upload-button,
-.wpcf7 input[type=month]::-webkit-file-upload-button,
-.wpcf7 input[type=week]::-webkit-file-upload-button,
-.wpcf7 input[type=time]::-webkit-file-upload-button,
-.wpcf7 input[type=datetime]::-webkit-file-upload-button,
-.wpcf7 input[type=datetime-local]::-webkit-file-upload-button,
-.wpcf7 input[type=color]::-webkit-file-upload-button,
-.wpcf7 input[type=email]::-webkit-file-upload-button,
-.wpcf7 input[type=file]::-webkit-file-upload-button,
-.wpcf7 input[type=submit]::-webkit-file-upload-button,
-.wpcf7 select::-webkit-file-upload-button,
-.wpcf7 textarea::-webkit-file-upload-button, .widget_categories select::-webkit-file-upload-button,
+  .form-control::-webkit-file-upload-button, .widget_categories select::-webkit-file-upload-button,
 .widget_archive select::-webkit-file-upload-button {
     -webkit-transition: none;
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .wpcf7 .wpcf7-validation-errors:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .wpcf7 input[type=text]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=search]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=url]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=tel]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=number]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=range]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=date]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=month]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=week]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=time]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=datetime]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=datetime-local]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=color]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=email]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=file]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 input[type=submit]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 select:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
-.wpcf7 textarea:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .widget_categories select:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .widget_categories select:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
 .widget_archive select:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
@@ -2898,8 +2620,7 @@ progress {
           margin-inline-end: 1rem;
 }
 
-textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
-.wpcf7 textarea {
+textarea.form-control {
   min-height: calc(1.5em + 0.75rem + 2px);
 }
 textarea.form-control-sm {
@@ -3091,7 +2812,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .wpcf7 .btn-check[disabled] + input[type=submit], .woocommerce-info .btn-check[disabled] + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-check[disabled] + a.button, .btn-check:disabled + .btn, .wpcf7 .btn-check:disabled + input[type=submit], .woocommerce-info .btn-check:disabled + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-check:disabled + a.button {
+.btn-check[disabled] + .btn, .woocommerce-info .btn-check[disabled] + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-check[disabled] + a.button, .btn-check:disabled + .btn, .woocommerce-info .btn-check:disabled + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-check:disabled + a.button {
   pointer-events: none;
   -webkit-filter: none;
           filter: none;
@@ -3196,24 +2917,7 @@ textarea.form-control-lg {
 .form-floating {
   position: relative;
 }
-.form-floating > .form-control, .wpcf7 .form-floating > .wpcf7-validation-errors, .wpcf7 .form-floating > input[type=text],
-.wpcf7 .form-floating > input[type=search],
-.wpcf7 .form-floating > input[type=url],
-.wpcf7 .form-floating > input[type=tel],
-.wpcf7 .form-floating > input[type=number],
-.wpcf7 .form-floating > input[type=range],
-.wpcf7 .form-floating > input[type=date],
-.wpcf7 .form-floating > input[type=month],
-.wpcf7 .form-floating > input[type=week],
-.wpcf7 .form-floating > input[type=time],
-.wpcf7 .form-floating > input[type=datetime],
-.wpcf7 .form-floating > input[type=datetime-local],
-.wpcf7 .form-floating > input[type=color],
-.wpcf7 .form-floating > input[type=email],
-.wpcf7 .form-floating > input[type=file],
-.wpcf7 .form-floating > input[type=submit],
-.wpcf7 .form-floating > select,
-.wpcf7 .form-floating > textarea, .widget_categories .form-floating > select,
+.form-floating > .form-control, .widget_categories .form-floating > select,
 .widget_archive .form-floating > select,
 .form-floating > .form-select {
   height: calc(3.5rem + 2px);
@@ -3240,169 +2944,33 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.form-floating > .form-control, .wpcf7 .form-floating > .wpcf7-validation-errors, .wpcf7 .form-floating > input[type=text],
-.wpcf7 .form-floating > input[type=search],
-.wpcf7 .form-floating > input[type=url],
-.wpcf7 .form-floating > input[type=tel],
-.wpcf7 .form-floating > input[type=number],
-.wpcf7 .form-floating > input[type=range],
-.wpcf7 .form-floating > input[type=date],
-.wpcf7 .form-floating > input[type=month],
-.wpcf7 .form-floating > input[type=week],
-.wpcf7 .form-floating > input[type=time],
-.wpcf7 .form-floating > input[type=datetime],
-.wpcf7 .form-floating > input[type=datetime-local],
-.wpcf7 .form-floating > input[type=color],
-.wpcf7 .form-floating > input[type=email],
-.wpcf7 .form-floating > input[type=file],
-.wpcf7 .form-floating > input[type=submit],
-.wpcf7 .form-floating > select,
-.wpcf7 .form-floating > textarea, .widget_categories .form-floating > select,
+.form-floating > .form-control, .widget_categories .form-floating > select,
 .widget_archive .form-floating > select {
   padding: 1rem 0.75rem;
 }
-.form-floating > .form-control::-webkit-input-placeholder, .wpcf7 .form-floating > .wpcf7-validation-errors::-webkit-input-placeholder, .wpcf7 .form-floating > input[type=text]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=search]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=url]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=tel]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=number]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=range]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=date]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=month]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=week]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=time]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=datetime]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=datetime-local]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=color]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=email]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=file]::-webkit-input-placeholder,
-.wpcf7 .form-floating > input[type=submit]::-webkit-input-placeholder,
-.wpcf7 .form-floating > select::-webkit-input-placeholder,
-.wpcf7 .form-floating > textarea::-webkit-input-placeholder, .widget_categories .form-floating > select::-webkit-input-placeholder,
+.form-floating > .form-control::-webkit-input-placeholder, .widget_categories .form-floating > select::-webkit-input-placeholder,
 .widget_archive .form-floating > select::-webkit-input-placeholder {
   color: transparent;
 }
-.form-floating > .form-control::-moz-placeholder, .wpcf7 .form-floating > .wpcf7-validation-errors::-moz-placeholder, .wpcf7 .form-floating > input[type=text]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=search]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=url]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=tel]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=number]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=range]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=date]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=month]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=week]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=time]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=datetime]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=datetime-local]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=color]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=email]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=file]::-moz-placeholder,
-.wpcf7 .form-floating > input[type=submit]::-moz-placeholder,
-.wpcf7 .form-floating > select::-moz-placeholder,
-.wpcf7 .form-floating > textarea::-moz-placeholder, .widget_categories .form-floating > select::-moz-placeholder,
+.form-floating > .form-control::-moz-placeholder, .widget_categories .form-floating > select::-moz-placeholder,
 .widget_archive .form-floating > select::-moz-placeholder {
   color: transparent;
 }
-.form-floating > .form-control::-ms-input-placeholder, .wpcf7 .form-floating > .wpcf7-validation-errors::-ms-input-placeholder, .wpcf7 .form-floating > input[type=text]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=search]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=url]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=tel]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=number]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=range]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=date]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=month]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=week]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=time]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=datetime]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=datetime-local]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=color]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=email]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=file]::-ms-input-placeholder,
-.wpcf7 .form-floating > input[type=submit]::-ms-input-placeholder,
-.wpcf7 .form-floating > select::-ms-input-placeholder,
-.wpcf7 .form-floating > textarea::-ms-input-placeholder, .widget_categories .form-floating > select::-ms-input-placeholder,
+.form-floating > .form-control::-ms-input-placeholder, .widget_categories .form-floating > select::-ms-input-placeholder,
 .widget_archive .form-floating > select::-ms-input-placeholder {
   color: transparent;
 }
-.form-floating > .form-control::placeholder, .wpcf7 .form-floating > .wpcf7-validation-errors::placeholder, .wpcf7 .form-floating > input[type=text]::placeholder,
-.wpcf7 .form-floating > input[type=search]::placeholder,
-.wpcf7 .form-floating > input[type=url]::placeholder,
-.wpcf7 .form-floating > input[type=tel]::placeholder,
-.wpcf7 .form-floating > input[type=number]::placeholder,
-.wpcf7 .form-floating > input[type=range]::placeholder,
-.wpcf7 .form-floating > input[type=date]::placeholder,
-.wpcf7 .form-floating > input[type=month]::placeholder,
-.wpcf7 .form-floating > input[type=week]::placeholder,
-.wpcf7 .form-floating > input[type=time]::placeholder,
-.wpcf7 .form-floating > input[type=datetime]::placeholder,
-.wpcf7 .form-floating > input[type=datetime-local]::placeholder,
-.wpcf7 .form-floating > input[type=color]::placeholder,
-.wpcf7 .form-floating > input[type=email]::placeholder,
-.wpcf7 .form-floating > input[type=file]::placeholder,
-.wpcf7 .form-floating > input[type=submit]::placeholder,
-.wpcf7 .form-floating > select::placeholder,
-.wpcf7 .form-floating > textarea::placeholder, .widget_categories .form-floating > select::placeholder,
+.form-floating > .form-control::placeholder, .widget_categories .form-floating > select::placeholder,
 .widget_archive .form-floating > select::placeholder {
   color: transparent;
 }
-.form-floating > .form-control:focus, .wpcf7 .form-floating > .wpcf7-validation-errors:focus, .wpcf7 .form-floating > input[type=text]:focus,
-.wpcf7 .form-floating > input[type=search]:focus,
-.wpcf7 .form-floating > input[type=url]:focus,
-.wpcf7 .form-floating > input[type=tel]:focus,
-.wpcf7 .form-floating > input[type=number]:focus,
-.wpcf7 .form-floating > input[type=range]:focus,
-.wpcf7 .form-floating > input[type=date]:focus,
-.wpcf7 .form-floating > input[type=month]:focus,
-.wpcf7 .form-floating > input[type=week]:focus,
-.wpcf7 .form-floating > input[type=time]:focus,
-.wpcf7 .form-floating > input[type=datetime]:focus,
-.wpcf7 .form-floating > input[type=datetime-local]:focus,
-.wpcf7 .form-floating > input[type=color]:focus,
-.wpcf7 .form-floating > input[type=email]:focus,
-.wpcf7 .form-floating > input[type=file]:focus,
-.wpcf7 .form-floating > input[type=submit]:focus,
-.wpcf7 .form-floating > select:focus,
-.wpcf7 .form-floating > textarea:focus, .widget_categories .form-floating > select:focus,
-.widget_archive .form-floating > select:focus, .form-floating > .form-control:not(:placeholder-shown), .wpcf7 .form-floating > .wpcf7-validation-errors:not(:placeholder-shown), .wpcf7 .form-floating > input[type=text]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=search]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=url]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=tel]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=number]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=range]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=date]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=month]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=week]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=time]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=datetime]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=datetime-local]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=color]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=email]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=file]:not(:placeholder-shown),
-.wpcf7 .form-floating > input[type=submit]:not(:placeholder-shown),
-.wpcf7 .form-floating > select:not(:placeholder-shown),
-.wpcf7 .form-floating > textarea:not(:placeholder-shown), .widget_categories .form-floating > select:not(:placeholder-shown),
+.form-floating > .form-control:focus, .widget_categories .form-floating > select:focus,
+.widget_archive .form-floating > select:focus, .form-floating > .form-control:not(:placeholder-shown), .widget_categories .form-floating > select:not(:placeholder-shown),
 .widget_archive .form-floating > select:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:-webkit-autofill, .wpcf7 .form-floating > .wpcf7-validation-errors:-webkit-autofill, .wpcf7 .form-floating > input[type=text]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=search]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=url]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=tel]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=number]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=range]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=date]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=month]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=week]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=time]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=datetime]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=datetime-local]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=color]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=email]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=file]:-webkit-autofill,
-.wpcf7 .form-floating > input[type=submit]:-webkit-autofill,
-.wpcf7 .form-floating > select:-webkit-autofill,
-.wpcf7 .form-floating > textarea:-webkit-autofill, .widget_categories .form-floating > select:-webkit-autofill,
+.form-floating > .form-control:-webkit-autofill, .widget_categories .form-floating > select:-webkit-autofill,
 .widget_archive .form-floating > select:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
@@ -3411,45 +2979,9 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:focus ~ label, .wpcf7 .form-floating > .wpcf7-validation-errors:focus ~ label, .wpcf7 .form-floating > input[type=text]:focus ~ label,
-.wpcf7 .form-floating > input[type=search]:focus ~ label,
-.wpcf7 .form-floating > input[type=url]:focus ~ label,
-.wpcf7 .form-floating > input[type=tel]:focus ~ label,
-.wpcf7 .form-floating > input[type=number]:focus ~ label,
-.wpcf7 .form-floating > input[type=range]:focus ~ label,
-.wpcf7 .form-floating > input[type=date]:focus ~ label,
-.wpcf7 .form-floating > input[type=month]:focus ~ label,
-.wpcf7 .form-floating > input[type=week]:focus ~ label,
-.wpcf7 .form-floating > input[type=time]:focus ~ label,
-.wpcf7 .form-floating > input[type=datetime]:focus ~ label,
-.wpcf7 .form-floating > input[type=datetime-local]:focus ~ label,
-.wpcf7 .form-floating > input[type=color]:focus ~ label,
-.wpcf7 .form-floating > input[type=email]:focus ~ label,
-.wpcf7 .form-floating > input[type=file]:focus ~ label,
-.wpcf7 .form-floating > input[type=submit]:focus ~ label,
-.wpcf7 .form-floating > select:focus ~ label,
-.wpcf7 .form-floating > textarea:focus ~ label, .widget_categories .form-floating > select:focus ~ label,
+.form-floating > .form-control:focus ~ label, .widget_categories .form-floating > select:focus ~ label,
 .widget_archive .form-floating > select:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > .wpcf7-validation-errors:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=text]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=search]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=url]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=tel]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=number]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=range]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=date]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=month]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=week]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=time]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=datetime]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=datetime-local]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=color]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=email]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=file]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > input[type=submit]:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > select:not(:placeholder-shown) ~ label,
-.wpcf7 .form-floating > textarea:not(:placeholder-shown) ~ label,
 .widget_categories .form-floating > select:not(:placeholder-shown) ~ label,
 .widget_archive .form-floating > select:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
@@ -3457,24 +2989,7 @@ textarea.form-control-lg {
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
           transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
-.form-floating > .form-control:-webkit-autofill ~ label, .wpcf7 .form-floating > .wpcf7-validation-errors:-webkit-autofill ~ label, .wpcf7 .form-floating > input[type=text]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=search]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=url]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=tel]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=number]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=range]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=date]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=month]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=week]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=time]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=datetime]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=datetime-local]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=color]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=email]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=file]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > input[type=submit]:-webkit-autofill ~ label,
-.wpcf7 .form-floating > select:-webkit-autofill ~ label,
-.wpcf7 .form-floating > textarea:-webkit-autofill ~ label, .widget_categories .form-floating > select:-webkit-autofill ~ label,
+.form-floating > .form-control:-webkit-autofill ~ label, .widget_categories .form-floating > select:-webkit-autofill ~ label,
 .widget_archive .form-floating > select:-webkit-autofill ~ label {
   opacity: 0.65;
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
@@ -3493,24 +3008,7 @@ textarea.form-control-lg {
           align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control, .wpcf7 .input-group > .wpcf7-validation-errors, .wpcf7 .input-group > input[type=text],
-.wpcf7 .input-group > input[type=search],
-.wpcf7 .input-group > input[type=url],
-.wpcf7 .input-group > input[type=tel],
-.wpcf7 .input-group > input[type=number],
-.wpcf7 .input-group > input[type=range],
-.wpcf7 .input-group > input[type=date],
-.wpcf7 .input-group > input[type=month],
-.wpcf7 .input-group > input[type=week],
-.wpcf7 .input-group > input[type=time],
-.wpcf7 .input-group > input[type=datetime],
-.wpcf7 .input-group > input[type=datetime-local],
-.wpcf7 .input-group > input[type=color],
-.wpcf7 .input-group > input[type=email],
-.wpcf7 .input-group > input[type=file],
-.wpcf7 .input-group > input[type=submit],
-.wpcf7 .input-group > select,
-.wpcf7 .input-group > textarea, .widget_categories .input-group > select,
+.input-group > .form-control, .widget_categories .input-group > select,
 .widget_archive .input-group > select,
 .input-group > .form-select {
   position: relative;
@@ -3520,33 +3018,16 @@ textarea.form-control-lg {
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus, .wpcf7 .input-group > .wpcf7-validation-errors:focus, .wpcf7 .input-group > input[type=text]:focus,
-.wpcf7 .input-group > input[type=search]:focus,
-.wpcf7 .input-group > input[type=url]:focus,
-.wpcf7 .input-group > input[type=tel]:focus,
-.wpcf7 .input-group > input[type=number]:focus,
-.wpcf7 .input-group > input[type=range]:focus,
-.wpcf7 .input-group > input[type=date]:focus,
-.wpcf7 .input-group > input[type=month]:focus,
-.wpcf7 .input-group > input[type=week]:focus,
-.wpcf7 .input-group > input[type=time]:focus,
-.wpcf7 .input-group > input[type=datetime]:focus,
-.wpcf7 .input-group > input[type=datetime-local]:focus,
-.wpcf7 .input-group > input[type=color]:focus,
-.wpcf7 .input-group > input[type=email]:focus,
-.wpcf7 .input-group > input[type=file]:focus,
-.wpcf7 .input-group > input[type=submit]:focus,
-.wpcf7 .input-group > select:focus,
-.wpcf7 .input-group > textarea:focus, .widget_categories .input-group > select:focus,
+.input-group > .form-control:focus, .widget_categories .input-group > select:focus,
 .widget_archive .input-group > select:focus,
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn, .input-group .wpcf7 input[type=submit], .wpcf7 .input-group input[type=submit], .input-group .woocommerce-info a.button, .woocommerce-info .input-group a.button, .input-group .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .input-group a.button {
+.input-group .btn, .input-group .woocommerce-info a.button, .woocommerce-info .input-group a.button, .input-group .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .input-group a.button {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .wpcf7 input[type=submit]:focus, .wpcf7 .input-group input[type=submit]:focus, .input-group .woocommerce-info a.button:focus, .woocommerce-info .input-group a.button:focus, .input-group .woocommerce-notices-wrapper .woocommerce-message a.button:focus, .woocommerce-notices-wrapper .woocommerce-message .input-group a.button:focus {
+.input-group .btn:focus, .input-group .woocommerce-info a.button:focus, .woocommerce-info .input-group a.button:focus, .input-group .woocommerce-notices-wrapper .woocommerce-message a.button:focus, .woocommerce-notices-wrapper .woocommerce-message .input-group a.button:focus {
   z-index: 3;
 }
 
@@ -3569,24 +3050,7 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-control, .wpcf7 .input-group-lg > .wpcf7-validation-errors, .wpcf7 .input-group-lg > input[type=text],
-.wpcf7 .input-group-lg > input[type=search],
-.wpcf7 .input-group-lg > input[type=url],
-.wpcf7 .input-group-lg > input[type=tel],
-.wpcf7 .input-group-lg > input[type=number],
-.wpcf7 .input-group-lg > input[type=range],
-.wpcf7 .input-group-lg > input[type=date],
-.wpcf7 .input-group-lg > input[type=month],
-.wpcf7 .input-group-lg > input[type=week],
-.wpcf7 .input-group-lg > input[type=time],
-.wpcf7 .input-group-lg > input[type=datetime],
-.wpcf7 .input-group-lg > input[type=datetime-local],
-.wpcf7 .input-group-lg > input[type=color],
-.wpcf7 .input-group-lg > input[type=email],
-.wpcf7 .input-group-lg > input[type=file],
-.wpcf7 .input-group-lg > input[type=submit],
-.wpcf7 .input-group-lg > select,
-.wpcf7 .input-group-lg > textarea, .widget_categories .input-group-lg > select,
+.input-group-lg > .form-control, .widget_categories .input-group-lg > select,
 .widget_archive .input-group-lg > select,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
@@ -3598,24 +3062,7 @@ textarea.form-control-lg {
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control, .wpcf7 .input-group-sm > .wpcf7-validation-errors, .wpcf7 .input-group-sm > input[type=text],
-.wpcf7 .input-group-sm > input[type=search],
-.wpcf7 .input-group-sm > input[type=url],
-.wpcf7 .input-group-sm > input[type=tel],
-.wpcf7 .input-group-sm > input[type=number],
-.wpcf7 .input-group-sm > input[type=range],
-.wpcf7 .input-group-sm > input[type=date],
-.wpcf7 .input-group-sm > input[type=month],
-.wpcf7 .input-group-sm > input[type=week],
-.wpcf7 .input-group-sm > input[type=time],
-.wpcf7 .input-group-sm > input[type=datetime],
-.wpcf7 .input-group-sm > input[type=datetime-local],
-.wpcf7 .input-group-sm > input[type=color],
-.wpcf7 .input-group-sm > input[type=email],
-.wpcf7 .input-group-sm > input[type=file],
-.wpcf7 .input-group-sm > input[type=submit],
-.wpcf7 .input-group-sm > select,
-.wpcf7 .input-group-sm > textarea, .widget_categories .input-group-sm > select,
+.input-group-sm > .form-control, .widget_categories .input-group-sm > select,
 .widget_archive .input-group-sm > select,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
@@ -3677,60 +3124,9 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:valid, .was-validated .wpcf7 .wpcf7-validation-errors:valid, .wpcf7 .was-validated .wpcf7-validation-errors:valid, .was-validated .wpcf7 input[type=text]:valid, .wpcf7 .was-validated input[type=text]:valid,
-.was-validated .wpcf7 input[type=search]:valid,
-.wpcf7 .was-validated input[type=search]:valid,
-.was-validated .wpcf7 input[type=url]:valid,
-.wpcf7 .was-validated input[type=url]:valid,
-.was-validated .wpcf7 input[type=tel]:valid,
-.wpcf7 .was-validated input[type=tel]:valid,
-.was-validated .wpcf7 input[type=number]:valid,
-.wpcf7 .was-validated input[type=number]:valid,
-.was-validated .wpcf7 input[type=range]:valid,
-.wpcf7 .was-validated input[type=range]:valid,
-.was-validated .wpcf7 input[type=date]:valid,
-.wpcf7 .was-validated input[type=date]:valid,
-.was-validated .wpcf7 input[type=month]:valid,
-.wpcf7 .was-validated input[type=month]:valid,
-.was-validated .wpcf7 input[type=week]:valid,
-.wpcf7 .was-validated input[type=week]:valid,
-.was-validated .wpcf7 input[type=time]:valid,
-.wpcf7 .was-validated input[type=time]:valid,
-.was-validated .wpcf7 input[type=datetime]:valid,
-.wpcf7 .was-validated input[type=datetime]:valid,
-.was-validated .wpcf7 input[type=datetime-local]:valid,
-.wpcf7 .was-validated input[type=datetime-local]:valid,
-.was-validated .wpcf7 input[type=color]:valid,
-.wpcf7 .was-validated input[type=color]:valid,
-.was-validated .wpcf7 input[type=email]:valid,
-.wpcf7 .was-validated input[type=email]:valid,
-.was-validated .wpcf7 input[type=file]:valid,
-.wpcf7 .was-validated input[type=file]:valid,
-.was-validated .wpcf7 input[type=submit]:valid,
-.wpcf7 .was-validated input[type=submit]:valid,
-.was-validated .wpcf7 select:valid,
-.wpcf7 .was-validated select:valid,
-.was-validated .wpcf7 textarea:valid,
-.wpcf7 .was-validated textarea:valid, .was-validated .widget_categories select:valid, .widget_categories .was-validated select:valid,
+.was-validated .form-control:valid, .was-validated .widget_categories select:valid, .widget_categories .was-validated select:valid,
 .was-validated .widget_archive select:valid,
-.widget_archive .was-validated select:valid, .form-control.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors, .wpcf7 input.is-valid[type=text],
-.wpcf7 input.is-valid[type=search],
-.wpcf7 input.is-valid[type=url],
-.wpcf7 input.is-valid[type=tel],
-.wpcf7 input.is-valid[type=number],
-.wpcf7 input.is-valid[type=range],
-.wpcf7 input.is-valid[type=date],
-.wpcf7 input.is-valid[type=month],
-.wpcf7 input.is-valid[type=week],
-.wpcf7 input.is-valid[type=time],
-.wpcf7 input.is-valid[type=datetime],
-.wpcf7 input.is-valid[type=datetime-local],
-.wpcf7 input.is-valid[type=color],
-.wpcf7 input.is-valid[type=email],
-.wpcf7 input.is-valid[type=file],
-.wpcf7 input.is-valid[type=submit],
-.wpcf7 select.is-valid,
-.wpcf7 textarea.is-valid, .widget_categories select.is-valid,
+.widget_archive .was-validated select:valid, .form-control.is-valid, .widget_categories select.is-valid,
 .widget_archive select.is-valid {
   border-color: #198754;
   padding-right: calc(1.5em + 0.75rem);
@@ -3739,70 +3135,16 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:valid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:valid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:valid:focus, .was-validated .wpcf7 input[type=text]:valid:focus, .wpcf7 .was-validated input[type=text]:valid:focus,
-.was-validated .wpcf7 input[type=search]:valid:focus,
-.wpcf7 .was-validated input[type=search]:valid:focus,
-.was-validated .wpcf7 input[type=url]:valid:focus,
-.wpcf7 .was-validated input[type=url]:valid:focus,
-.was-validated .wpcf7 input[type=tel]:valid:focus,
-.wpcf7 .was-validated input[type=tel]:valid:focus,
-.was-validated .wpcf7 input[type=number]:valid:focus,
-.wpcf7 .was-validated input[type=number]:valid:focus,
-.was-validated .wpcf7 input[type=range]:valid:focus,
-.wpcf7 .was-validated input[type=range]:valid:focus,
-.was-validated .wpcf7 input[type=date]:valid:focus,
-.wpcf7 .was-validated input[type=date]:valid:focus,
-.was-validated .wpcf7 input[type=month]:valid:focus,
-.wpcf7 .was-validated input[type=month]:valid:focus,
-.was-validated .wpcf7 input[type=week]:valid:focus,
-.wpcf7 .was-validated input[type=week]:valid:focus,
-.was-validated .wpcf7 input[type=time]:valid:focus,
-.wpcf7 .was-validated input[type=time]:valid:focus,
-.was-validated .wpcf7 input[type=datetime]:valid:focus,
-.wpcf7 .was-validated input[type=datetime]:valid:focus,
-.was-validated .wpcf7 input[type=datetime-local]:valid:focus,
-.wpcf7 .was-validated input[type=datetime-local]:valid:focus,
-.was-validated .wpcf7 input[type=color]:valid:focus,
-.wpcf7 .was-validated input[type=color]:valid:focus,
-.was-validated .wpcf7 input[type=email]:valid:focus,
-.wpcf7 .was-validated input[type=email]:valid:focus,
-.was-validated .wpcf7 input[type=file]:valid:focus,
-.wpcf7 .was-validated input[type=file]:valid:focus,
-.was-validated .wpcf7 input[type=submit]:valid:focus,
-.wpcf7 .was-validated input[type=submit]:valid:focus,
-.was-validated .wpcf7 select:valid:focus,
-.wpcf7 .was-validated select:valid:focus,
-.was-validated .wpcf7 textarea:valid:focus,
-.wpcf7 .was-validated textarea:valid:focus, .was-validated .widget_categories select:valid:focus, .widget_categories .was-validated select:valid:focus,
+.was-validated .form-control:valid:focus, .was-validated .widget_categories select:valid:focus, .widget_categories .was-validated select:valid:focus,
 .was-validated .widget_archive select:valid:focus,
-.widget_archive .was-validated select:valid:focus, .form-control.is-valid:focus, .wpcf7 .is-valid.wpcf7-validation-errors:focus, .wpcf7 input.is-valid[type=text]:focus,
-.wpcf7 input.is-valid[type=search]:focus,
-.wpcf7 input.is-valid[type=url]:focus,
-.wpcf7 input.is-valid[type=tel]:focus,
-.wpcf7 input.is-valid[type=number]:focus,
-.wpcf7 input.is-valid[type=range]:focus,
-.wpcf7 input.is-valid[type=date]:focus,
-.wpcf7 input.is-valid[type=month]:focus,
-.wpcf7 input.is-valid[type=week]:focus,
-.wpcf7 input.is-valid[type=time]:focus,
-.wpcf7 input.is-valid[type=datetime]:focus,
-.wpcf7 input.is-valid[type=datetime-local]:focus,
-.wpcf7 input.is-valid[type=color]:focus,
-.wpcf7 input.is-valid[type=email]:focus,
-.wpcf7 input.is-valid[type=file]:focus,
-.wpcf7 input.is-valid[type=submit]:focus,
-.wpcf7 select.is-valid:focus,
-.wpcf7 textarea.is-valid:focus, .widget_categories select.is-valid:focus,
+.widget_archive .was-validated select:valid:focus, .form-control.is-valid:focus, .widget_categories select.is-valid:focus,
 .widget_archive select.is-valid:focus {
   border-color: #198754;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
           box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
-.was-validated textarea.form-control:valid,
-.was-validated .wpcf7 textarea:valid,
-.wpcf7 .was-validated textarea:valid, textarea.form-control.is-valid,
-.wpcf7 textarea.is-valid {
+.was-validated textarea.form-control:valid, textarea.form-control.is-valid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -3840,154 +3182,18 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:valid, .was-validated .input-group .wpcf7 .wpcf7-validation-errors:valid, .wpcf7 .was-validated .input-group .wpcf7-validation-errors:valid, .was-validated .input-group .wpcf7 input[type=text]:valid, .wpcf7 .was-validated .input-group input[type=text]:valid,
-.was-validated .input-group .wpcf7 input[type=search]:valid,
-.wpcf7 .was-validated .input-group input[type=search]:valid,
-.was-validated .input-group .wpcf7 input[type=url]:valid,
-.wpcf7 .was-validated .input-group input[type=url]:valid,
-.was-validated .input-group .wpcf7 input[type=tel]:valid,
-.wpcf7 .was-validated .input-group input[type=tel]:valid,
-.was-validated .input-group .wpcf7 input[type=number]:valid,
-.wpcf7 .was-validated .input-group input[type=number]:valid,
-.was-validated .input-group .wpcf7 input[type=range]:valid,
-.wpcf7 .was-validated .input-group input[type=range]:valid,
-.was-validated .input-group .wpcf7 input[type=date]:valid,
-.wpcf7 .was-validated .input-group input[type=date]:valid,
-.was-validated .input-group .wpcf7 input[type=month]:valid,
-.wpcf7 .was-validated .input-group input[type=month]:valid,
-.was-validated .input-group .wpcf7 input[type=week]:valid,
-.wpcf7 .was-validated .input-group input[type=week]:valid,
-.was-validated .input-group .wpcf7 input[type=time]:valid,
-.wpcf7 .was-validated .input-group input[type=time]:valid,
-.was-validated .input-group .wpcf7 input[type=datetime]:valid,
-.wpcf7 .was-validated .input-group input[type=datetime]:valid,
-.was-validated .input-group .wpcf7 input[type=datetime-local]:valid,
-.wpcf7 .was-validated .input-group input[type=datetime-local]:valid,
-.was-validated .input-group .wpcf7 input[type=color]:valid,
-.wpcf7 .was-validated .input-group input[type=color]:valid,
-.was-validated .input-group .wpcf7 input[type=email]:valid,
-.wpcf7 .was-validated .input-group input[type=email]:valid,
-.was-validated .input-group .wpcf7 input[type=file]:valid,
-.wpcf7 .was-validated .input-group input[type=file]:valid,
-.was-validated .input-group .wpcf7 input[type=submit]:valid,
-.wpcf7 .was-validated .input-group input[type=submit]:valid,
-.was-validated .input-group .wpcf7 select:valid,
-.wpcf7 .was-validated .input-group select:valid,
-.was-validated .input-group .wpcf7 textarea:valid,
-.wpcf7 .was-validated .input-group textarea:valid, .was-validated .input-group .widget_categories select:valid, .widget_categories .was-validated .input-group select:valid,
+.was-validated .input-group .form-control:valid, .was-validated .input-group .widget_categories select:valid, .widget_categories .was-validated .input-group select:valid,
 .was-validated .input-group .widget_archive select:valid,
-.widget_archive .was-validated .input-group select:valid, .input-group .form-control.is-valid, .input-group .wpcf7 .is-valid.wpcf7-validation-errors, .wpcf7 .input-group .is-valid.wpcf7-validation-errors, .input-group .wpcf7 input.is-valid[type=text], .wpcf7 .input-group input.is-valid[type=text],
-.input-group .wpcf7 input.is-valid[type=search],
-.wpcf7 .input-group input.is-valid[type=search],
-.input-group .wpcf7 input.is-valid[type=url],
-.wpcf7 .input-group input.is-valid[type=url],
-.input-group .wpcf7 input.is-valid[type=tel],
-.wpcf7 .input-group input.is-valid[type=tel],
-.input-group .wpcf7 input.is-valid[type=number],
-.wpcf7 .input-group input.is-valid[type=number],
-.input-group .wpcf7 input.is-valid[type=range],
-.wpcf7 .input-group input.is-valid[type=range],
-.input-group .wpcf7 input.is-valid[type=date],
-.wpcf7 .input-group input.is-valid[type=date],
-.input-group .wpcf7 input.is-valid[type=month],
-.wpcf7 .input-group input.is-valid[type=month],
-.input-group .wpcf7 input.is-valid[type=week],
-.wpcf7 .input-group input.is-valid[type=week],
-.input-group .wpcf7 input.is-valid[type=time],
-.wpcf7 .input-group input.is-valid[type=time],
-.input-group .wpcf7 input.is-valid[type=datetime],
-.wpcf7 .input-group input.is-valid[type=datetime],
-.input-group .wpcf7 input.is-valid[type=datetime-local],
-.wpcf7 .input-group input.is-valid[type=datetime-local],
-.input-group .wpcf7 input.is-valid[type=color],
-.wpcf7 .input-group input.is-valid[type=color],
-.input-group .wpcf7 input.is-valid[type=email],
-.wpcf7 .input-group input.is-valid[type=email],
-.input-group .wpcf7 input.is-valid[type=file],
-.wpcf7 .input-group input.is-valid[type=file],
-.input-group .wpcf7 input.is-valid[type=submit],
-.wpcf7 .input-group input.is-valid[type=submit],
-.input-group .wpcf7 select.is-valid,
-.wpcf7 .input-group select.is-valid,
-.input-group .wpcf7 textarea.is-valid,
-.wpcf7 .input-group textarea.is-valid, .input-group .widget_categories select.is-valid, .widget_categories .input-group select.is-valid,
+.widget_archive .was-validated .input-group select:valid, .input-group .form-control.is-valid, .input-group .widget_categories select.is-valid, .widget_categories .input-group select.is-valid,
 .input-group .widget_archive select.is-valid,
 .widget_archive .input-group select.is-valid,
 .was-validated .input-group .form-select:valid,
 .input-group .form-select.is-valid {
   z-index: 1;
 }
-.was-validated .input-group .form-control:valid:focus, .was-validated .input-group .wpcf7 .wpcf7-validation-errors:valid:focus, .wpcf7 .was-validated .input-group .wpcf7-validation-errors:valid:focus, .was-validated .input-group .wpcf7 input[type=text]:valid:focus, .wpcf7 .was-validated .input-group input[type=text]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=search]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=search]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=url]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=url]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=tel]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=tel]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=number]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=number]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=range]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=range]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=date]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=date]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=month]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=month]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=week]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=week]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=time]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=time]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=datetime]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=datetime]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=datetime-local]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=datetime-local]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=color]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=color]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=email]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=email]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=file]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=file]:valid:focus,
-.was-validated .input-group .wpcf7 input[type=submit]:valid:focus,
-.wpcf7 .was-validated .input-group input[type=submit]:valid:focus,
-.was-validated .input-group .wpcf7 select:valid:focus,
-.wpcf7 .was-validated .input-group select:valid:focus,
-.was-validated .input-group .wpcf7 textarea:valid:focus,
-.wpcf7 .was-validated .input-group textarea:valid:focus, .was-validated .input-group .widget_categories select:valid:focus, .widget_categories .was-validated .input-group select:valid:focus,
+.was-validated .input-group .form-control:valid:focus, .was-validated .input-group .widget_categories select:valid:focus, .widget_categories .was-validated .input-group select:valid:focus,
 .was-validated .input-group .widget_archive select:valid:focus,
-.widget_archive .was-validated .input-group select:valid:focus, .input-group .form-control.is-valid:focus, .input-group .wpcf7 .is-valid.wpcf7-validation-errors:focus, .wpcf7 .input-group .is-valid.wpcf7-validation-errors:focus, .input-group .wpcf7 input.is-valid[type=text]:focus, .wpcf7 .input-group input.is-valid[type=text]:focus,
-.input-group .wpcf7 input.is-valid[type=search]:focus,
-.wpcf7 .input-group input.is-valid[type=search]:focus,
-.input-group .wpcf7 input.is-valid[type=url]:focus,
-.wpcf7 .input-group input.is-valid[type=url]:focus,
-.input-group .wpcf7 input.is-valid[type=tel]:focus,
-.wpcf7 .input-group input.is-valid[type=tel]:focus,
-.input-group .wpcf7 input.is-valid[type=number]:focus,
-.wpcf7 .input-group input.is-valid[type=number]:focus,
-.input-group .wpcf7 input.is-valid[type=range]:focus,
-.wpcf7 .input-group input.is-valid[type=range]:focus,
-.input-group .wpcf7 input.is-valid[type=date]:focus,
-.wpcf7 .input-group input.is-valid[type=date]:focus,
-.input-group .wpcf7 input.is-valid[type=month]:focus,
-.wpcf7 .input-group input.is-valid[type=month]:focus,
-.input-group .wpcf7 input.is-valid[type=week]:focus,
-.wpcf7 .input-group input.is-valid[type=week]:focus,
-.input-group .wpcf7 input.is-valid[type=time]:focus,
-.wpcf7 .input-group input.is-valid[type=time]:focus,
-.input-group .wpcf7 input.is-valid[type=datetime]:focus,
-.wpcf7 .input-group input.is-valid[type=datetime]:focus,
-.input-group .wpcf7 input.is-valid[type=datetime-local]:focus,
-.wpcf7 .input-group input.is-valid[type=datetime-local]:focus,
-.input-group .wpcf7 input.is-valid[type=color]:focus,
-.wpcf7 .input-group input.is-valid[type=color]:focus,
-.input-group .wpcf7 input.is-valid[type=email]:focus,
-.wpcf7 .input-group input.is-valid[type=email]:focus,
-.input-group .wpcf7 input.is-valid[type=file]:focus,
-.wpcf7 .input-group input.is-valid[type=file]:focus,
-.input-group .wpcf7 input.is-valid[type=submit]:focus,
-.wpcf7 .input-group input.is-valid[type=submit]:focus,
-.input-group .wpcf7 select.is-valid:focus,
-.wpcf7 .input-group select.is-valid:focus,
-.input-group .wpcf7 textarea.is-valid:focus,
-.wpcf7 .input-group textarea.is-valid:focus, .input-group .widget_categories select.is-valid:focus, .widget_categories .input-group select.is-valid:focus,
+.widget_archive .was-validated .input-group select:valid:focus, .input-group .form-control.is-valid:focus, .input-group .widget_categories select.is-valid:focus, .widget_categories .input-group select.is-valid:focus,
 .input-group .widget_archive select.is-valid:focus,
 .widget_archive .input-group select.is-valid:focus,
 .was-validated .input-group .form-select:valid:focus,
@@ -4024,60 +3230,9 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:invalid, .was-validated .wpcf7 .wpcf7-validation-errors:invalid, .wpcf7 .was-validated .wpcf7-validation-errors:invalid, .was-validated .wpcf7 input[type=text]:invalid, .wpcf7 .was-validated input[type=text]:invalid,
-.was-validated .wpcf7 input[type=search]:invalid,
-.wpcf7 .was-validated input[type=search]:invalid,
-.was-validated .wpcf7 input[type=url]:invalid,
-.wpcf7 .was-validated input[type=url]:invalid,
-.was-validated .wpcf7 input[type=tel]:invalid,
-.wpcf7 .was-validated input[type=tel]:invalid,
-.was-validated .wpcf7 input[type=number]:invalid,
-.wpcf7 .was-validated input[type=number]:invalid,
-.was-validated .wpcf7 input[type=range]:invalid,
-.wpcf7 .was-validated input[type=range]:invalid,
-.was-validated .wpcf7 input[type=date]:invalid,
-.wpcf7 .was-validated input[type=date]:invalid,
-.was-validated .wpcf7 input[type=month]:invalid,
-.wpcf7 .was-validated input[type=month]:invalid,
-.was-validated .wpcf7 input[type=week]:invalid,
-.wpcf7 .was-validated input[type=week]:invalid,
-.was-validated .wpcf7 input[type=time]:invalid,
-.wpcf7 .was-validated input[type=time]:invalid,
-.was-validated .wpcf7 input[type=datetime]:invalid,
-.wpcf7 .was-validated input[type=datetime]:invalid,
-.was-validated .wpcf7 input[type=datetime-local]:invalid,
-.wpcf7 .was-validated input[type=datetime-local]:invalid,
-.was-validated .wpcf7 input[type=color]:invalid,
-.wpcf7 .was-validated input[type=color]:invalid,
-.was-validated .wpcf7 input[type=email]:invalid,
-.wpcf7 .was-validated input[type=email]:invalid,
-.was-validated .wpcf7 input[type=file]:invalid,
-.wpcf7 .was-validated input[type=file]:invalid,
-.was-validated .wpcf7 input[type=submit]:invalid,
-.wpcf7 .was-validated input[type=submit]:invalid,
-.was-validated .wpcf7 select:invalid,
-.wpcf7 .was-validated select:invalid,
-.was-validated .wpcf7 textarea:invalid,
-.wpcf7 .was-validated textarea:invalid, .was-validated .widget_categories select:invalid, .widget_categories .was-validated select:invalid,
+.was-validated .form-control:invalid, .was-validated .widget_categories select:invalid, .widget_categories .was-validated select:invalid,
 .was-validated .widget_archive select:invalid,
-.widget_archive .was-validated select:invalid, .form-control.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors, .wpcf7 input.is-invalid[type=text],
-.wpcf7 input.is-invalid[type=search],
-.wpcf7 input.is-invalid[type=url],
-.wpcf7 input.is-invalid[type=tel],
-.wpcf7 input.is-invalid[type=number],
-.wpcf7 input.is-invalid[type=range],
-.wpcf7 input.is-invalid[type=date],
-.wpcf7 input.is-invalid[type=month],
-.wpcf7 input.is-invalid[type=week],
-.wpcf7 input.is-invalid[type=time],
-.wpcf7 input.is-invalid[type=datetime],
-.wpcf7 input.is-invalid[type=datetime-local],
-.wpcf7 input.is-invalid[type=color],
-.wpcf7 input.is-invalid[type=email],
-.wpcf7 input.is-invalid[type=file],
-.wpcf7 input.is-invalid[type=submit],
-.wpcf7 select.is-invalid,
-.wpcf7 textarea.is-invalid, .widget_categories select.is-invalid,
+.widget_archive .was-validated select:invalid, .form-control.is-invalid, .widget_categories select.is-invalid,
 .widget_archive select.is-invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
@@ -4086,70 +3241,16 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:invalid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:invalid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:invalid:focus, .was-validated .wpcf7 input[type=text]:invalid:focus, .wpcf7 .was-validated input[type=text]:invalid:focus,
-.was-validated .wpcf7 input[type=search]:invalid:focus,
-.wpcf7 .was-validated input[type=search]:invalid:focus,
-.was-validated .wpcf7 input[type=url]:invalid:focus,
-.wpcf7 .was-validated input[type=url]:invalid:focus,
-.was-validated .wpcf7 input[type=tel]:invalid:focus,
-.wpcf7 .was-validated input[type=tel]:invalid:focus,
-.was-validated .wpcf7 input[type=number]:invalid:focus,
-.wpcf7 .was-validated input[type=number]:invalid:focus,
-.was-validated .wpcf7 input[type=range]:invalid:focus,
-.wpcf7 .was-validated input[type=range]:invalid:focus,
-.was-validated .wpcf7 input[type=date]:invalid:focus,
-.wpcf7 .was-validated input[type=date]:invalid:focus,
-.was-validated .wpcf7 input[type=month]:invalid:focus,
-.wpcf7 .was-validated input[type=month]:invalid:focus,
-.was-validated .wpcf7 input[type=week]:invalid:focus,
-.wpcf7 .was-validated input[type=week]:invalid:focus,
-.was-validated .wpcf7 input[type=time]:invalid:focus,
-.wpcf7 .was-validated input[type=time]:invalid:focus,
-.was-validated .wpcf7 input[type=datetime]:invalid:focus,
-.wpcf7 .was-validated input[type=datetime]:invalid:focus,
-.was-validated .wpcf7 input[type=datetime-local]:invalid:focus,
-.wpcf7 .was-validated input[type=datetime-local]:invalid:focus,
-.was-validated .wpcf7 input[type=color]:invalid:focus,
-.wpcf7 .was-validated input[type=color]:invalid:focus,
-.was-validated .wpcf7 input[type=email]:invalid:focus,
-.wpcf7 .was-validated input[type=email]:invalid:focus,
-.was-validated .wpcf7 input[type=file]:invalid:focus,
-.wpcf7 .was-validated input[type=file]:invalid:focus,
-.was-validated .wpcf7 input[type=submit]:invalid:focus,
-.wpcf7 .was-validated input[type=submit]:invalid:focus,
-.was-validated .wpcf7 select:invalid:focus,
-.wpcf7 .was-validated select:invalid:focus,
-.was-validated .wpcf7 textarea:invalid:focus,
-.wpcf7 .was-validated textarea:invalid:focus, .was-validated .widget_categories select:invalid:focus, .widget_categories .was-validated select:invalid:focus,
+.was-validated .form-control:invalid:focus, .was-validated .widget_categories select:invalid:focus, .widget_categories .was-validated select:invalid:focus,
 .was-validated .widget_archive select:invalid:focus,
-.widget_archive .was-validated select:invalid:focus, .form-control.is-invalid:focus, .wpcf7 .is-invalid.wpcf7-validation-errors:focus, .wpcf7 input.is-invalid[type=text]:focus,
-.wpcf7 input.is-invalid[type=search]:focus,
-.wpcf7 input.is-invalid[type=url]:focus,
-.wpcf7 input.is-invalid[type=tel]:focus,
-.wpcf7 input.is-invalid[type=number]:focus,
-.wpcf7 input.is-invalid[type=range]:focus,
-.wpcf7 input.is-invalid[type=date]:focus,
-.wpcf7 input.is-invalid[type=month]:focus,
-.wpcf7 input.is-invalid[type=week]:focus,
-.wpcf7 input.is-invalid[type=time]:focus,
-.wpcf7 input.is-invalid[type=datetime]:focus,
-.wpcf7 input.is-invalid[type=datetime-local]:focus,
-.wpcf7 input.is-invalid[type=color]:focus,
-.wpcf7 input.is-invalid[type=email]:focus,
-.wpcf7 input.is-invalid[type=file]:focus,
-.wpcf7 input.is-invalid[type=submit]:focus,
-.wpcf7 select.is-invalid:focus,
-.wpcf7 textarea.is-invalid:focus, .widget_categories select.is-invalid:focus,
+.widget_archive .was-validated select:invalid:focus, .form-control.is-invalid:focus, .widget_categories select.is-invalid:focus,
 .widget_archive select.is-invalid:focus {
   border-color: #dc3545;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
           box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated textarea.form-control:invalid,
-.was-validated .wpcf7 textarea:invalid,
-.wpcf7 .was-validated textarea:invalid, textarea.form-control.is-invalid,
-.wpcf7 textarea.is-invalid {
+.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -4187,154 +3288,18 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:invalid, .was-validated .input-group .wpcf7 .wpcf7-validation-errors:invalid, .wpcf7 .was-validated .input-group .wpcf7-validation-errors:invalid, .was-validated .input-group .wpcf7 input[type=text]:invalid, .wpcf7 .was-validated .input-group input[type=text]:invalid,
-.was-validated .input-group .wpcf7 input[type=search]:invalid,
-.wpcf7 .was-validated .input-group input[type=search]:invalid,
-.was-validated .input-group .wpcf7 input[type=url]:invalid,
-.wpcf7 .was-validated .input-group input[type=url]:invalid,
-.was-validated .input-group .wpcf7 input[type=tel]:invalid,
-.wpcf7 .was-validated .input-group input[type=tel]:invalid,
-.was-validated .input-group .wpcf7 input[type=number]:invalid,
-.wpcf7 .was-validated .input-group input[type=number]:invalid,
-.was-validated .input-group .wpcf7 input[type=range]:invalid,
-.wpcf7 .was-validated .input-group input[type=range]:invalid,
-.was-validated .input-group .wpcf7 input[type=date]:invalid,
-.wpcf7 .was-validated .input-group input[type=date]:invalid,
-.was-validated .input-group .wpcf7 input[type=month]:invalid,
-.wpcf7 .was-validated .input-group input[type=month]:invalid,
-.was-validated .input-group .wpcf7 input[type=week]:invalid,
-.wpcf7 .was-validated .input-group input[type=week]:invalid,
-.was-validated .input-group .wpcf7 input[type=time]:invalid,
-.wpcf7 .was-validated .input-group input[type=time]:invalid,
-.was-validated .input-group .wpcf7 input[type=datetime]:invalid,
-.wpcf7 .was-validated .input-group input[type=datetime]:invalid,
-.was-validated .input-group .wpcf7 input[type=datetime-local]:invalid,
-.wpcf7 .was-validated .input-group input[type=datetime-local]:invalid,
-.was-validated .input-group .wpcf7 input[type=color]:invalid,
-.wpcf7 .was-validated .input-group input[type=color]:invalid,
-.was-validated .input-group .wpcf7 input[type=email]:invalid,
-.wpcf7 .was-validated .input-group input[type=email]:invalid,
-.was-validated .input-group .wpcf7 input[type=file]:invalid,
-.wpcf7 .was-validated .input-group input[type=file]:invalid,
-.was-validated .input-group .wpcf7 input[type=submit]:invalid,
-.wpcf7 .was-validated .input-group input[type=submit]:invalid,
-.was-validated .input-group .wpcf7 select:invalid,
-.wpcf7 .was-validated .input-group select:invalid,
-.was-validated .input-group .wpcf7 textarea:invalid,
-.wpcf7 .was-validated .input-group textarea:invalid, .was-validated .input-group .widget_categories select:invalid, .widget_categories .was-validated .input-group select:invalid,
+.was-validated .input-group .form-control:invalid, .was-validated .input-group .widget_categories select:invalid, .widget_categories .was-validated .input-group select:invalid,
 .was-validated .input-group .widget_archive select:invalid,
-.widget_archive .was-validated .input-group select:invalid, .input-group .form-control.is-invalid, .input-group .wpcf7 .is-invalid.wpcf7-validation-errors, .wpcf7 .input-group .is-invalid.wpcf7-validation-errors, .input-group .wpcf7 input.is-invalid[type=text], .wpcf7 .input-group input.is-invalid[type=text],
-.input-group .wpcf7 input.is-invalid[type=search],
-.wpcf7 .input-group input.is-invalid[type=search],
-.input-group .wpcf7 input.is-invalid[type=url],
-.wpcf7 .input-group input.is-invalid[type=url],
-.input-group .wpcf7 input.is-invalid[type=tel],
-.wpcf7 .input-group input.is-invalid[type=tel],
-.input-group .wpcf7 input.is-invalid[type=number],
-.wpcf7 .input-group input.is-invalid[type=number],
-.input-group .wpcf7 input.is-invalid[type=range],
-.wpcf7 .input-group input.is-invalid[type=range],
-.input-group .wpcf7 input.is-invalid[type=date],
-.wpcf7 .input-group input.is-invalid[type=date],
-.input-group .wpcf7 input.is-invalid[type=month],
-.wpcf7 .input-group input.is-invalid[type=month],
-.input-group .wpcf7 input.is-invalid[type=week],
-.wpcf7 .input-group input.is-invalid[type=week],
-.input-group .wpcf7 input.is-invalid[type=time],
-.wpcf7 .input-group input.is-invalid[type=time],
-.input-group .wpcf7 input.is-invalid[type=datetime],
-.wpcf7 .input-group input.is-invalid[type=datetime],
-.input-group .wpcf7 input.is-invalid[type=datetime-local],
-.wpcf7 .input-group input.is-invalid[type=datetime-local],
-.input-group .wpcf7 input.is-invalid[type=color],
-.wpcf7 .input-group input.is-invalid[type=color],
-.input-group .wpcf7 input.is-invalid[type=email],
-.wpcf7 .input-group input.is-invalid[type=email],
-.input-group .wpcf7 input.is-invalid[type=file],
-.wpcf7 .input-group input.is-invalid[type=file],
-.input-group .wpcf7 input.is-invalid[type=submit],
-.wpcf7 .input-group input.is-invalid[type=submit],
-.input-group .wpcf7 select.is-invalid,
-.wpcf7 .input-group select.is-invalid,
-.input-group .wpcf7 textarea.is-invalid,
-.wpcf7 .input-group textarea.is-invalid, .input-group .widget_categories select.is-invalid, .widget_categories .input-group select.is-invalid,
+.widget_archive .was-validated .input-group select:invalid, .input-group .form-control.is-invalid, .input-group .widget_categories select.is-invalid, .widget_categories .input-group select.is-invalid,
 .input-group .widget_archive select.is-invalid,
 .widget_archive .input-group select.is-invalid,
 .was-validated .input-group .form-select:invalid,
 .input-group .form-select.is-invalid {
   z-index: 2;
 }
-.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group .wpcf7 .wpcf7-validation-errors:invalid:focus, .wpcf7 .was-validated .input-group .wpcf7-validation-errors:invalid:focus, .was-validated .input-group .wpcf7 input[type=text]:invalid:focus, .wpcf7 .was-validated .input-group input[type=text]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=search]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=search]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=url]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=url]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=tel]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=tel]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=number]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=number]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=range]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=range]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=date]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=date]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=month]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=month]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=week]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=week]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=time]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=time]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=datetime]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=datetime]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=datetime-local]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=datetime-local]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=color]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=color]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=email]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=email]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=file]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=file]:invalid:focus,
-.was-validated .input-group .wpcf7 input[type=submit]:invalid:focus,
-.wpcf7 .was-validated .input-group input[type=submit]:invalid:focus,
-.was-validated .input-group .wpcf7 select:invalid:focus,
-.wpcf7 .was-validated .input-group select:invalid:focus,
-.was-validated .input-group .wpcf7 textarea:invalid:focus,
-.wpcf7 .was-validated .input-group textarea:invalid:focus, .was-validated .input-group .widget_categories select:invalid:focus, .widget_categories .was-validated .input-group select:invalid:focus,
+.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group .widget_categories select:invalid:focus, .widget_categories .was-validated .input-group select:invalid:focus,
 .was-validated .input-group .widget_archive select:invalid:focus,
-.widget_archive .was-validated .input-group select:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group .wpcf7 .is-invalid.wpcf7-validation-errors:focus, .wpcf7 .input-group .is-invalid.wpcf7-validation-errors:focus, .input-group .wpcf7 input.is-invalid[type=text]:focus, .wpcf7 .input-group input.is-invalid[type=text]:focus,
-.input-group .wpcf7 input.is-invalid[type=search]:focus,
-.wpcf7 .input-group input.is-invalid[type=search]:focus,
-.input-group .wpcf7 input.is-invalid[type=url]:focus,
-.wpcf7 .input-group input.is-invalid[type=url]:focus,
-.input-group .wpcf7 input.is-invalid[type=tel]:focus,
-.wpcf7 .input-group input.is-invalid[type=tel]:focus,
-.input-group .wpcf7 input.is-invalid[type=number]:focus,
-.wpcf7 .input-group input.is-invalid[type=number]:focus,
-.input-group .wpcf7 input.is-invalid[type=range]:focus,
-.wpcf7 .input-group input.is-invalid[type=range]:focus,
-.input-group .wpcf7 input.is-invalid[type=date]:focus,
-.wpcf7 .input-group input.is-invalid[type=date]:focus,
-.input-group .wpcf7 input.is-invalid[type=month]:focus,
-.wpcf7 .input-group input.is-invalid[type=month]:focus,
-.input-group .wpcf7 input.is-invalid[type=week]:focus,
-.wpcf7 .input-group input.is-invalid[type=week]:focus,
-.input-group .wpcf7 input.is-invalid[type=time]:focus,
-.wpcf7 .input-group input.is-invalid[type=time]:focus,
-.input-group .wpcf7 input.is-invalid[type=datetime]:focus,
-.wpcf7 .input-group input.is-invalid[type=datetime]:focus,
-.input-group .wpcf7 input.is-invalid[type=datetime-local]:focus,
-.wpcf7 .input-group input.is-invalid[type=datetime-local]:focus,
-.input-group .wpcf7 input.is-invalid[type=color]:focus,
-.wpcf7 .input-group input.is-invalid[type=color]:focus,
-.input-group .wpcf7 input.is-invalid[type=email]:focus,
-.wpcf7 .input-group input.is-invalid[type=email]:focus,
-.input-group .wpcf7 input.is-invalid[type=file]:focus,
-.wpcf7 .input-group input.is-invalid[type=file]:focus,
-.input-group .wpcf7 input.is-invalid[type=submit]:focus,
-.wpcf7 .input-group input.is-invalid[type=submit]:focus,
-.input-group .wpcf7 select.is-invalid:focus,
-.wpcf7 .input-group select.is-invalid:focus,
-.input-group .wpcf7 textarea.is-invalid:focus,
-.wpcf7 .input-group textarea.is-invalid:focus, .input-group .widget_categories select.is-invalid:focus, .widget_categories .input-group select.is-invalid:focus,
+.widget_archive .was-validated .input-group select:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group .widget_categories select.is-invalid:focus, .widget_categories .input-group select.is-invalid:focus,
 .input-group .widget_archive select.is-invalid:focus,
 .widget_archive .input-group select.is-invalid:focus,
 .was-validated .input-group .form-select:invalid:focus,
@@ -4342,7 +3307,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.btn, .wpcf7 input[type=submit], .woocommerce-info a.button, .woocommerce-notices-wrapper .woocommerce-message a.button {
+.btn, .woocommerce-info a.button, .woocommerce-notices-wrapper .woocommerce-message a.button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -4366,20 +3331,20 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .wpcf7 input[type=submit], .woocommerce-info a.button, .woocommerce-notices-wrapper .woocommerce-message a.button {
+  .btn, .woocommerce-info a.button, .woocommerce-notices-wrapper .woocommerce-message a.button {
     -webkit-transition: none;
     transition: none;
   }
 }
-.btn:hover, .wpcf7 input[type=submit]:hover, .woocommerce-info a.button:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover {
+.btn:hover, .woocommerce-info a.button:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .wpcf7 .btn-check:focus + input[type=submit], .woocommerce-info .btn-check:focus + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-check:focus + a.button, .btn:focus, .wpcf7 input[type=submit]:focus, .woocommerce-info a.button:focus, .woocommerce-notices-wrapper .woocommerce-message a.button:focus {
+.btn-check:focus + .btn, .woocommerce-info .btn-check:focus + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-check:focus + a.button, .btn:focus, .woocommerce-info a.button:focus, .woocommerce-notices-wrapper .woocommerce-message a.button:focus {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
           box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.btn:disabled, .wpcf7 input[type=submit]:disabled, .woocommerce-info a.button:disabled, .woocommerce-notices-wrapper .woocommerce-message a.button:disabled, .btn.disabled, .wpcf7 input.disabled[type=submit], .woocommerce-info a.disabled.button, .woocommerce-notices-wrapper .woocommerce-message a.disabled.button, fieldset:disabled .btn, fieldset:disabled .wpcf7 input[type=submit], .wpcf7 fieldset:disabled input[type=submit], fieldset:disabled .woocommerce-info a.button, .woocommerce-info fieldset:disabled a.button, fieldset:disabled .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message fieldset:disabled a.button {
+.btn:disabled, .woocommerce-info a.button:disabled, .woocommerce-notices-wrapper .woocommerce-message a.button:disabled, .btn.disabled, .woocommerce-info a.disabled.button, .woocommerce-notices-wrapper .woocommerce-message a.disabled.button, fieldset:disabled .btn, fieldset:disabled .woocommerce-info a.button, .woocommerce-info fieldset:disabled a.button, fieldset:disabled .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message fieldset:disabled a.button {
   pointer-events: none;
   opacity: 0.65;
 }
@@ -4640,29 +3605,29 @@ textarea.form-control-lg {
   border-color: #212529;
 }
 
-.btn-outline-primary, .wpcf7 input[type=submit] {
+.btn-outline-primary {
   color: #0d6efd;
   border-color: #0d6efd;
 }
-.btn-outline-primary:hover, .wpcf7 input[type=submit]:hover {
+.btn-outline-primary:hover {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.btn-check:focus + .btn-outline-primary, .wpcf7 .btn-check:focus + input[type=submit], .btn-outline-primary:focus, .wpcf7 input[type=submit]:focus {
+.btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
   -webkit-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
           box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
 }
-.btn-check:checked + .btn-outline-primary, .wpcf7 .btn-check:checked + input[type=submit], .btn-check:active + .btn-outline-primary, .wpcf7 .btn-check:active + input[type=submit], .btn-outline-primary:active, .wpcf7 input[type=submit]:active, .btn-outline-primary.active, .wpcf7 input.active[type=submit], .btn-outline-primary.dropdown-toggle.show, .wpcf7 input.dropdown-toggle.show[type=submit] {
+.btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.btn-check:checked + .btn-outline-primary:focus, .wpcf7 .btn-check:checked + input[type=submit]:focus, .btn-check:active + .btn-outline-primary:focus, .wpcf7 .btn-check:active + input[type=submit]:focus, .btn-outline-primary:active:focus, .wpcf7 input[type=submit]:active:focus, .btn-outline-primary.active:focus, .wpcf7 input.active[type=submit]:focus, .btn-outline-primary.dropdown-toggle.show:focus, .wpcf7 input.dropdown-toggle.show[type=submit]:focus {
+.btn-check:checked + .btn-outline-primary:focus, .btn-check:active + .btn-outline-primary:focus, .btn-outline-primary:active:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus {
   -webkit-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
           box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
 }
-.btn-outline-primary:disabled, .wpcf7 input[type=submit]:disabled, .btn-outline-primary.disabled, .wpcf7 input.disabled[type=submit] {
+.btn-outline-primary:disabled, .btn-outline-primary.disabled {
   color: #0d6efd;
   background-color: transparent;
 }
@@ -4868,13 +3833,13 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], .woocommerce-info .btn-group-lg > a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-lg > a.button {
+.btn-lg, .btn-group-lg > .btn, .woocommerce-info .btn-group-lg > a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-lg > a.button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], .woocommerce-info .btn-group-sm > a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-sm > a.button {
+.btn-sm, .btn-group-sm > .btn, .woocommerce-info .btn-group-sm > a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-sm > a.button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -5237,9 +4202,8 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .wpcf7 .btn-group > input[type=submit], .woocommerce-info .btn-group > a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button,
+.btn-group > .btn, .woocommerce-info .btn-group > a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button,
 .btn-group-vertical > .btn,
-.wpcf7 .btn-group-vertical > input[type=submit],
 .woocommerce-info .btn-group-vertical > a.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button {
   position: relative;
@@ -5247,49 +4211,38 @@ textarea.form-control-lg {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .wpcf7 .btn-group > .btn-check:checked + input[type=submit], .woocommerce-info .btn-group > .btn-check:checked + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group > .btn-check:checked + a.button,
+.btn-group > .btn-check:checked + .btn, .woocommerce-info .btn-group > .btn-check:checked + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group > .btn-check:checked + a.button,
 .btn-group > .btn-check:focus + .btn,
-.wpcf7 .btn-group > .btn-check:focus + input[type=submit],
 .woocommerce-info .btn-group > .btn-check:focus + a.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group > .btn-check:focus + a.button,
 .btn-group > .btn:hover,
-.wpcf7 .btn-group > input[type=submit]:hover,
 .woocommerce-info .btn-group > a.button:hover,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button:hover,
 .btn-group > .btn:focus,
-.wpcf7 .btn-group > input[type=submit]:focus,
 .woocommerce-info .btn-group > a.button:focus,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button:focus,
 .btn-group > .btn:active,
-.wpcf7 .btn-group > input[type=submit]:active,
 .woocommerce-info .btn-group > a.button:active,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button:active,
 .btn-group > .btn.active,
-.wpcf7 .btn-group > input.active[type=submit],
 .woocommerce-info .btn-group > a.active.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.active.button,
 .btn-group-vertical > .btn-check:checked + .btn,
-.wpcf7 .btn-group-vertical > .btn-check:checked + input[type=submit],
 .woocommerce-info .btn-group-vertical > .btn-check:checked + a.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > .btn-check:checked + a.button,
 .btn-group-vertical > .btn-check:focus + .btn,
-.wpcf7 .btn-group-vertical > .btn-check:focus + input[type=submit],
 .woocommerce-info .btn-group-vertical > .btn-check:focus + a.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > .btn-check:focus + a.button,
 .btn-group-vertical > .btn:hover,
-.wpcf7 .btn-group-vertical > input[type=submit]:hover,
 .woocommerce-info .btn-group-vertical > a.button:hover,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button:hover,
 .btn-group-vertical > .btn:focus,
-.wpcf7 .btn-group-vertical > input[type=submit]:focus,
 .woocommerce-info .btn-group-vertical > a.button:focus,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button:focus,
 .btn-group-vertical > .btn:active,
-.wpcf7 .btn-group-vertical > input[type=submit]:active,
 .woocommerce-info .btn-group-vertical > a.button:active,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button:active,
 .btn-group-vertical > .btn.active,
-.wpcf7 .btn-group-vertical > input.active[type=submit],
 .woocommerce-info .btn-group-vertical > a.active.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.active.button {
   z-index: 1;
@@ -5309,25 +4262,22 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child), .woocommerce-info .btn-group > a.button:not(:first-child), .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button:not(:first-child),
+.btn-group > .btn:not(:first-child), .woocommerce-info .btn-group > a.button:not(:first-child), .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle), .woocommerce-info .btn-group > a.button:not(:last-child):not(.dropdown-toggle), .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .woocommerce-info .btn-group > a.button:not(:last-child):not(.dropdown-toggle), .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
-.wpcf7 .btn-group > .btn-group:not(:last-child) > input[type=submit],
 .woocommerce-info .btn-group > .btn-group:not(:last-child) > a.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group > .btn-group:not(:last-child) > a.button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), .wpcf7 .btn-group > input[type=submit]:nth-child(n+3), .woocommerce-info .btn-group > a.button:nth-child(n+3), .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .woocommerce-info .btn-group > a.button:nth-child(n+3), .woocommerce-notices-wrapper .woocommerce-message .btn-group > a.button:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-.wpcf7 .btn-group > :not(.btn-check) + input[type=submit],
 .woocommerce-info .btn-group > :not(.btn-check) + a.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group > :not(.btn-check) + a.button,
 .btn-group > .btn-group:not(:first-child) > .btn,
-.wpcf7 .btn-group > .btn-group:not(:first-child) > input[type=submit],
 .woocommerce-info .btn-group > .btn-group:not(:first-child) > a.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group > .btn-group:not(:first-child) > a.button {
   border-top-left-radius: 0;
@@ -5345,12 +4295,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, .woocommerce-info .btn-group-sm > a.button + .dropdown-toggle-split, .woocommerce-notices-wrapper .woocommerce-message .btn-group-sm > a.button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .woocommerce-info .btn-group-sm > a.button + .dropdown-toggle-split, .woocommerce-notices-wrapper .woocommerce-message .btn-group-sm > a.button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, .woocommerce-info .btn-group-lg > a.button + .dropdown-toggle-split, .woocommerce-notices-wrapper .woocommerce-message .btn-group-lg > a.button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .woocommerce-info .btn-group-lg > a.button + .dropdown-toggle-split, .woocommerce-notices-wrapper .woocommerce-message .btn-group-lg > a.button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -5367,25 +4317,23 @@ textarea.form-control-lg {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.btn-group-vertical > .btn, .wpcf7 .btn-group-vertical > input[type=submit], .woocommerce-info .btn-group-vertical > a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button,
+.btn-group-vertical > .btn, .woocommerce-info .btn-group-vertical > a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child), .woocommerce-info .btn-group-vertical > a.button:not(:first-child), .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .woocommerce-info .btn-group-vertical > a.button:not(:first-child), .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle), .woocommerce-info .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle), .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .woocommerce-info .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle), .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-.wpcf7 .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit],
 .woocommerce-info .btn-group-vertical > .btn-group:not(:last-child) > a.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > .btn-group:not(:last-child) > a.button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, .wpcf7 .btn-group-vertical > input[type=submit] ~ .btn, .wpcf7 .btn-group-vertical > .btn ~ input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] ~ input[type=submit], .woocommerce-info .btn-group-vertical > a.button ~ .btn, .woocommerce-info .wpcf7 .btn-group-vertical > a.button ~ input[type=submit], .wpcf7 .woocommerce-info .btn-group-vertical > a.button ~ input[type=submit], .woocommerce-info .btn-group-vertical > .btn ~ a.button, .woocommerce-info .wpcf7 .btn-group-vertical > input[type=submit] ~ a.button, .wpcf7 .woocommerce-info .btn-group-vertical > input[type=submit] ~ a.button, .woocommerce-info .btn-group-vertical > a.button ~ a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button ~ .btn, .woocommerce-notices-wrapper .woocommerce-message .wpcf7 .btn-group-vertical > a.button ~ input[type=submit], .wpcf7 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button ~ input[type=submit], .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > .btn ~ a.button, .woocommerce-notices-wrapper .woocommerce-message .wpcf7 .btn-group-vertical > input[type=submit] ~ a.button, .wpcf7 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > input[type=submit] ~ a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button ~ a.button,
+.btn-group-vertical > .btn ~ .btn, .woocommerce-info .btn-group-vertical > a.button ~ .btn, .woocommerce-info .btn-group-vertical > .btn ~ a.button, .woocommerce-info .btn-group-vertical > a.button ~ a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button ~ .btn, .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > .btn ~ a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > a.button ~ a.button,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-.wpcf7 .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit],
 .woocommerce-info .btn-group-vertical > .btn-group:not(:first-child) > a.button,
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-vertical > .btn-group:not(:first-child) > a.button {
   border-top-left-radius: 0;
@@ -6541,7 +5489,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge, .wpcf7 input[type=submit] .badge, .woocommerce-info a.button .badge, .woocommerce-notices-wrapper .woocommerce-message a.button .badge {
+.btn .badge, .woocommerce-info a.button .badge, .woocommerce-notices-wrapper .woocommerce-message a.button .badge {
   position: relative;
   top: -1px;
 }
@@ -8145,7 +7093,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .wpcf7 input.placeholder[type=submit]::before, .woocommerce-info a.placeholder.button::before, .woocommerce-notices-wrapper .woocommerce-message a.placeholder.button::before {
+.placeholder.btn::before, .woocommerce-info a.placeholder.button::before, .woocommerce-notices-wrapper .woocommerce-message a.placeholder.button::before {
   display: inline-block;
   content: "";
 }
@@ -17166,39 +16114,10 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   border: 1px solid transparent;
 }
 
-/*
-* Use existing Bootstrap 4/5 classes and
-* variables to extend - override CF7 style
-*
-* Useful CF7 classes:
-* .wpcf7 the wrapper element
-* .wpcf7-form
-* .wpcf7-form-control
-* .wpcf7-text
-* .wpcf7-email
-* .wpcf7-textarea
-* .wpcf7-submit
-*/
-.wpcf7 {
-  max-width: 600px;
-  margin: 0 auto !important;
-}
-.wpcf7 .wpcf7-form p {
-  margin-bottom: 1rem;
-}
-.wpcf7 .wpcf7-form label {
-  width: 100%;
-}
-.wpcf7 .wpcf7-not-valid-tip {
-  color: theme-color("danger");
-}
-.wpcf7 .wpcf7-validation-errors {
-  color: theme-color("danger");
-  border: 1px solid #e9ecef;
-}
-
 /* Mexican Jeweler ColorblindSafe: */
 /*Autumn Landscape of the Sangre de Cristo Mountains in New Mexico*/
+/* FONTS
+=========================== */
 /* Text */
 /* Forms */
 /* fjalla-one-regular - latin */
@@ -17717,6 +16636,39 @@ body {
   font-size: 3.5rem;
 }
 
+.container {
+  max-width: 1136px;
+}
+
+.container-lg {
+  max-width: 1136px;
+}
+
+/*.container-md {
+	max-width: 1136px;
+}
+.container-sm {
+	max-width: 1136px;
+}*/
+.container-xl {
+  max-width: 1136px;
+}
+
+.container-xxl {
+  max-width: 1136px;
+}
+
+/*
+FIRST, SOME MATH TRANSLATING REM INTO PX:
+3.5rem = 56px;
+3rem = 16px * 3 = 48px,
+2.5rem = 40px,
+1.75rem = 28px,
+1.5rem = 24px;
+1.25rem = 20px;
+1.125rem = 18px;
+
+*/
 body {
   font-family: "archiaregular", Arial, Helvetica, sans-serif;
   font-size: 1.125rem;
@@ -17733,25 +16685,65 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   */
 }
 
-/*
-3.5rem = 56px;
-3rem = 16px * 3 = 48px,
-2.5rem = 40px,
-1.75rem = 28px,
+.entry-title {
+  color: #8F190B !important;
+  font-size: 3.5rem;
+}
 
-*/
 h1, .h1 {
   font-size: 3.5rem;
-  font-weight: 900;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
 }
 
 h2, .h2 {
   font-size: 3rem;
   font-weight: 700;
+  letter-spacing: 0.075rem;
 }
 
 h3, .h3 {
   font-size: 2.5rem;
+}
+
+h4, .h4 {
+  font-size: 1.75rem;
+}
+
+h5, .h5 {
+  font-size: 1.5rem;
+}
+
+h6, .h6 {
+  font-size: 1.25rem;
+}
+
+.wp-block-quote {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-left: 5px solid #C2210E;
+  padding: 0 1.5rem 0 1.5rem;
+}
+.wp-block-quote p {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.wp-block-quote cite {
+  color: #290600;
+}
+
+.wp-block-pullquote {
+  border-top: 5px solid #C2210E;
+  border-bottom: 5px solid #C2210E;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  margin: 1.5rem 0 1.5rem 0;
+}
+.wp-block-pullquote p {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .navbar-dark {
