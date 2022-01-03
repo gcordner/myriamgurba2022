@@ -11,9 +11,9 @@ FIRST, SOME MATH TRANSLATING REM INTO PX:
 */
 
 body {
-   font-family: "archiaregular", Arial, Helvetica, sans-serif; 
-   font-size: 1.125rem;
-/*     font-family: "Source Code Pro", Arial, Helvetica, sans-serif;  */
+   font-family: "archiaregular", Arial, Helvetica, sans-serif;
+   font-size: 1.125rem; 
+  /*   font-family: "Source Code Pro", Arial, Helvetica, sans-serif;  */
 /*   font-family: "Montserrat", Arial, Helvetica, sans-serif; */
 }
 
@@ -27,8 +27,8 @@ font-weight: 900;
 */}
 
 .entry-title {
-   color: $dark-red !important;
-   font-size: 3.5rem;
+   color: $brown !important;
+   @extend h1;
 }
 
 

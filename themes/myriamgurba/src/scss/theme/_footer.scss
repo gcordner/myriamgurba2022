@@ -1,0 +1,23 @@
+#wrapper-footer {
+    .wrapper {
+        background-color: $brown !important;
+    }
+}
+
+.footer-wrapper {
+    background-color: $brown;
+    color: $tan;
+
+}
+
+.site-info {
+    font-size: 0.9rem;
+    text-align:center;
+    p {
+        padding-top: $spacer;
+    }
+}
+
+.jeremiah {
+    color: pink;
+}

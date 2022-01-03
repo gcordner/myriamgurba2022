@@ -12,8 +12,9 @@
 //@import "assets/understrap/theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
 
 // Myriam Gurba Files //
-@import "myriamgurba/_myriamgurba_variables";                   // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
-@import "myriamgurba/fonts";
-@import "myriamgurba/myriamgurba";           // <---- Add your styles into this file
-@import "myriamgurba/typography";               // <--- All custom navbar styles
-@import "myriamgurba/navbar";               // <--- All custom navbar styles
+@import "theme/child_theme_variables";                   // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import "theme/fonts";
+@import "theme/child_theme";           // <---- Add your styles into this file
+@import "theme/typography";               // <--- All custom navbar styles
+@import "theme/navbar";               // <--- All custom navbar styles
+@import "theme/footer";

@@ -1,3 +1,13 @@
 //* NAVBAR *//
 
-.navbar-dark {background-color: $red !important;}
+.navbar-dark {background-color: $brown !important;}
+
+.navbar-brand {
+    @extend h1;
+}
+
+.navbar-dark {
+	.navbar-brand {
+		color: $tan;
+	}
+}
