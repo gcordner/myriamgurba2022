@@ -1,6 +1,0 @@
-{
-    "require": {
-        "algolia/algoliasearch-client-php": "^2.4",
-        "smalot/pdfparser": "^0.14.0"
-    }
-}
