@@ -3,7 +3,7 @@ Contributors: johnbillion
 Tags: debug, debug-bar, debugging, development, developer, performance, profiler, queries, query monitor, rest-api
 Requires at least: 3.7
 Tested up to: 5.8
-Stable tag: 3.8.0
+Stable tag: 3.8.1
 License: GPLv2 or later
 Requires PHP: 5.3
 Donate link: https://johnblackbourn.com/donations/
@@ -140,6 +140,13 @@ Yes. You can enable this on the Settings panel.
 In addition, if you like the plugin then I'd love for you to [leave a review](https://wordpress.org/support/view/plugin-reviews/query-monitor). Tell all your friends about it too!
 
 ## Changelog ##
+
+### 3.8.1 ###
+
+* Fixes an incompatibility with PHP versions prior to 7.2
+* Fixes a warning that was being triggered within the PHP header dispatcher
+* Introduces the `qm/component_type/{$type}` filter
+* Introduces a `QM_VERSION` constant
 
 ### 3.8.0 ###
 
@@ -453,17 +460,3 @@ New features! Read about them here: https://querymonitor.com/blog/2019/02/new-fe
 * Better handling of environments with unlimited execution time or memory limit. Adds a warning for both.
 * When an external cache isn't in use, provide some helpful info if an appropriate extension is installed.
 
-
-### 3.0.1 ###
-
-* Add even more hardening to the JS handling to prevent problems when jQuery is broken.
-* Remove the old `no-js` styles which don't work well with the new UI.
-* Correct the logic for showing the `Non-Core` component filter option.
-* Add another VIP function to the list of functions that call the HTTP API.
-* Add an inline warning highlight to capability checks that are empty or of a non-string type.
-* Add support for WordPress.com VIP Client MU plugins.
-* Add support for displaying laps as part of the timing information.
-* Add full support for namespaced Debug Bar add-on panels.
-* Switch back to depending on `jquery` instead of `jquery-core`.
-* Don't assume `php_uname()` is always callable. Add info about the host OS too.
-* Reset inline height attribute when the panel is closed.
