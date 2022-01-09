@@ -38,4 +38,31 @@ h1 {
     font-size: 1.25rem;
  }
 
+ #front-page {
+    //* FRONT PAGE STYLE OVERRIDES GO HERE *//
+
+    max-width: 900px;
+    margin: auto;
+    .wp-block-pullquote {
+        padding: 0 1rem 0 1rem;
+        margin: 0 0 1.5rem 0;
+
+    }
+
+    .wp-block-quote {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 0 1.5rem 0;
+        p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+        }
+        cite {
+            line-height: 1;
+        }
+    }
+    //* FRONT PAGE STYLE OVERRIDES ABOVE HERE *//
+}
+
 }

@@ -16773,44 +16773,6 @@ h6, .h6 {
   color: #F29727;
 }
 
-/* 
-For all info on bootstrap media queries, see this page:
-https://getbootstrap.com/docs/5.0/layout/breakpoints/
-
-Call the media queries using the functions outlined on the page.
-See https://www.understrapacademy.com/courses/take/instant-understrap/lessons/25540560-extraordinarily-simple-css-bootstrap-s-grid-responsive-breakpoints-sass-nesting-and-more
-around the 13 minute mark for more.
-*/
-@media (max-width: 576px) {
-  h1, .h1, .entry-title, .navbar-brand {
-    font-size: 2.3rem;
-  }
-  h1 .navbar-brand, .h1 .navbar-brand, .entry-title .navbar-brand, .navbar-brand .navbar-brand {
-    font-size: 2.3rem;
-  }
-
-  h2, .h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 0.075rem;
-  }
-
-  h3, .h3 {
-    font-size: 2.5rem;
-  }
-
-  h4, .h4 {
-    font-size: 1.75rem;
-  }
-
-  h5, .h5 {
-    font-size: 1.5rem;
-  }
-
-  h6, .h6 {
-    font-size: 1.25rem;
-  }
-}
 #wrapper-footer .wrapper {
   background-color: #401e01 !important;
 }
@@ -16879,4 +16841,65 @@ around the 13 minute mark for more.
 }
 #front-page .wp-block-quote cite {
   color: #290600;
+}
+
+/* 
+For all info on bootstrap media queries, see this page:
+https://getbootstrap.com/docs/5.0/layout/breakpoints/
+
+Call the media queries using the functions outlined on the page.
+See https://www.understrapacademy.com/courses/take/instant-understrap/lessons/25540560-extraordinarily-simple-css-bootstrap-s-grid-responsive-breakpoints-sass-nesting-and-more
+around the 13 minute mark for more.
+*/
+@media (max-width: 576px) {
+  h1, .h1, .entry-title, .navbar-brand {
+    font-size: 2.3rem;
+  }
+  h1 .navbar-brand, .h1 .navbar-brand, .entry-title .navbar-brand, .navbar-brand .navbar-brand {
+    font-size: 2.3rem;
+  }
+
+  h2, .h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.075rem;
+  }
+
+  h3, .h3 {
+    font-size: 2.5rem;
+  }
+
+  h4, .h4 {
+    font-size: 1.75rem;
+  }
+
+  h5, .h5 {
+    font-size: 1.5rem;
+  }
+
+  h6, .h6 {
+    font-size: 1.25rem;
+  }
+
+  #front-page {
+    max-width: 900px;
+    margin: auto;
+  }
+  #front-page .wp-block-pullquote {
+    padding: 0 1rem 0 1rem;
+    margin: 0 0 1.5rem 0;
+  }
+  #front-page .wp-block-quote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 1.5rem 0;
+  }
+  #front-page .wp-block-quote p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  #front-page .wp-block-quote cite {
+    line-height: 1;
+  }
 }
