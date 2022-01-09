@@ -20,10 +20,10 @@ get_header();
 <?php if ( is_front_page() ) : ?>
 	<section class="hero-home dark-overlay">
 		<div class="row">
-			<div class="d-none d-sm-block col-sm-6 col-md-4 col-lg-3"><img src="/wp-content/uploads/2022/01/myriam-gurba-02.jpg" alt="Black and white portrait of Myriam Gurba" class="img-fluid"></div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><img src="/wp-content/uploads/2022/01/myriam-gurba-01.jpg" alt="Black and white portrait of Myriam Gurba" class="img-fluid"></div>
-			<div class="d-none d-md-block d-lg-block d-xl-block col-md-4 col-lg-3"><img src="/wp-content/uploads/2022/01/myriam-gurba-03.jpg" alt="Black and white portrait of Myriam Gurba" class="img-fluid"></div>
-			<div class="d-none d-md-none d-lg-block d-xl-block col-lg-3"><img src="/wp-content/uploads/2022/01/myriam-gurba-02.jpg" alt="Black and white portrait of Myriam Gurba" class="img-fluid"></div>
+			<div class="d-none d-sm-block col-sm-6 col-md-4 col-lg-3"><img src="<?php echo site_url(); ?>/wp-content/uploads/2022/01/myriam-gurba-02.jpg" alt="Black and white portrait of Myriam Gurba" class="img-fluid"></div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><img src="<?php echo site_url(); ?>/wp-content/uploads/2022/01/myriam-gurba-01.jpg" alt="Black and white portrait of Myriam Gurba" class="img-fluid"></div>
+			<div class="d-none d-md-block d-lg-block d-xl-block col-md-4 col-lg-3"><img src="<?php echo site_url(); ?>/wp-content/uploads/2022/01/myriam-gurba-03.jpg" alt="Black and white portrait of Myriam Gurba" class="img-fluid"></div>
+			<div class="d-none d-md-none d-lg-block d-xl-block col-lg-3"><img src="<?php echo site_url(); ?>/wp-content/uploads/2022/01/myriam-gurba-02.jpg" alt="Black and white portrait of Myriam Gurba" class="img-fluid"></div>
 			</div>
 	
 	<div class="container py-7">
