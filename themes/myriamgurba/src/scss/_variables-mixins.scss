@@ -9,11 +9,35 @@ $primary: #000000;
 
 
 /* Mexican Jeweler ColorblindSafe: */
-$red: #C2210E;
+//$red: #C2210E;
 $olive: #9FA66A;
 $tan: #D9CAAD;
-$brown: #5C4333;
+//$brown: #5C4333;
 $dark-red: #8F190B;
+
+/* Guadalajara */
+/* Color Theme Swatches in Hex */
+$Guadalajara-1-hex: #A61F2B;
+$Guadalajara-2-hex: #337D78;
+$Guadalajara-3-hex: #D9C6A3;
+$Guadalajara-4-hex: #593414;
+$brown: #593414;
+
+$Guadalajara-5-hex: #D9ABA0;
+
+/* Color Theme Swatches in RGBA */
+$Guadalajara-1-rgba: rgba(165,31,42, 1);
+$Guadalajara-2-rgba: rgba(51,124,119, 1);
+$Guadalajara-3-rgba: rgba(216,198,163, 1);
+$Guadalajara-4-rgba: rgba(89,52,19, 1);
+$Guadalajara-5-rgba: rgba(216,170,160, 1);
+
+/* Color Theme Swatches in HSLA */
+$Guadalajara-1-hsla: hsla(354, 68, 38, 1);
+$Guadalajara-2-hsla: hsla(175, 42, 34, 1);
+$Guadalajara-3-hsla: hsla(38, 41, 74, 1);
+$Guadalajara-4-hsla: hsla(27, 63, 21, 1);
+$Guadalajara-5-hsla: hsla(11, 42, 73, 1);
 
 /*Autumn Landscape of the Sangre de Cristo Mountains in New Mexico*/
 $blue: #0597F2;
@@ -49,12 +73,6 @@ $tablet: 767px;
 $desktop: 991px;
 $wide: 1200px;
 $extra-wide: 1400px;
-
-/* FONTS
-=========================== */
-
-$font-family-sans-serif: "archiaregular", Arial, Helvetica, sans-serif !default;
-$headings-font-family: "Bebas Neue", Arial, Helvetica, sans-serif !important;
 
 
 %headingLight {

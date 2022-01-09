@@ -16,5 +16,7 @@
 @import "theme/fonts";
 @import "theme/child_theme";           // <---- Add your styles into this file
 @import "theme/typography";               // <--- All custom navbar styles
-@import "theme/navbar";               // <--- All custom navbar styles
+@import "theme/navbar"; 
+@import "theme/mobile";              // <--- All custom navbar styles
 @import "theme/footer";
+@import "theme/home";

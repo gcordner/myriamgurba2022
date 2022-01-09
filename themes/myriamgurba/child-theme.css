@@ -16115,6 +16115,9 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 }
 
 /* Mexican Jeweler ColorblindSafe: */
+/* Guadalajara */
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in Hex */
 /*Autumn Landscape of the Sangre de Cristo Mountains in New Mexico*/
 /* Text */
 /* Forms */
@@ -16127,6 +16130,15 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   /* IE9 Compat Modes */
   src: local(""), url("fonts/fjalla-one-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/fjalla-one-v8-latin-regular.woff2") format("woff2"), url("fonts/fjalla-one-v8-latin-regular.woff") format("woff"), url("fonts/fjalla-one-v8-latin-regular.ttf") format("truetype"), url("fonts/fjalla-one-v8-latin-regular.svg#FjallaOne") format("svg");
   /* Legacy iOS */
+}
+/* vISAGE */
+@font-face {
+  font-family: "visage";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/fjalla-one-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("fonts/visage-bold-demolished.woff2") format("woff2"), url("fonts/visage-bold-demolished.woff") format("woff");
 }
 /* anton-regular - latin */
 @font-face {
@@ -16622,7 +16634,7 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   /* Legacy iOS */
 }
 body {
-  background-color: #D9CAAD;
+  background-color: #D9C6A3;
 }
 
 .container {
@@ -16656,6 +16668,7 @@ FIRST, SOME MATH TRANSLATING REM INTO PX:
 1.5rem = 24px;
 1.25rem = 20px;
 1.125rem = 18px;
+0.85rem = 14px;
 
 */
 body {
@@ -16709,7 +16722,7 @@ h6, .h6 {
 .wp-block-quote {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  border-left: 5px solid #C2210E;
+  border-left: 5px solid #A61F2B;
   padding: 0 1.5rem 0 1.5rem;
 }
 .wp-block-quote p {
@@ -16722,8 +16735,8 @@ h6, .h6 {
 }
 
 .wp-block-pullquote {
-  border-top: 5px solid #C2210E;
-  border-bottom: 5px solid #C2210E;
+  border-top: 5px solid #A61F2B;
+  border-bottom: 5px solid #A61F2B;
   padding: 1.5rem 3rem 1.5rem 3rem;
   margin: 1.5rem 0 1.5rem 0;
 }
@@ -16732,23 +16745,79 @@ h6, .h6 {
   font-size: 1.75rem;
   font-weight: 600;
   font-style: italic;
+  margin-bottom: 0;
 }
 
 .navbar-dark {
   background-color: #401e01 !important;
 }
 
-.navbar-dark .navbar-brand {
-  color: #D9CAAD;
+.navbar-brand {
+  font-family: "visage", serif;
 }
 
+.navbar-dark .navbar-brand {
+  color: #f9f9f9;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #f9f9f9;
+  font-size: 1rem;
+}
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #F29727;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #F29727;
+}
+
+/* 
+For all info on bootstrap media queries, see this page:
+https://getbootstrap.com/docs/5.0/layout/breakpoints/
+
+Call the media queries using the functions outlined on the page.
+See https://www.understrapacademy.com/courses/take/instant-understrap/lessons/25540560-extraordinarily-simple-css-bootstrap-s-grid-responsive-breakpoints-sass-nesting-and-more
+around the 13 minute mark for more.
+*/
+@media (max-width: 576px) {
+  h1, .h1, .entry-title, .navbar-brand {
+    font-size: 2.3rem;
+  }
+  h1 .navbar-brand, .h1 .navbar-brand, .entry-title .navbar-brand, .navbar-brand .navbar-brand {
+    font-size: 2.3rem;
+  }
+
+  h2, .h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.075rem;
+  }
+
+  h3, .h3 {
+    font-size: 2.5rem;
+  }
+
+  h4, .h4 {
+    font-size: 1.75rem;
+  }
+
+  h5, .h5 {
+    font-size: 1.5rem;
+  }
+
+  h6, .h6 {
+    font-size: 1.25rem;
+  }
+}
 #wrapper-footer .wrapper {
   background-color: #401e01 !important;
 }
 
 .footer-wrapper {
   background-color: #401e01;
-  color: #D9CAAD;
+  color: #D9C6A3;
 }
 
 .site-info {
@@ -16758,7 +16827,56 @@ h6, .h6 {
 .site-info p {
   padding-top: 1rem;
 }
+.site-info a {
+  color: #D9C6A3;
+  text-decoration: underline;
+}
+.site-info a:hover {
+  color: #F29727;
+}
+.site-info a:focus {
+  color: #F29727;
+}
 
-.jeremiah {
-  color: pink;
+.hero-home .row {
+  --bs-gutter-x: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+#front-page {
+  max-width: 900px;
+  margin: auto;
+}
+#front-page .wp-block-pullquote {
+  border-top: none;
+  border-bottom: none;
+  padding: 0 3rem 0 3rem;
+  margin: 0 0 1.5rem 0;
+}
+#front-page .wp-block-pullquote p {
+  font-family: "Bebas Neue", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+}
+#front-page .wp-block-quote {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-left: none;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+#front-page .wp-block-quote p {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 0;
+}
+#front-page .wp-block-quote cite {
+  color: #290600;
 }

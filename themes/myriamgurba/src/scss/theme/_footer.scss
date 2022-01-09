@@ -16,8 +16,15 @@
     p {
         padding-top: $spacer;
     }
+    a {
+        color: $tan;
+        text-decoration: underline;
+        &:hover {
+            color: $orange;
+        }
+        &:focus {
+            color: $orange;
+        }
+    }
 }
 
-.jeremiah {
-    color: pink;
-}

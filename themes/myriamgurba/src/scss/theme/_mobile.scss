@@ -6,3 +6,36 @@ Call the media queries using the functions outlined on the page.
 See https://www.understrapacademy.com/courses/take/instant-understrap/lessons/25540560-extraordinarily-simple-css-bootstrap-s-grid-responsive-breakpoints-sass-nesting-and-more
 around the 13 minute mark for more.
 */
+
+@media (max-width: 576px) {
+    
+h1 {
+    font-size: 2.3rem;
+    .navbar-brand {
+        font-size:2.3rem;
+    }
+ }
+ 
+ h2 {
+    font-size: 3.0rem;
+    font-weight: 700;
+    letter-spacing: 0.075rem;
+ }
+ 
+ h3 {
+    font-size: 2.5rem;
+ }
+ 
+ h4 {
+    font-size: 1.75rem;
+ }
+ 
+ h5 {
+    font-size: 1.5rem;
+ }
+ 
+ h6 {
+    font-size: 1.25rem;
+ }
+
+}
