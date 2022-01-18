@@ -7,7 +7,7 @@ See https://www.understrapacademy.com/courses/take/instant-understrap/lessons/25
 around the 13 minute mark for more.
 */
 
-@media (max-width: 576px) {
+@include media-breakpoint-down(sm) {
     
 h1 {
     font-size: 2.3rem;
@@ -24,6 +24,9 @@ h1 {
  
  h3 {
     font-size: 2.5rem;
+    .book-subheading {
+        font-size: 1.75rem;
+    }
  }
  
  h4 {
@@ -38,11 +41,15 @@ h1 {
     font-size: 1.25rem;
  }
 
- #front-page {
-    //* FRONT PAGE STYLE OVERRIDES GO HERE *//
+ .book-subheading {
+     font-size: 1.75rem;
+ }
 
-    max-width: 900px;
-    margin: auto;
+ ol, ul {
+    padding-left: 1rem;
+}
+
+ 
     .wp-block-pullquote {
         padding: 0 1rem 0 1rem;
         margin: 0 0 1.5rem 0;
@@ -54,7 +61,7 @@ h1 {
         margin-right: 0;
         padding: 0 0 1.5rem 0;
         p {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 400;
             font-style: italic;
         }
@@ -62,7 +69,25 @@ h1 {
             line-height: 1;
         }
     }
-    //* FRONT PAGE STYLE OVERRIDES ABOVE HERE *//
 }
 
+#front-page {
+	.wp-block-quote {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0 0.5rem 0.5rem 0.5rem;
+	}
 }
+
+
+.mobi-show
+{
+    display: block;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .mobi-show {
+      display: none;
+    }
+}
+

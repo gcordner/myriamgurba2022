@@ -16634,7 +16634,7 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   /* Legacy iOS */
 }
 body {
-  background-color: #D9C6A3;
+  background-color: #FAF9F4;
 }
 
 .container {
@@ -16657,6 +16657,48 @@ body {
 
 .container-xxl {
   max-width: 1136px;
+}
+
+hr {
+  margin: 2rem 0 2rem 0;
+  color: #8F190B;
+  border: 0;
+  border-top-color: #8F190B;
+  border-top-style: none;
+  border-top-width: 0px;
+  border-bottom-color: #8F190B;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  opacity: 1;
+}
+hr .wp-block-separator {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  opacity: 1 !important;
+}
+
+.price {
+  margin-top: 2rem;
+}
+
+.wp-block-coblocks-accordion-item__title.has-background {
+  border-radius: 4px;
+  padding: 0;
+  position: relative;
+}
+.wp-block-coblocks-accordion-item__title.has-background:not(.has-background) {
+  background: transparent;
+}
+
+.wp-block-coblocks-accordion-item__title {
+  border-radius: 4px;
+  padding: 0;
+  position: relative;
+  font-style: italic;
+  font-weight: bold;
+}
+.wp-block-coblocks-accordion-item__title:not(.has-background) {
+  background: transparent;
 }
 
 /*
@@ -16688,7 +16730,7 @@ h1, .navbar-brand, .entry-title, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h
 }
 
 .entry-title {
-  color: #401e01 !important;
+  /*color: $brown !important;*/
 }
 
 h1, .navbar-brand, .h1, .entry-title {
@@ -16722,7 +16764,7 @@ h6, .h6 {
 .wp-block-quote {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  border-left: 5px solid #A61F2B;
+  border-left: 5px solid #a61f2b;
   padding: 0 1.5rem 0 1.5rem;
 }
 .wp-block-quote p {
@@ -16735,8 +16777,8 @@ h6, .h6 {
 }
 
 .wp-block-pullquote {
-  border-top: 5px solid #A61F2B;
-  border-bottom: 5px solid #A61F2B;
+  border-top: 5px solid #a61f2b;
+  border-bottom: 5px solid #a61f2b;
   padding: 1.5rem 3rem 1.5rem 3rem;
   margin: 1.5rem 0 1.5rem 0;
 }
@@ -16749,7 +16791,7 @@ h6, .h6 {
 }
 
 .navbar-dark {
-  background-color: #401e01 !important;
+  background-color: #290600 !important;
 }
 
 .navbar-brand {
@@ -16757,29 +16799,29 @@ h6, .h6 {
 }
 
 .navbar-dark .navbar-brand {
-  color: #f9f9f9;
+  color: #FAF9F4;
 }
 
 .navbar-dark .navbar-nav .nav-link {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: #f9f9f9;
+  color: #FAF9F4;
   font-size: 1rem;
 }
 .navbar-dark .navbar-nav .nav-link:focus {
-  color: #F29727;
+  color: #f29727;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: #F29727;
+  color: #f29727;
 }
 
 #wrapper-footer .wrapper {
-  background-color: #401e01 !important;
+  background-color: #290600 !important;
 }
 
 .footer-wrapper {
-  background-color: #401e01;
-  color: #D9C6A3;
+  background-color: #290600;
+  color: #FAF9F4;
 }
 
 .site-info {
@@ -16790,14 +16832,14 @@ h6, .h6 {
   padding-top: 1rem;
 }
 .site-info a {
-  color: #D9C6A3;
+  color: #FAF9F4;
   text-decoration: underline;
 }
 .site-info a:hover {
-  color: #F29727;
+  color: #f29727;
 }
 .site-info a:focus {
-  color: #F29727;
+  color: #f29727;
 }
 
 .hero-home .row {
@@ -16843,6 +16885,87 @@ h6, .h6 {
   color: #290600;
 }
 
+/* CSS */
+.button-orange {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  margin-bottom: 1rem;
+}
+.button-orange:after {
+  content: "";
+  background-color: #f29727;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.button-orange:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-orange {
+    padding: 13px 50px 13px;
+  }
+}
+.button-green {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  margin-bottom: 1.25rem;
+}
+.button-green:after {
+  content: "";
+  background-color: #9fa66a;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.button-green:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-green {
+    padding: 13px 50px 13px;
+  }
+}
 /* 
 For all info on bootstrap media queries, see this page:
 https://getbootstrap.com/docs/5.0/layout/breakpoints/
@@ -16851,7 +16974,7 @@ Call the media queries using the functions outlined on the page.
 See https://www.understrapacademy.com/courses/take/instant-understrap/lessons/25540560-extraordinarily-simple-css-bootstrap-s-grid-responsive-breakpoints-sass-nesting-and-more
 around the 13 minute mark for more.
 */
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
   h1, .h1, .entry-title, .navbar-brand {
     font-size: 2.3rem;
   }
@@ -16868,6 +16991,9 @@ around the 13 minute mark for more.
   h3, .h3 {
     font-size: 2.5rem;
   }
+  h3 .book-subheading, .h3 .book-subheading {
+    font-size: 1.75rem;
+  }
 
   h4, .h4 {
     font-size: 1.75rem;
@@ -16881,25 +17007,45 @@ around the 13 minute mark for more.
     font-size: 1.25rem;
   }
 
-  #front-page {
-    max-width: 900px;
-    margin: auto;
+  .book-subheading {
+    font-size: 1.75rem;
   }
-  #front-page .wp-block-pullquote {
+
+  ol, ul {
+    padding-left: 1rem;
+  }
+
+  .wp-block-pullquote {
     padding: 0 1rem 0 1rem;
     margin: 0 0 1.5rem 0;
   }
-  #front-page .wp-block-quote {
+
+  .wp-block-quote {
     margin-left: 0;
     margin-right: 0;
     padding: 0 0 1.5rem 0;
   }
-  #front-page .wp-block-quote p {
-    font-size: 1.5rem;
+  .wp-block-quote p {
+    font-size: 1.25rem;
     font-weight: 400;
     font-style: italic;
   }
-  #front-page .wp-block-quote cite {
+  .wp-block-quote cite {
     line-height: 1;
+  }
+}
+#front-page .wp-block-quote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.mobi-show {
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .mobi-show {
+    display: none;
   }
 }
