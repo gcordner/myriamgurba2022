@@ -39,7 +39,7 @@
         <?php if($articleUrl) { 
         echo '<a href="'.$articleUrl.'" target="_blank" title="'.get_the_title().'">'."I'm a little teapot short and stout".'</a>';
         } else {
-            echo "Here is my handle and here is my spout.";
+            echo '<a href="' . esc_url( get_permalink( get_the_ID() ) ).'" target="_blank"> Here is my handle and here is my spout. </a>';
         }
         ?>
  <!-- MAGAZINE AND DATE --> 
@@ -73,6 +73,13 @@
       <!-- .entry-header -->
       <div class="entry-content">
          <?php
+         /* to remove READ MORE link from excerpt:
+         https://stackoverflow.com/questions/42202169/wordpress-remove-read-more-from-excerpt
+            
+         or do it using css:
+         https://wpmarks.com/how-to-remove-the-read-more-button-in-wordpress/
+
+         */
             the_excerpt();
             understrap_link_pages();
 
