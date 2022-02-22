@@ -3,11 +3,11 @@
  * Plugin Name: 	  Radio Buttons for Taxonomies
  * Plugin URI: 		  http://www.kathyisawesome.com/441/radio-buttons-for-taxonomies
  * Description: 	  Use radio buttons for any taxonomy so users can only select 1 term at a time
- * Version:           2.3.1
+ * Version:           2.4.2
  * Author:            helgatheviking
  * Author URI:        https://www.kathyisawesome.com
  * Requires at least: 4.5.0
- * Tested up to:      5.2.4
+ * Tested up to:      5.8.2
  *
  * Text Domain:       radio-buttons-for-taxonomies
  * Domain Path:       /languages/
@@ -46,7 +46,7 @@ class Radio_Buttons_For_Taxonomies {
 	protected static $_instance = null;
 
 	/* @var str $version */
-	public static $version = '2.3.1';
+	public static $version = '2.4.2';
 
 	/* @var array $options - The plugin's options. */
 	public $options = array();
@@ -100,11 +100,11 @@ class Radio_Buttons_For_Taxonomies {
 		// Include required files.
 		include_once 'inc/class-wordpress-radio-taxonomy.php';
 
-		if ( $this->is_wp_version_gte('4.4.0') ) {
-			include_once 'inc/class-walker-category-radio.php';
-		} else {
-			include_once 'inc/class-walker-category-radio-old.php';
-		}
+		// Include taxonomy walker.
+		include_once 'inc/class-walker-category-radio.php';
+
+		// Load compatibility modules.
+		include_once 'inc/class-rb4t-compatibility.php';
 
 		// Set-up Action and Filter Hooks.
 		register_uninstall_hook( __FILE__, array( __CLASS__, 'delete_plugin_options' ) );
@@ -136,8 +136,8 @@ class Radio_Buttons_For_Taxonomies {
 		// Add "no term" to taxonomy rest result for Gutenberg sidebar.
 		add_action( 'rest_api_init', array( $this, 'register_rest_field' ) );
 
-		// Multilingualpress support.
-		add_filter( 'mlp_mutually_exclusive_taxonomies', array( $this, 'multilingualpress_support' ) );
+		// Limit return to first term... just in case.
+		add_filter( 'get_the_terms', array( $this, 'restrict_terms' ), 10, 3 );
 
 	}
 
@@ -295,9 +295,11 @@ class Radio_Buttons_For_Taxonomies {
 			'radiotax-gutenberg-sidebar',
 			plugins_url( 'js/dist/index.js', __FILE__ ),
 			$asset_file['dependencies'],
-			self::$version,
+			$asset_file['version'],
 			true
 		);
+
+		wp_set_script_translations( 'radiotax-gutenberg-sidebar', 'radio-buttons-for-taxonomies' );
 
 		$i18n = array( 'radio_taxonomies' => (array) $this->get_options( 'taxonomies' ) );
 		wp_localize_script( 'radiotax-gutenberg-sidebar', 'RB4Tl18n', $i18n );
@@ -368,7 +370,40 @@ class Radio_Buttons_For_Taxonomies {
 				),
 			)
 		);
-		
+
+		register_rest_field(
+			'taxonomy',
+			'default_term',
+			array(
+				'get_callback' => function ( $params ) {
+					return intval( get_option( 'default_' . $params['slug'], 0 ) );
+			    },
+				'schema' => array(
+					'description' => __( 'Taxonomy default term ID.', 'radio-buttons-for-taxonomies' ),
+					'type'        => 'int'
+				),
+			)
+		);
+
+	}
+
+
+
+	/**
+	 * Filters the list of terms attached to the given post, limit response to single term.
+	 *
+	 * @since 2.4.0
+	 *
+	 * @param WP_Term[]|WP_Error $terms    Array of attached terms, or WP_Error on failure.
+	 * @param int                $post_id  Post ID.
+	 * @param string             $taxonomy Name of the taxonomy.
+	 * @return WP_Term[]|WP_Error
+	 */
+	function restrict_terms( $terms, $post_id, $taxonomy ) {
+		if ( ! is_wp_error( $terms ) && $this->is_radio_tax( $taxonomy ) && count( $terms) > 1 ) {
+			$terms = array_slice( $terms, 0, 1 );
+		}
+		return $terms;
 	}
 
 	// ------------------------------------------------------------------------------
@@ -467,23 +502,12 @@ class Radio_Buttons_For_Taxonomies {
 	/**
 	 * Make sure Multilingual Press shows the correct user interface.
 	 *
-	 * This method is called after switch_to_blog(), so we have to fetch the
-	 * options separately.
-	 *
-	 * @wp-hook mlp_mutually_exclusive_taxonomies
-	 * @param array $taxonomies
-	 * @return array
+	 * @deprecated 2.4.0 - Moved to separate compat class module.
+	 * @see: RB4T_MultilingualPress_Compatibility::multilingualpress_support()
 	 */
 	public function multilingualpress_support( Array $taxonomies ) {
-
-		$remote_options = get_option( 'radio_button_for_taxonomies_options', array() );
-
-		if ( empty( $remote_options['taxonomies'] ) )
-			return $taxonomies;
-
-		$all_taxonomies = array_merge( (array) $remote_options['taxonomies'], $taxonomies );
-
-		return array_unique( $all_taxonomies );
+		_deprecated_function( __METHOD__ . '()', '2.4.0', 'RB4T_MultilingualPress_Compatibility::multilingualpress_support()' );
+		RB4T_MultilingualPress_Compatibility::multilingualpress_support( $taxonomies );
 	}
 
 } // End class.

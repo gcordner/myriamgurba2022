@@ -49,7 +49,7 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 *
 		 * @var string
 		 */
-        public $ckyes_scan_data;
+		public $ckyes_scan_data;
 
 		public $user_email;
 		/**
@@ -87,7 +87,7 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 
 			add_action( 'init', array( $this, 'init' ) );
 			add_action( 'wp_ajax_cookieyes_ajax_main_controller', array( $this, 'ajax_main_controller' ), 10, 0 );
-			add_action( 'wt_cli_after_advanced_settings', array( $this, 'ckyes_settings' ),11 );
+			add_action( 'wt_cli_after_advanced_settings', array( $this, 'ckyes_settings' ), 11 );
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		}
 		/**
@@ -121,21 +121,22 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 * @return void
 		 */
 		public function ajax_main_controller() {
-			if ( ! Wt_Cookie_Law_Info_Security_Helper::check_write_access( CLI_PLUGIN_FILENAME, $this->module_id ) ) {
-				wp_die( __( 'You do not have sufficient permission to perform this operation', 'cookie-law-info' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+			check_ajax_referer( $this->module_id, '_wpnonce' );
+			if ( ! current_user_can( 'manage_options' ) ) {
+				wp_die( esc_html__( 'You do not have sufficient permission to perform this operation', 'cookie-law-info' ) );
 			}
-			if ( isset( $_POST['sub_action'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			if ( isset( $_POST['sub_action'] ) ) {
 
-				$sub_action = Wt_Cookie_Law_Info_Security_Helper::sanitize_item( $_POST['sub_action'] ); // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				$sub_action = sanitize_text_field( wp_unslash( $_POST['sub_action'] ) ); // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 				if ( in_array( $sub_action, $this->ckyes_actions, true ) && method_exists( $this, $sub_action ) ) {
 
-					$response    = $this->{$sub_action}();
-					$data        = array();
-					$status      = ( isset( $response['status'] ) ? $response['status'] : false );
-					$status_code = ( isset( $response['code'] ) ? $response['code'] : '' );
-					$message     = ( isset( $response['message'] ) ? $response['message'] : false );
-					$html        = ( isset( $response['html'] ) ? $response['html'] : false );
+					$response       = $this->{$sub_action}();
+					$data           = array();
+					$status         = ( isset( $response['status'] ) ? $response['status'] : false );
+					$status_code    = ( isset( $response['code'] ) ? $response['code'] : '' );
+					$message        = ( isset( $response['message'] ) ? $response['message'] : false );
+					$html           = ( isset( $response['html'] ) ? $response['html'] : false );
 					$data['status'] = $status;
 					if ( ! empty( $status_code ) ) {
 						$data['code'] = $status_code;
@@ -194,15 +195,15 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 */
 		public function enqueue_scripts() {
 
-			$allowed_pages = apply_filters( 'wt_cli_ckyes_allowed_pages', array( 'cookie-law-info-cookie-scaner','cookie-law-info' ) );
+			$allowed_pages = apply_filters( 'wt_cli_ckyes_allowed_pages', array( 'cookie-law-info-cookie-scaner', 'cookie-law-info' ) );
 			if ( isset( $_GET['post_type'] ) && CLI_POST_TYPE === $_GET['post_type'] && isset( $_GET['page'] ) && in_array( $_GET['page'], $allowed_pages, true ) ) { // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				$params = array(
 					'nonce'    => wp_create_nonce( esc_html( $this->module_id ) ),
 					'ajax_url' => admin_url( 'admin-ajax.php' ),
 					'messages' => array(
-						'error' => __( 'Invalid request', 'cookie-law-info' ),
+						'error'          => __( 'Invalid request', 'cookie-law-info' ),
 						'delete_success' => __( 'Successfully deleted!', 'cookie-law-info' ),
-						'delete_failed' => __( 'Delete failed, please try again later', 'cookie-law-info' ),
+						'delete_failed'  => __( 'Delete failed, please try again later', 'cookie-law-info' ),
 					),
 				);
 				wp_enqueue_script( 'cookie-law-info-ckyes-admin', CLI_PLUGIN_URL . 'admin/js/cookie-law-info-ckyes.js', array( 'cookie-law-info' ), CLI_VERSION, true );
@@ -265,13 +266,13 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 									</style>
 				<div class='wt-cli-modal' id='wt-cli-ckyes-modal-password-reset'>
 					<div class="wt-cli-modal-header">
-						<h4><?php echo __( 'Reset Password', 'cookie-law-info' ); // phpcs:ignore WordPress.Security.EscapeOutput ?></h4>
+						<h4><?php echo esc_html__( 'Reset Password', 'cookie-law-info' ); // phpcs:ignore WordPress.Security.EscapeOutput ?></h4>
 					</div>
 					<div class="wt-cli-modal-body">
 						<form id="wt-cli-ckyes-form-password-reset">
-							<input type="email" name="ckyes-reset-email" class="wt-cli-form-input" placeholder="<?php echo __('Email','cookie-law-info'); ?>" value="<?php echo esc_attr( $this->get_user_email() ); ?>" />
+							<input type="email" name="ckyes-reset-email" class="wt-cli-form-input" placeholder="<?php echo esc_attr__( 'Email', 'cookie-law-info' ); ?>" value="<?php echo esc_attr( $this->get_user_email() ); ?>" />
 							<div class="wt-cli-action-container">
-								<button id="wt-cli-ckyes-password-reset-btn" class="wt-cli-action button button-primary"><?php echo __( 'Send password reset email', 'cookie-law-info' ); // phpcs:ignore WordPress.Security.EscapeOutput ?></button>
+								<button id="wt-cli-ckyes-password-reset-btn" class="wt-cli-action button button-primary"><?php echo esc_html__( 'Send password reset email', 'cookie-law-info' ); ?></button>
 							</div>
 
 						</form>
@@ -279,14 +280,14 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 				</div>
 				<div class='wt-cli-modal' id='wt-cli-ckyes-modal-register'>
 					<span class="wt-cli-modal-js-close">×</span>
-					<div class="wt-cli-modal-header"><h4><?php echo __( 'Welcome to CookieYes', 'cookie-law-info' ); ?></h4></div>
+					<div class="wt-cli-modal-header"><h4><?php echo esc_html__( 'Welcome to CookieYes', 'cookie-law-info' ); ?></h4></div>
 					<div class="wt-cli-modal-body">
-						<p><?php echo sprintf( __( 'Enter your email to create an account with CookieYes. By clicking “Connect”, your CookieYes account will be created automatically and you can start scanning your website for cookies right away!', 'cookie-law-info' ), $this->get_user_email() ); // phpcs:ignore WordPress.Security.EscapeOutput ?></p>
+						<p><?php echo esc_html__( 'Enter your email to create an account with CookieYes. By clicking “Connect”, your CookieYes account will be created automatically and you can start scanning your website for cookies right away!', 'cookie-law-info' ); // phpcs:ignore WordPress.Security.EscapeOutput ?></p>
 						<form id="wt-cli-ckyes-form-register">
-							<input type="email" name="ckyes-email" class="wt-cli-form-input" placeholder="<?php echo __('Email','cookie-law-info'); ?>" value = "<?php echo esc_attr( $this->get_user_email() ); ?>" />
+							<input type="email" name="ckyes-email" class="wt-cli-form-input" placeholder="<?php echo esc_attr__( 'Email', 'cookie-law-info' ); ?>" value = "<?php echo esc_attr( $this->get_user_email() ); ?>" />
 							<div class="wt-cli-action-container">
 								<div class="wt-cli-action-group">
-									<button id="wt-cli-ckyes-register-btn" class="wt-cli-action button button-primary"><?php echo __( 'Connect', 'cookie-law-info' );  // phpcs:ignore WordPress.Security.EscapeOutput ?></button>
+									<button id="wt-cli-ckyes-register-btn" class="wt-cli-action button button-primary"><?php echo esc_html__( 'Connect', 'cookie-law-info' ); ?></button>
 								</div>
 							</div>
 						</form>
@@ -349,9 +350,10 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 */
 		public function get_user_email() {
 			if ( ! $this->user_email ) {
-				$this->user_email = get_option( 'admin_email' );
+				$cookieyes_options = $this->get_cookieyes_options();
+				$this->user_email  = ( isset( $cookieyes_options['email'] ) ? $cookieyes_options['email'] : '' );
 			}
-			return $this->user_email;
+			return sanitize_email( $this->user_email );
 		}
 		/**
 		 * Get CookieYes access token
@@ -410,12 +412,14 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 				$cky_license       = array(
 					'status' => 0,
 					'token'  => '',
+					'email'  => '',
 				);
 				$cookieyes_options = get_option( 'wt_cli_cookieyes_options', false );
 				if ( false !== $cookieyes_options && is_array( $cookieyes_options ) ) {
 
 					$cky_license['status'] = intval( isset( $cookieyes_options['status'] ) ? $cookieyes_options['status'] : 0 );
 					$cky_license['token']  = isset( $cookieyes_options['token'] ) ? $cookieyes_options['token'] : '';
+					$cky_license['email']  = isset( $cookieyes_options['email'] ) ? $cookieyes_options['email'] : '';
 				} else {
 					return false;
 				}
@@ -444,16 +448,14 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 * @return void
 		 */
 		public function set_cookieyes_options( $options ) {
-
-			$cookieyes_options = get_option( 'wt_cli_cookieyes_options', false );
-
-			$cky_license = array(
+			$cky_license        = array(
 				'status' => 0,
 				'token'  => '',
+				'email'  => '',
 			);
-
 			$this->ckyes_status = $cky_license['status']  = ( isset( $options['status'] ) ? intval( $options['status'] ) : 0 );
 			$this->token        = $cky_license['token']   = isset( $options['token'] ) ? sanitize_text_field( $options['token'] ) : '';
+			$this->user_email   = $cky_license['email']   = isset( $options['email'] ) ? sanitize_email( $options['email'] ) : '';
 
 			update_option( 'wt_cli_cookieyes_options', $cky_license );
 		}
@@ -561,11 +563,13 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 * @return array
 		 */
 		public function register() {
+			check_ajax_referer( $this->module_id, '_wpnonce' );
+
 			$api_response = $this->get_default_response();
 			$endpoint     = $this->get_base_path() . 'users/register';
 
 			$url              = $this->get_website_url();
-			$email            = isset( $_POST['email'] ) ? wp_unslash( $_POST['email'] ) : $email; // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$email            = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : '';
 			$this->user_email = $email;
 			if ( empty( $email ) || empty( $url ) ) {
 				$api_response['code'] = 101;
@@ -581,6 +585,7 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 					$cky_options = array(
 						'status' => 2, // Waiting for email verification.
 						'token'  => $response['token'],
+						'email'  => $this->get_user_email(),
 					);
 					$this->set_cookieyes_options( $cky_options );
 					$api_response['status'] = true;
@@ -606,17 +611,15 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 */
 		public function login() {
 
+			check_ajax_referer( $this->module_id, '_wpnonce' );
 			$api_response = $this->get_default_response();
-
-			$endpoint = $this->get_base_path() . 'users/login';
+			$endpoint     = $this->get_base_path() . 'users/login';
 
 			$url   = $this->get_website_url();
 			$email = $this->get_user_email();
 
-			$email    = isset( $_POST['email'] ) ? $_POST['email'] : $email; // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$email    = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : $email;
 			$password = isset( $_POST['password'] ) ? $_POST['password'] : ''; // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-
-			$email    = Wt_Cookie_Law_Info_Security_Helper::sanitize_item( $email );
 
 			if ( empty( $email ) || empty( $url ) || empty( $password ) ) {
 				$api_response['code'] = 101;
@@ -641,6 +644,7 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 						$cky_options = array(
 							'status' => true,
 							'token'  => $response['token'],
+							'email'  => $this->get_user_email(),
 						);
 						$this->set_cookieyes_options( $cky_options );
 						$this->set_ckyes_branding_default();
@@ -685,7 +689,7 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 							if ( $response['error_code'] == 1005 ) {
 								$response = $this->refresh_scan_token();
 							} elseif ( $response['error_code'] == 1007 ) {
-								$api_response['code']   = self::EC_WT_CKYES_PENDING_VERIFICATION;
+								$api_response['code'] = self::EC_WT_CKYES_PENDING_VERIFICATION;
 							}
 						}
 					}
@@ -714,12 +718,12 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 * @return array
 		 */
 		public function reset_password() {
+			check_ajax_referer( $this->module_id, '_wpnonce' );
 			$api_response = $this->get_default_response();
 
 			$endpoint = $this->get_base_path() . 'password/reset';
 
-			$email = isset( $_POST['email'] ) ? wp_unslash( $_POST['email'] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			$email = Wt_Cookie_Law_Info_Security_Helper::sanitize_item( $email );
+			$email = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 			if ( empty( $email ) ) {
 				$api_response['code'] = 101;
@@ -771,14 +775,14 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 * @return array
 		 */
 		public function connect_disconnect() {
-
+			check_ajax_referer( $this->module_id, '_wpnonce' );
 			$api_response = array(
 				'status'  => false,
 				'code'    => 100,
 				'message' => '',
 			);
 			$message      = __( 'Successfully disconnected with Cookieyes', 'cookie-law-info' );
-			$action       = isset( $_POST['account_action'] ) ? wp_unslash( $_POST['account_action'] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$action       = isset( $_POST['account_action'] ) ? sanitize_text_field( wp_unslash( $_POST['account_action'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 			if ( empty( $action ) ) {
 				$api_response['message'] = __( 'Could not identify the action', 'cookie-law-info' );
 				return $api_response;
@@ -887,16 +891,16 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 					<tr valign="top">
 						<th scope="row"></th>
 						<td>
-							<button class="wt-cli-ckyes-delete-btn button" data-action="show-prompt"><?php echo __('Delete site data from CookieYes	'); ?></button>
+							<button class="wt-cli-ckyes-delete-btn button" data-action="show-prompt"><?php echo esc_html( __( 'Delete site data from CookieYes', 'cookie-law-info' ) ); ?></button>
 						</td>
 					</tr>
 				</table>
 				<div class='wt-cli-modal' id='wt-cli-ckyes-modal-delete-account'>
 					<span class="wt-cli-modal-js-close">×</span>
-					<div class="wt-cli-modal-header"><h4><?php echo __( 'Do you really want to delete your website from CookieYes', 'cookie-law-info' ); ?></h4></div>
+					<div class="wt-cli-modal-header"><h4><?php echo esc_html__( 'Do you really want to delete your website from CookieYes', 'cookie-law-info' ); ?></h4></div>
 					<div class="wt-cli-modal-body">
-						<p><?php echo sprintf( __( 'This action will clear all your website data from CookieYes. If you have multiple websites added to your CookieYes account, then only the data associated with this website get deleted. Otherwise, your entire account will be deleted.', 'cookie-law-info' ), $this->get_user_email() ); // phpcs:ignore WordPress.Security.EscapeOutput ?></p>
-						<button class="wt-cli-action wt-cli-ckyes-delete-btn button button-primary" data-action="delete-account" ><?php echo __( 'Delete this website', 'cookie-law-info' );  // phpcs:ignore WordPress.Security.EscapeOutput ?></button>
+						<p><?php echo esc_html__( 'This action will clear all your website data from CookieYes. If you have multiple websites added to your CookieYes account, then only the data associated with this website get deleted. Otherwise, your entire account will be deleted.', 'cookie-law-info' ); ?></p>
+						<button class="wt-cli-action wt-cli-ckyes-delete-btn button button-primary" data-action="delete-account" ><?php echo esc_html__( 'Delete this website', 'cookie-law-info' ); ?></button>
 					</div>
 				</div>
 				<?php
@@ -910,7 +914,7 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		public function ckyes_save_settings() {
 
 			if ( ! current_user_can( 'manage_options' ) ) {
-				wp_die( __( 'You do not have sufficient permission to perform this operation', 'cookie-law-info' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+				wp_die( esc_html__( 'You do not have sufficient permission to perform this operation', 'cookie-law-info' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
 			}
 			check_admin_referer( 'cookielawinfo-update-' . CLI_SETTINGS_FIELD );
 			if ( isset( $_POST['wt-cli-ckyes-branding'] ) && 'yes' === $_POST['wt-cli-ckyes-branding'] ) {
@@ -994,9 +998,8 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 
 			$html           = '';
 			$resend_message = '';
-
 			/* translators: %s: user email. */
-			$message = sprintf( __( "We've sent an account verification link to the email address %s. Please click on the link given in email to verify your account with CookieYes.", 'cookie-law-info' ), $this->get_user_email() );
+			$message = sprintf( __( "We've sent an account verification link to the email address %s. Please click on the link given in email to verify your account with CookieYes.", 'cookie-law-info' ), esc_html( $this->get_user_email() ) );
 
 			if ( true === $resend ) {
 				/* translators: %s: Resent link. */
@@ -1051,17 +1054,16 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		 * @return string
 		 */
 		public function get_login_html() {
-
 			$html  = '';
 			$html .= '<div class="wt-cli-modal-body">';
 			$html .= '<div class="wt-cli-ckyes-login-icon">';
 			$html .= '<span class="dashicons dashicons-admin-users"></span>';
 			$html .= '</div>';
-			$html .= '<h4>' . sprintf( __( 'Looks like you already have an account with CookieYes for email id %s, please login to continue.', 'cookie-law-info' ), $this->get_user_email() ) . '</h4>';
+			$html .= '<h4>' . sprintf( __( 'Looks like you already have an account with CookieYes for email id %s, please login to continue.', 'cookie-law-info' ), esc_html( $this->get_user_email() ) ) . '</h4>';
 			$html .= '<form id="wt-cli-ckyes-form-login">';
 			$html .= '<div class="wt-cli-form-row">';
-			$html .= '<input type="email" name="ckyes-email" class="wt-cli-form-input" placeholder="'.__("Email","cookie-law-info").'" value="' . $this->get_user_email() . '"/>';
-			$html .= '<input type="password" name="ckyes-password" class="wt-cli-form-input" placeholder="'.__("Password","cookie-law-info").'" />';
+			$html .= '<input type="email" name="ckyes-email" class="wt-cli-form-input" placeholder="' . __( 'Email', 'cookie-law-info' ) . '" value="' . esc_attr( $this->get_user_email() ) . '"/>';
+			$html .= '<input type="password" name="ckyes-password" class="wt-cli-form-input" placeholder="' . __( 'Password', 'cookie-law-info' ) . '" />';
 			$html .= '</div>';
 			$html .= '<p style="color: #757575">' . __( 'Please check if you have received an email with your password from CookieYes.', 'cookie-law-info' ) . '</p>';
 			$html .= '<p style="color: #757575;">' . __( 'If you did not get the email, click “Reset password” to create a new password.', 'cookie-law-info' ) . '</p>';
@@ -1081,21 +1083,21 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		public function delete_account() {
 
 			$api_response = $this->get_default_response();
-			if( 1 === apply_filters('wt_cli_cookie_scan_status',0) ) {
+			if ( 1 === apply_filters( 'wt_cli_cookie_scan_status', 0 ) ) {
 				$ckyes_scan_id = $this->get_ckyes_scan_id();
-				if( $ckyes_scan_id ) {
+				if ( $ckyes_scan_id ) {
 					$response = $this->ckyes_abort_scan( $ckyes_scan_id );
 					$status   = isset( $response['status'] ) ? $response['status'] : false;
-					if( false === $status ) {
+					if ( false === $status ) {
 						wp_send_json_error();
 					}
-					do_action('wt_cli_ckyes_abort_scan' );
+					do_action( 'wt_cli_ckyes_abort_scan' );
 				}
 			}
 			$this->delete_ckyes_account();
 
 		}
-		public function delete_ckyes_account(){
+		public function delete_ckyes_account() {
 			$api_response = $this->get_default_response();
 			$token        = $this->get_access_token();
 
@@ -1115,86 +1117,86 @@ if ( ! class_exists( 'Cookie_Law_Info_Cookieyes' ) ) {
 		}
 		public function get_ckyes_scan_data() {
 
-            if( !$this->ckyes_scan_data ) {
-                $scan_data = array(
-                    'scan_id'       => 0,
-                    'scan_status'    => '',
-                    'scan_token'  => '',
-                    'scan_estimate' => ''
-                );
-                $ckyes_scan_data = get_option('wt_cli_ckyes_scan_options', false);
+			if ( ! $this->ckyes_scan_data ) {
+				$scan_data       = array(
+					'scan_id'       => 0,
+					'scan_status'   => '',
+					'scan_token'    => '',
+					'scan_estimate' => '',
+				);
+				$ckyes_scan_data = get_option( 'wt_cli_ckyes_scan_options', false );
 
-                if ($ckyes_scan_data !== false && is_array($ckyes_scan_data)) {
-    
-                    $scan_data['scan_id']       = intval(isset($ckyes_scan_data['scan_id']) ? $ckyes_scan_data['scan_id'] : 0);
-                    $scan_data['scan_status']   = isset($ckyes_scan_data['scan_status']) ? $ckyes_scan_data['scan_status'] : 0;
-                    $scan_data['scan_token']    = isset($ckyes_scan_data['scan_token']) ? $ckyes_scan_data['scan_token'] : '';
-                    $scan_data['scan_estimate'] = isset($ckyes_scan_data['scan_estimate']) ? $ckyes_scan_data['scan_estimate'] : 0;
-                    $scan_data['scan_instance'] = isset($ckyes_scan_data['scan_instance']) ? $ckyes_scan_data['scan_instance'] : 0;
-                
-                } else {
-                    return false;
-                }
-                $this->ckyes_scan_data = $scan_data;
-            }
-            return $this->ckyes_scan_data;
-        }
-        public function get_ckyes_scan_id() {
-            $ckyes_scan_data = $this->get_ckyes_scan_data();
-            return ( isset( $ckyes_scan_data['scan_id'] ) ? $ckyes_scan_data['scan_id'] : 0 );
-        }
+				if ( $ckyes_scan_data !== false && is_array( $ckyes_scan_data ) ) {
 
-        public function get_ckyes_scan_status() {
-            $ckyes_scan_data = $this->get_ckyes_scan_data();
-            return ( isset( $ckyes_scan_data['scan_status'] ) ? intval( $ckyes_scan_data['scan_status'] ) : 0 );
-        }
+					$scan_data['scan_id']       = intval( isset( $ckyes_scan_data['scan_id'] ) ? $ckyes_scan_data['scan_id'] : 0 );
+					$scan_data['scan_status']   = isset( $ckyes_scan_data['scan_status'] ) ? $ckyes_scan_data['scan_status'] : 0;
+					$scan_data['scan_token']    = isset( $ckyes_scan_data['scan_token'] ) ? $ckyes_scan_data['scan_token'] : '';
+					$scan_data['scan_estimate'] = isset( $ckyes_scan_data['scan_estimate'] ) ? $ckyes_scan_data['scan_estimate'] : 0;
+					$scan_data['scan_instance'] = isset( $ckyes_scan_data['scan_instance'] ) ? $ckyes_scan_data['scan_instance'] : 0;
 
-        public function get_ckyes_scan_token() {
-            $ckyes_scan_data = $this->get_ckyes_scan_data();
-            return ( isset( $ckyes_scan_data['scan_token'] ) ? $ckyes_scan_data['scan_token'] : '' );
-        }
+				} else {
+					return false;
+				}
+				$this->ckyes_scan_data = $scan_data;
+			}
+			return $this->ckyes_scan_data;
+		}
+		public function get_ckyes_scan_id() {
+			$ckyes_scan_data = $this->get_ckyes_scan_data();
+			return ( isset( $ckyes_scan_data['scan_id'] ) ? $ckyes_scan_data['scan_id'] : 0 );
+		}
 
-        public function get_ckyes_scan_estimate() {
-            $ckyes_scan_data = $this->get_ckyes_scan_data();
-            return ( isset( $ckyes_scan_data['scan_estimate'] ) ? $ckyes_scan_data['scan_estimate'] : 0 );
-        }
+		public function get_ckyes_scan_status() {
+			$ckyes_scan_data = $this->get_ckyes_scan_data();
+			return ( isset( $ckyes_scan_data['scan_status'] ) ? intval( $ckyes_scan_data['scan_status'] ) : 0 );
+		}
 
-        public function set_ckyes_scan_id( $value = 0  ) {
-            $this->set_ckyes_scan_data( 'scan_id', $value );
-        }
+		public function get_ckyes_scan_token() {
+			$ckyes_scan_data = $this->get_ckyes_scan_data();
+			return ( isset( $ckyes_scan_data['scan_token'] ) ? $ckyes_scan_data['scan_token'] : '' );
+		}
 
-        public function set_ckyes_scan_status( $value = 0  ){
-            $this->set_ckyes_scan_data( 'scan_status', $value );
-        }
+		public function get_ckyes_scan_estimate() {
+			$ckyes_scan_data = $this->get_ckyes_scan_data();
+			return ( isset( $ckyes_scan_data['scan_estimate'] ) ? $ckyes_scan_data['scan_estimate'] : 0 );
+		}
 
-        public function set_ckyes_scan_token( $value = ''  ){
-            $this->set_ckyes_scan_data( 'scan_token', $value );
-        }
+		public function set_ckyes_scan_id( $value = 0 ) {
+			$this->set_ckyes_scan_data( 'scan_id', $value );
+		}
 
-        public function set_ckyes_scan_estimate( $value = 0  ){
-            $this->set_ckyes_scan_data( 'scan_estimate', $value );
-        }
+		public function set_ckyes_scan_status( $value = 0 ) {
+			$this->set_ckyes_scan_data( 'scan_status', $value );
+		}
 
-        public function set_ckyes_scan_data( $option_name, $value  ) {
-            $options = $this->get_ckyes_scan_data();
-            $options[ $option_name ] = $value;
-            update_option('wt_cli_ckyes_scan_options', $options );
-            $this->ckyes_scan_data = $options;
-        }
-        public function reset_scan_token(){
-            delete_option('wt_cli_ckyes_scan_options');
-        }
+		public function set_ckyes_scan_token( $value = '' ) {
+			$this->set_ckyes_scan_data( 'scan_token', $value );
+		}
 
-        public function set_ckyes_scan_instance(){
-            $instance_id = 'wt-cli-scan-'.wp_create_nonce( $this->module_id );
-            $instance_id = base64_encode( $instance_id );
-            $this->set_ckyes_scan_data( 'scan_instance', $instance_id );
-            return $instance_id;
-        }
-        public function get_ckyes_scan_instance(){
-            $ckyes_scan_data = $this->get_ckyes_scan_data();
-            return ( isset( $ckyes_scan_data['scan_instance'] ) ? $ckyes_scan_data['scan_instance'] : 0 );
-        }
+		public function set_ckyes_scan_estimate( $value = 0 ) {
+			$this->set_ckyes_scan_data( 'scan_estimate', $value );
+		}
+
+		public function set_ckyes_scan_data( $option_name, $value ) {
+			$options                 = $this->get_ckyes_scan_data();
+			$options[ $option_name ] = $value;
+			update_option( 'wt_cli_ckyes_scan_options', $options );
+			$this->ckyes_scan_data = $options;
+		}
+		public function reset_scan_token() {
+			delete_option( 'wt_cli_ckyes_scan_options' );
+		}
+
+		public function set_ckyes_scan_instance() {
+			$instance_id = 'wt-cli-scan-' . wp_create_nonce( $this->module_id );
+			$instance_id = base64_encode( $instance_id );
+			$this->set_ckyes_scan_data( 'scan_instance', $instance_id );
+			return $instance_id;
+		}
+		public function get_ckyes_scan_instance() {
+			$ckyes_scan_data = $this->get_ckyes_scan_data();
+			return ( isset( $ckyes_scan_data['scan_instance'] ) ? $ckyes_scan_data['scan_instance'] : 0 );
+		}
 	}
 	$settings_popup = new Cookie_Law_Info_Cookieyes();
 }

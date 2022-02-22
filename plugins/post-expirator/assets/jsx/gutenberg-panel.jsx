@@ -24,7 +24,7 @@
             const postType = wp.data.select('core/editor').getCurrentPostType();
             const setPostMeta = (newMeta) => wp.data.dispatch('core/editor').editPost({meta: newMeta});
 
-            let enabled = config.defaults.autoEnable == 1;
+            let enabled = false;
             let date = new Date();
 
             let expireAction = this.getExpireType(postMeta);
@@ -48,6 +48,9 @@
                 if (config.default_date) {
                     date.setTime((parseInt(config.default_date) + browserTimezoneOffset + wpTimezoneOffset) * 1000);
                 }
+
+                // If the date is not set
+                enabled = false;
             }
 
             let taxonomy = config.defaults.taxonomy || 'category';

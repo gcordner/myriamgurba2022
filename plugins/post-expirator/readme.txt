@@ -1,11 +1,11 @@
-=== PublishPress Future: Automatically Unpublish Posts and Pages on a Future Date ===
-Contributors: publishpress, kevinB, stevejburge, andergmartins
+=== PublishPress Future: Automatically Unpublish WordPress Posts ===
+Contributors: publishpress, kevinB, stevejburge, andergmartins, rozroz
 Author: publishpress
 Author URI: https://publishpress.com
-Tags: expire, posts, pages, schedule, unpublish
-Requires at least: 5.0
-Tested up to: 5.8
-Stable tag: 2.7.0
+Tags: expire, posts, pages, schedule
+Requires at least: 5.3
+Tested up to: 5.9
+Stable tag: 2.7.3
 
 Add an expiration date to posts. When your post is automatically unpublished, you can delete the post, change the status, or update the post categories.
 
@@ -21,8 +21,6 @@ Here's an overview of what you can do with PublishPress Future:
 * Modify expiry dates using "Quick Edit" and "Bulk Edit".
 * Receive email notifications when your content expires.
 * Show expiry dates in your content, automatically or with shortcodes.
-
-This plugin was previously known as "Post Expirator".
 
 ## Options for Expiring Posts
 
@@ -42,7 +40,7 @@ When your posts expire, you can perform these changes on your content:
 
 ## Display the Expiry Date in Your Content
 
-PublishPress Future allows you to automatically show the expiry date inside your articles. The expiry will be added at the bottom of your post.
+PublishPress Future allows you to place automatically show the expiry date inside your articles. The expiry will be added at the bottom of your post.
 
 [Click here to see the Footer Display options](https://publishpress.com/knowledge-base/footer-display/).
 
@@ -64,7 +62,7 @@ The PublishPress Future plugin can send you email notifications when your conten
 
 ## Details on How Post Expiry Works
 
-For each expiration event, a custom cron job is scheduled. This can help reduce server overhead for busy sites. This plugin REQUIRES that WP-CRON is set up and functional on your webhost.  Some hosts do not support this, so please check and confirm if you run into issues using the plugin.
+For each expiration event, a custom cron job is scheduled. This can help reduce server overhead for busy sites. This plugin REQUIRES that WP-CRON is setup and functional on your webhost.  Some hosts do not support this, so please check and confirm if you run into issues using the plugin.
 
 [Click here to see the technical details for this plugin](https://publishpress.com/knowledge-base/scheduling-cron-jobs/).
 
@@ -83,9 +81,51 @@ This section describes how to install the plugin and get it working.
 
 == Changelog ==
 
+= [2.7.3] - 27 Jan 2022 =
+
+* Fixed: Fix the selection of categories when setting a post to expire, #220;
+
+= [2.7.2] - 25 Jan 2022 =
+
+* Changed: Added more clear debug message if the cron event was not scheduled due to an error;
+* Changed: Refactored the list of cron schedules in the Diagnostics tab adding more post information, #215;
+* Changed: Removed the admin notice about the plugin renaming;
+* Added: Added the event GUID as tooltip to each post in the Current Cron Schedule list on the Diagnostics page, #214;
+* Fixed: Fix the Expires column in the posts page correctly identifying the post ID on cron event with multiple IDs, #210;
+* Fixed: Fix wrong function used to escape a html attributes on a setting page;
+* Fixed: Fix missed sanitization for some data on admin pages;
+* Fixed: Fix some false positives given by PHPCS;
+* Fixed: Fix expiration data processing avoid to process for deactivated posts;
+* Fixed: Fix a typo in the diagnostics settings tab;
+* Fixed: Fix the checkbox state for posts that are not set to expire, #217;
+
+= [2.7.1] - 12 Jan 2022 =
+
+* Added: Add visual indicator to the cron event status in the settings page, #155;
+* Added: Add small help text to the Expires column icon to say if the event is scheduled or not;
+* Added: Add additional permission check before loading the settings page;
+* Added: Add CLI command to expire a post, #206;
+* Changed: Remove the plugin description from the settings page, #194;
+* Changed: Deprecated a not used function called "expirationdate_get_blog_url";
+* Changed: Updated the min required WP to 5.3 due to the requirement of using the function 'wp_date';
+* Fixed: Fix PHP error while purging the debug log, #135;
+* Fixed: Fix composer's autoloader path;
+* Fixed: Code cleanup. Removed comments and dead code;
+* Fixed: Fixed the block for direct access to view files;
+* Fixed: Added check for is_admin before checking if the user has permission to see the settings page;
+* Fixed: Avoid running sortable column code if not in the admin;
+* Fixed: Cross-site scripting (XSS) was possible if a third party allowed html or javascript into a database setting or language file;
+* Fixed: Fix the URL for the View Debug Log admin page, #196;
+* Fixed: Removed unopened span tag from a form;
+* Fixed: Added a secondary admin and ajax referer check when saving expiration post data;
+* Fixed: Fix the option "Preserve data after deactivating the plugin" that was not saving the setting, #198;
+* Fixed: Fix the post expiration function to make sure a post is not expired if the checkbox is not checked on it, #199;
+* Fixed: Fix the post expiration meta not being cleanup after a post expires, #207;
+* Fixed: Fix the post expiration checkbox status when post type is set configured to check it by default;
+
 = [2.7.0] - 02 Dec 2021 =
 
-* Changed: Rename the plugin from Post Expirator to PublishpPress Future, #14;
+* Changed: Rename the plugin from Post Expirator to PublishPress Future, #14;
 * Changed: Add the PublishPress footer and branding, #68;
 * Changed: Separate the settings into different tabs, #97, #98;
 * Changed: Rename the "General Settings" tab to "Default", #99;

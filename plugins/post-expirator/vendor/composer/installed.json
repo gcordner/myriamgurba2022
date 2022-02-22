@@ -2,17 +2,17 @@
     "packages": [
         {
             "name": "publishpress/wordpress-reviews",
-            "version": "v1.1.16",
-            "version_normalized": "1.1.16.0",
+            "version": "v1.1.18",
+            "version_normalized": "1.1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/publishpress/wordpress-reviews.git",
-                "reference": "2b647f104d7aa64e0c72c028f86e1875035b7a91"
+                "reference": "0020705b8f6a7177fc393c6c42c82171bf9e2fbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/publishpress/wordpress-reviews/zipball/2b647f104d7aa64e0c72c028f86e1875035b7a91",
-                "reference": "2b647f104d7aa64e0c72c028f86e1875035b7a91",
+                "url": "https://api.github.com/repos/publishpress/wordpress-reviews/zipball/0020705b8f6a7177fc393c6c42c82171bf9e2fbd",
+                "reference": "0020705b8f6a7177fc393c6c42c82171bf9e2fbd",
                 "shasum": ""
             },
             "require": {
@@ -36,7 +36,7 @@
                 "wp-cli/i18n-command": "^2.2",
                 "wp-cli/wp-cli": "^2.5"
             },
-            "time": "2021-12-01T20:36:26+00:00",
+            "time": "2021-12-15T00:03:53+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -67,7 +67,7 @@
             ],
             "support": {
                 "issues": "https://github.com/publishpress/wordpress-reviews/issues",
-                "source": "https://github.com/publishpress/wordpress-reviews/tree/v1.1.16"
+                "source": "https://github.com/publishpress/wordpress-reviews/tree/v1.1.18"
             },
             "install-path": "../publishpress/wordpress-reviews"
         }

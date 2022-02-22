@@ -44,4 +44,25 @@ class PostExpirator_CronFacade
             'postExpiratorExpire',
         ];
     }
+
+    public static function post_has_scheduled_task($post_id)
+    {
+        $events = self::get_plugin_cron_events();
+
+        foreach ($events as $event) {
+            foreach ($event as $eventValue) {
+                $eventValueKeys = array_keys($eventValue);
+
+                foreach ($eventValueKeys as $eventGUID) {
+                    if (! empty($eventValue[$eventGUID]['args'])) {
+                        if ((int)$eventValue[$eventGUID]['args'][0] === (int)$post_id) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
 }

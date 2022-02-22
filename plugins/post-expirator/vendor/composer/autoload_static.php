@@ -4,10 +4,11 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb4c7c32b9bcab4f54643f778f077efdc
+class ComposerStaticInit1d63918176b7b346c50a6bf376bce514
 {
     public static $files = array (
         '41c664bd04a95c2d6a2f2a3e00f06593' => __DIR__ . '/..' . '/publishpress/wordpress-reviews/ReviewsController.php',
+        '042dd0ae2433f2c5951d75563af2394e' => __DIR__ . '/../..' . '/classes/DummyForAutoloadDetection.php',
     );
 
     public static $classMap = array (
@@ -17,7 +18,7 @@ class ComposerStaticInitb4c7c32b9bcab4f54643f778f077efdc
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitb4c7c32b9bcab4f54643f778f077efdc::$classMap;
+            $loader->classMap = ComposerStaticInit1d63918176b7b346c50a6bf376bce514::$classMap;
 
         }, null, ClassLoader::class);
     }

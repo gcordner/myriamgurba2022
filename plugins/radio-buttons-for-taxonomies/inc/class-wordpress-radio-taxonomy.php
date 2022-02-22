@@ -330,21 +330,26 @@ class WordPress_Radio_Taxonomy {
 	function get_terms( $terms, $taxonomies, $args ) {
 
 		// Only filter terms for radio taxes (except category) and only in the checkbox - need to check $args b/c get_terms() is called multiple times in wp_terms_checklist()
-		if( in_array( $this->taxonomy, ( array ) $taxonomies ) && ! in_array( 'category', $taxonomies ) 
-			&& isset( $args['fields'] ) && $args['fields'] == 'all' && $this->get_terms_filter() ) {
+		if( in_array( $this->taxonomy, ( array ) $taxonomies ) && isset( $args['fields'] ) && $args['fields'] == 'all' ) {
 
-			// Remove filter after 1st run.
-			remove_filter( current_filter(), __FUNCTION__, 10, 3 );
+			$default_term = intval( get_option( 'default_' . $this->taxonomy, 0 ) );
+			
+			if ( ! $default_term && $this->get_terms_filter() ) {
 
-			// Turn the switch OFF.
-			$this->set_terms_filter( false ); 
+				// Remove filter after 1st run.
+				remove_filter( current_filter(), __FUNCTION__, 10, 3 );
 
-			$no_term = sprintf( __( 'No %s', 'radio-buttons-for-taxonomies' ), $this->tax_obj->labels->singular_name );
-			$no_term = apply_filters( 'radio_buttons_for_taxonomies_no_term_selected_text', $no_term, $this->tax_obj->labels->singular_name );
+				// Turn the switch OFF.
+				$this->set_terms_filter( false ); 
 
-			$uncategorized = (object) array( 'term_id' => '0', 'slug' => '0', 'name' => $no_term, 'parent' => '0' );
+				$no_term = sprintf( __( 'No %s', 'radio-buttons-for-taxonomies' ), $this->tax_obj->labels->singular_name );
+				$no_term = apply_filters( 'radio_buttons_for_taxonomies_no_term_selected_text', $no_term, $this->tax_obj->labels->singular_name );
 
-			array_push( $terms, $uncategorized );
+				$uncategorized = (object) array( 'term_id' => '0', 'slug' => '0', 'name' => $no_term, 'parent' => '0' );
+
+				array_push( $terms, $uncategorized );
+
+			}
 
 		}
 
@@ -425,42 +430,44 @@ class WordPress_Radio_Taxonomy {
 	 */
 	function save_single_term( $post_id ) {
 
-		// verify if this is an auto save routine. If it is our form has not been submitted, so we dont want to do anything.
-		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+		// Verify if this is an auto save routine. If it is our form has not been submitted, so we dont want to do anything.
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return $post_id;
+		}
 
-		// prevent weirdness with multisite.
-		if( function_exists( 'ms_is_switched' ) && ms_is_switched() )
+		// Prevent weirdness with multisite.
+		if( function_exists( 'ms_is_switched' ) && ms_is_switched() ) {
 			return $post_id;
+		}
 
-		// make sure we're on a supported post type.
-		if ( is_array( $this->tax_obj->object_type ) && isset( $_REQUEST['post_type'] ) && ! in_array ( $_REQUEST['post_type'], $this->tax_obj->object_type ) ) 
+		// Make sure we're on a supported post type.
+		if ( is_array( $this->tax_obj->object_type ) && isset( $_REQUEST['post_type'] ) && ! in_array ( $_REQUEST['post_type'], $this->tax_obj->object_type ) ) {
 			return $post_id;
+		}
+
+		// Check capabilities.
+		if ( ! current_user_can( $this->tax_obj->cap->assign_terms ) ) {
+			return $post_id;
+		}
 
 		// Verify nonce.
 		if ( ! isset( $_REQUEST["_radio_nonce-{$this->taxonomy}"]) || ! wp_verify_nonce( $_REQUEST["_radio_nonce-{$this->taxonomy}"], "radio_nonce-{$this->taxonomy}" ) ) {
 			return $post_id;
 		}
 
-		// OK, we must be authenticated by now: we need to find and save the data.
-		if ( isset( $_REQUEST["radio_tax_input"]["{$this->taxonomy}"] ) ) {
-
-			$terms = (array) $_REQUEST["radio_tax_input"]["{$this->taxonomy}"]; 
-
-			// If category and not saving any terms, set to default.
-			if ( 'category' == $this->taxonomy && empty ( $terms ) ) {
-				$single_term = intval( get_option( 'default_category' ) );
-			}
-
-			// Make sure we're only saving 1 term.
+		// OK, we must be authenticated by now: we need to make sure we're only saving 1 term.
+		if ( ! empty ( $_REQUEST["radio_tax_input"]["{$this->taxonomy}"] ) ) {
+			$terms = (array) $_REQUEST["radio_tax_input"]["{$this->taxonomy}"];
 			$single_term = intval( array_shift( $terms ) );
+		} else {
+			// If not saving any terms, set to default.
+			$single_term = intval( get_option( 'default_' . $this->taxonomy, 0 ) );
+		}
 
-			// Set the single terms.
-			if ( current_user_can( $this->tax_obj->cap->assign_terms ) ) {
-				wp_set_object_terms( $post_id, $single_term, $this->taxonomy );
-			}
-
-		}		
+		// Set the single terms.
+		if ( current_user_can( $this->tax_obj->cap->assign_terms ) ) {
+			wp_set_object_terms( $post_id, $single_term, $this->taxonomy );
+		}
 
 		return $post_id;
 	}
