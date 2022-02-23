@@ -46,13 +46,13 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-/**
- * Typekit fonts
- */
-function adobe_fonts() {
-    wp_enqueue_style( 'adobe-fonts', 'https://use.typekit.net/qnb6jpd.css', false );
-}
-add_action( 'wp_enqueue_scripts', 'adobe_fonts' );
+// /**
+//  * Typekit fonts
+//  */
+// function adobe_fonts() {
+//     wp_enqueue_style( 'adobe-fonts', 'https://use.typekit.net/qnb6jpd.css', false );
+// }
+// add_action( 'wp_enqueue_scripts', 'adobe_fonts' );
 
 /**
  * Load the child theme's text domain
