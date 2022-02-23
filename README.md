@@ -1,3 +1,13 @@
+# getting started:
+
+In wp-content folder:
+
+git init
+git remote add origin https://github.com/gcordner/myriamgurba2022.git
+git fetch origin
+git checkout main
+
+
 # wordpress-gulp
 
 Instructions for setting up gulp that work on linux as well as mac can be found here:
@@ -12,5 +22,12 @@ Basically, you can use the Sass migrator to automatically update your stylesheet
 
 $ npm install -g sass-migrator
 $ sass-migrator division **/*.scss
+
+# for the understrap-child theme:
+
+Instructions for npm are here:
+https://docs.understrap.com/#/understrap-child/npm
+
+
 
 
