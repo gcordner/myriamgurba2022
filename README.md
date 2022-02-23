@@ -3,8 +3,11 @@
 In wp-content folder:
 
 git init
+
 git remote add origin https://github.com/gcordner/myriamgurba2022.git
+
 git fetch origin
+
 git checkout main
 
 
