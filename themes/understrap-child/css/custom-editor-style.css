@@ -427,15 +427,15 @@ progress {
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
-  --bs-red: #dc3545;
-  --bs-orange: #fd7e14;
-  --bs-yellow: #ffc107;
-  --bs-green: #198754;
-  --bs-teal: #20c997;
-  --bs-cyan: #0dcaf0;
+  --bs-red: #732424;
+  --bs-orange: #F28705;
+  --bs-yellow: #F2B705;
+  --bs-green: #2A611D;
+  --bs-teal: #365956;
+  --bs-cyan: #048ABF;
   --bs-white: #F2F2F2;
   --bs-gray: #6c757d;
-  --bs-gray-dark: #343a40;
+  --bs-gray-dark: #012326;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -443,22 +443,22 @@ progress {
   --bs-gray-500: #adb5bd;
   --bs-gray-600: #6c757d;
   --bs-gray-700: #495057;
-  --bs-gray-800: #343a40;
+  --bs-gray-800: #012326;
   --bs-gray-900: #212529;
   --bs-primary: #261404;
   --bs-secondary: #bc4704;
-  --bs-success: #198754;
-  --bs-info: #0dcaf0;
-  --bs-warning: #ffc107;
-  --bs-danger: #dc3545;
+  --bs-success: #2A611D;
+  --bs-info: #048ABF;
+  --bs-warning: #F2B705;
+  --bs-danger: #732424;
   --bs-light: #BAD9D9;
   --bs-dark: #261404;
   --bs-primary-rgb: 38, 20, 4;
   --bs-secondary-rgb: 188, 71, 4;
-  --bs-success-rgb: 25, 135, 84;
-  --bs-info-rgb: 13, 202, 240;
-  --bs-warning-rgb: 255, 193, 7;
-  --bs-danger-rgb: 220, 53, 69;
+  --bs-success-rgb: 42, 97, 29;
+  --bs-info-rgb: 4, 138, 191;
+  --bs-warning-rgb: 242, 183, 5;
+  --bs-danger-rgb: 115, 36, 36;
   --bs-light-rgb: 186, 217, 217;
   --bs-dark-rgb: 38, 20, 4;
   --bs-white-rgb: 242, 242, 242;
@@ -566,51 +566,51 @@ progress {
 }
 
 .table-success {
-  --bs-table-bg: #d1e7dd;
-  --bs-table-striped-bg: #c7dbd2;
+  --bs-table-bg: #d4dfd2;
+  --bs-table-striped-bg: #c9d4c8;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #bcd0c7;
+  --bs-table-active-bg: #bfc9bd;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #c1d6cc;
+  --bs-table-hover-bg: #c4cec2;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #bcd0c7;
+  border-color: #bfc9bd;
 }
 
 .table-info {
-  --bs-table-bg: #cff4fc;
-  --bs-table-striped-bg: #c5e8ef;
+  --bs-table-bg: #cde8f2;
+  --bs-table-striped-bg: #c3dce6;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #badce3;
+  --bs-table-active-bg: #b9d1da;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #bfe2e9;
+  --bs-table-hover-bg: #bed7e0;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #badce3;
+  border-color: #b9d1da;
 }
 
 .table-warning {
-  --bs-table-bg: #fff3cd;
-  --bs-table-striped-bg: #f2e7c3;
+  --bs-table-bg: #fcf1cd;
+  --bs-table-striped-bg: #efe5c3;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #e6dbb9;
+  --bs-table-active-bg: #e3d9b9;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #ece1be;
+  --bs-table-hover-bg: #e9dfbe;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #e6dbb9;
+  border-color: #e3d9b9;
 }
 
 .table-danger {
-  --bs-table-bg: #f8d7da;
-  --bs-table-striped-bg: #eccccf;
+  --bs-table-bg: #e3d3d3;
+  --bs-table-striped-bg: #d8c8c8;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #dfc2c4;
+  --bs-table-active-bg: #ccbebe;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #e5c7ca;
+  --bs-table-hover-bg: #d2c3c3;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #dfc2c4;
+  border-color: #ccbebe;
 }
 
 .table-light {
@@ -853,62 +853,62 @@ progress {
 
 .has-red-color,
 .has-red-color:visited {
-  color: #dc3545;
+  color: #732424;
 }
 
 .has-red-background-color {
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background-color: #732424;
+  border-color: #732424;
 }
 
 .has-orange-color,
 .has-orange-color:visited {
-  color: #fd7e14;
+  color: #F28705;
 }
 
 .has-orange-background-color {
-  background-color: #fd7e14;
-  border-color: #fd7e14;
+  background-color: #F28705;
+  border-color: #F28705;
 }
 
 .has-yellow-color,
 .has-yellow-color:visited {
-  color: #ffc107;
+  color: #F2B705;
 }
 
 .has-yellow-background-color {
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: #F2B705;
+  border-color: #F2B705;
 }
 
 .has-green-color,
 .has-green-color:visited {
-  color: #198754;
+  color: #2A611D;
 }
 
 .has-green-background-color {
-  background-color: #198754;
-  border-color: #198754;
+  background-color: #2A611D;
+  border-color: #2A611D;
 }
 
 .has-teal-color,
 .has-teal-color:visited {
-  color: #20c997;
+  color: #365956;
 }
 
 .has-teal-background-color {
-  background-color: #20c997;
-  border-color: #20c997;
+  background-color: #365956;
+  border-color: #365956;
 }
 
 .has-cyan-color,
 .has-cyan-color:visited {
-  color: #0dcaf0;
+  color: #048ABF;
 }
 
 .has-cyan-background-color {
-  background-color: #0dcaf0;
-  border-color: #0dcaf0;
+  background-color: #048ABF;
+  border-color: #048ABF;
 }
 
 .has-white-color,
@@ -933,12 +933,12 @@ progress {
 
 .has-gray-dark-color,
 .has-gray-dark-color:visited {
-  color: #343a40;
+  color: #012326;
 }
 
 .has-gray-dark-background-color {
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: #012326;
+  border-color: #012326;
 }
 
 .has-primary-color,
@@ -963,42 +963,42 @@ progress {
 
 .has-success-color,
 .has-success-color:visited {
-  color: #198754;
+  color: #2A611D;
 }
 
 .has-success-background-color {
-  background-color: #198754;
-  border-color: #198754;
+  background-color: #2A611D;
+  border-color: #2A611D;
 }
 
 .has-info-color,
 .has-info-color:visited {
-  color: #0dcaf0;
+  color: #048ABF;
 }
 
 .has-info-background-color {
-  background-color: #0dcaf0;
-  border-color: #0dcaf0;
+  background-color: #048ABF;
+  border-color: #048ABF;
 }
 
 .has-warning-color,
 .has-warning-color:visited {
-  color: #ffc107;
+  color: #F2B705;
 }
 
 .has-warning-background-color {
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: #F2B705;
+  border-color: #F2B705;
 }
 
 .has-danger-color,
 .has-danger-color:visited {
-  color: #dc3545;
+  color: #732424;
 }
 
 .has-danger-background-color {
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background-color: #732424;
+  border-color: #732424;
 }
 
 .has-light-color,

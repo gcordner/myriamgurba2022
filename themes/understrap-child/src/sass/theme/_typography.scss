@@ -2,7 +2,7 @@ h1 {
     font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 1;
 }
 
@@ -10,24 +10,28 @@ h2 {
     font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
+    font-size: 3rem;
 }
 
 h3 {
     font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
+    font-size: 2rem;
 }
 
 h4 {
     font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
+    font-size: 1.5rem;
 }
 
 h5 {
     font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
+    font-size: 1rem;
 }
 
 .navbar-brand {
@@ -56,23 +60,40 @@ h5 {
 
 .blurb-box {
     .wp-block-quote {
-        max-width: 800px;
-        margin: auto;
-        margin-bottom: 2rem;
-        margin-top: 1rem;
-        text-align: center;
         p {
-            @extend h2;
+            @extend h3;
             margin-bottom: 0rem;
         }
         cite {
-            font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+            font-family: 'Big Shoulders Display', Arial, Helvetica, sans-serif;
             color: $primary;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
             font-style: normal;
         }
     }
 }
 
+.book-box {
+    h2 {
+        color: $yellow !important;
+    }
+    .wp-block-post-date {
+        display: none;
+    }
+}
+
+// IMPORTANT!!!
+// BECAUSE WORDPRESS VARIABLES IN BLOCK EDITOR ARE SET AS INLINE STYLES, YOU CAN'T OVERRIDE THEM EASILY
+// ON THIS STYLE SHEET. INSTEAD, THEY NEED TO BE ADDED TO THE ADDN CSS VIA CUSTOMIZER
+// SO THAT THEY LOAD INLINE **BELOW** THE BLOCK STYLES. FUCKING ANNOYING.
+// THIS HAS BEEN ADDED TO CUSTOM STYLES: 
+// .has-x-large-font-size {
+// 	font-size: 3.5rem !important
+// }
+// 
+// 
+//
 // font-family: obviously-condensed, sans-serif;
 // font-weight: 400;
 // font-style: normal;
