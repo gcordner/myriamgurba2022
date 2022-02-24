@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-secondary" aria-labelledby="main-nav-label">
+<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary fixed-top  navbar-scroll" aria-labelledby="main-nav-label">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -44,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="offcanvas offcanvas-end bg-secondary" tabindex="-1" id="navbarNavOffcanvas">
+		<div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="navbarNavOffcanvas">
 
 			<div class="offcanvas-header justify-content-end">
 				<button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>

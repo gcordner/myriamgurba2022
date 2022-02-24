@@ -13,14 +13,14 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 
-if ( is_front_page() ) {
-	get_template_part( 'global-templates/hero' );
-}
+// if ( is_front_page() ) {
+// 	get_template_part( 'global-templates/hero' );
+// }
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
-
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+<div class="wrapper p-0  mt-4" id="full-width-page-wrapper">
+<!--mt-4 to comoensate for being covered by fixed-top navbar -->
+	<div class="container-fluid p-0" id="content">
 
 		<div class="row">
 

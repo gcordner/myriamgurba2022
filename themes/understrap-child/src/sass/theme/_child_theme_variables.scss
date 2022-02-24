@@ -1,42 +1,33 @@
 // Use this file to overwrite the basic Bootstrap variables and add your own variables
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
-
 // DIA DEL LOS MUERTOS 02
 $muertos2-01: #F2B705;
 $muertos2-02: #F2EFEB;
 $muertos2-03: #F28705;
 $muertos2-04: #261404;
 $muertos2-05: #F25C05;
-$muertos2-06: #CF0000;
+$muertos2-06: #bc4704;
 // $muertos2-06: #9C0000;
-
 $joeartist-01: #012326;
 $joeartist-02: #365956;
 $joeartist-03: #734743;
 $joeartist-04: #734743;
 $joeartist-05: #F2F2F2;
-
 $socali-01: #BAD9D9;
 $socali-02: #567370;
 $socali-03: #735C48;
 $socali-04: #BFA68F;
 $socali-05: #8C2E26;
-
-
-
-
-
-
-
 // BOOTSTRAP COLOR VARIABLES
 // scss-docs-start theme-color-variables
-$primary:       $muertos2-04;
-$secondary:     $muertos2-06;
+$primary: $muertos2-04;
+$secondary: $muertos2-06;
 // $success:       $green !default;
 // $info:          $cyan !default;
 // $warning:       $yellow !default;
 // $danger:        $red !default;
-$light:         $socali-01;
-$dark:          $muertos2-04;
-$white:         $joeartist-05;
+$light: $socali-01;
+$dark: $muertos2-04;
+$white: $joeartist-05;
+$navbar-dark-brand-color: $muertos2-01;

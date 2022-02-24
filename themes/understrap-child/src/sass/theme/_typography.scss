@@ -1,32 +1,37 @@
 h1 {
-	font-family: "Bebas Neue",serif;
+    font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
-font-size: 3rem;
-line-height: 1;
+    font-size: 3rem;
+    line-height: 1;
 }
+
 h2 {
-	font-family: "Bebas Neue",serif;
+    font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
 }
+
 h3 {
-	font-family: "Bebas Neue",serif;
+    font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
 }
+
 h4 {
-	font-family: "Bebas Neue",serif;
+    font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
 }
+
 h5 {
-	font-family: "Bebas Neue",serif;
+    font-family: "Bebas Neue", serif;
     font-style: italic;
     font-weight: 400;
 }
 
 .navbar-brand {
+    padding-top: 0.5rem;
     @extend h1;
     font-size: 3rem;
     font-style: normal;
@@ -34,65 +39,79 @@ h5 {
 
 #main-nav {
     color: $white;
-    a {
-        color: $white;
+    //     a {
+    //         color: $white;
+    //     }
+}
 
+.front-cover {
+    h2 {
+        font-size: 5rem;
+        color: $muertos2-01 !important;
+    }
+    p {
+        color: $muertos2-01 !important;
     }
 }
 
+.blurb-box {
+    .wp-block-quote {
+        max-width: 800px;
+        margin: auto;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        text-align: center;
+        p {
+            @extend h2;
+            margin-bottom: 0rem;
+        }
+        cite {
+            font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+            color: $primary;
+            font-style: normal;
+        }
+    }
+}
 
 // font-family: obviously-condensed, sans-serif;
 // font-weight: 400;
 // font-style: normal;
-
 // font-family: obviously-condensed, sans-serif;
 // font-weight: 400;
 // font-style: italic;
-
 // font-family: obviously-condensed, sans-serif;
 // font-weight: 700;
 // font-style: normal;
-
 // font-family: obviously-condensed, sans-serif;
 // font-weight: 700;
 // font-style: italic;
-
 // font-family: obviously-narrow, sans-serif;
 // font-weight: 400;
 // font-style: normal;
-
 // font-family: obviously-narrow, sans-serif;
 // font-weight: 400;
 // font-style: italic;
-
 // font-family: obviously-narrow, sans-serif;
 // font-weight: 700;
 // font-style: normal;
-
 // font-family: obviously-narrow, sans-serif;
 // font-weight: 700;
 // font-style: italic;
-
 // font-family: obviously, sans-serif;
 // font-weight: 300;
 // font-style: normal;
-
 // font-family: obviously, sans-serif;
 // font-weight: 300;
 // font-style: italic;
-
 // font-family: obviously, sans-serif;
 // font-weight: 400;
 // font-style: normal;
-
 // font-family: obviously, sans-serif;
 // font-weight: 400;
 // font-style: italic;
-
 // font-family: obviously, sans-serif;
 // font-weight: 700;
 // font-style: normal;
-
 // font-family: obviously, sans-serif;
 // font-weight: 800;
 // font-style: normal;

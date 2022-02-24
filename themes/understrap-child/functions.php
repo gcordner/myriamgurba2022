@@ -93,3 +93,17 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+
+/**
+ * Loads child theme styles in admin.
+ */
+add_action('admin_head', 'theme_styles');
+
+function theme_styles() {
+  echo '<style>
+    .napoleon {
+		font-size: 100px;
+    } 
+  </style>';
+}
