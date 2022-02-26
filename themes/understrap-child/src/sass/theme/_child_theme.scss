@@ -16,3 +16,20 @@
     max-width: 800px;
     margin: auto;
 }
+
+.page-header {
+    margin-top: 7rem !important;
+    // margin-bottom: 3rem !important;
+    text-align: center;
+}
+
+.archive {
+    a {
+        text-decoration: none;
+        border-bottom: 1px dotted transparent;
+        &:hover {
+            color: $purple;
+            // border-bottom: 1px dotted $primary;
+        }
+    }
+}

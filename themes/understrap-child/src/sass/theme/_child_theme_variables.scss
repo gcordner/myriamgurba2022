@@ -2,6 +2,7 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 // DIA DEL LOS MUERTOS 02
+$muertos1-03: #B9537A;
 $muertos2-01: #F2B705;
 $muertos2-02: #F2EFEB;
 $muertos2-03: #F28705;
@@ -25,7 +26,7 @@ $socali-05: #8C2E26;
 // scss-docs-start color-variables
 $blue: #0d6efd !default;
 $indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
+$purple: $muertos1-03 !default;
 $pink: #d63384 !default;
 $red: $joeartist-04 !default;
 $orange: $muertos2-03 !default;

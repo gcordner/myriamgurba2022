@@ -425,7 +425,7 @@ progress {
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
+  --bs-purple: #B9537A;
   --bs-pink: #d63384;
   --bs-red: #732424;
   --bs-orange: #F28705;
@@ -833,12 +833,12 @@ progress {
 
 .has-purple-color,
 .has-purple-color:visited {
-  color: #6f42c1;
+  color: #B9537A;
 }
 
 .has-purple-background-color {
-  background-color: #6f42c1;
-  border-color: #6f42c1;
+  background-color: #B9537A;
+  border-color: #B9537A;
 }
 
 .has-pink-color,
