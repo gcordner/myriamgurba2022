@@ -23,6 +23,7 @@
     text-align: center;
 }
 
+//** ARCHIVE STUFF **//
 .archive {
     a {
         text-decoration: none;
@@ -30,6 +31,25 @@
         &:hover {
             color: $purple;
             // border-bottom: 1px dotted $primary;
+        }
+    }
+}
+
+.tags {
+    // padding: 5px;
+    // margin-bottom: 15px;
+    // background-color: pink;
+    a {
+        color: $white;
+        text-transform: lowercase;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        background-color: $primary;
+        padding: 2px 7px 2px 7px;
+        &:hover {
+            color: $white;
+            background-color: #000000;
+            text-decoration: underline !important;
         }
     }
 }

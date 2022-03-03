@@ -146,15 +146,6 @@ class CoBlocks_Block_Assets {
 		// Define where the vendor asset is loaded from.
 		$vendors_dir = CoBlocks()->asset_source( 'js/vendors' );
 
-		// Required by the events block.
-		wp_enqueue_script(
-			'coblocks-slick',
-			$vendors_dir . '/slick.js',
-			array( 'jquery' ),
-			COBLOCKS_VERSION,
-			true
-		);
-
 		// Styles.
 		$name       = 'coblocks-1';
 		$filepath   = 'dist/' . $name;
@@ -362,7 +353,7 @@ class CoBlocks_Block_Assets {
 		);
 
 		// Masonry block.
-		if ( $this->is_page_gutenberg() || has_block( 'coblocks/gallery-masonry' ) || has_block( 'core/block' ) ) {
+		if ( $this->has_masonry_v1_block() ) {
 			wp_enqueue_script(
 				'coblocks-masonry',
 				$dir . 'coblocks-masonry.js',
@@ -389,39 +380,14 @@ class CoBlocks_Block_Assets {
 				COBLOCKS_VERSION,
 				true
 			);
-
-			wp_enqueue_script(
-				'coblocks-flickity',
-				$vendors_dir . '/flickity.js',
-				array( 'jquery' ),
-				COBLOCKS_VERSION,
-				true
-			);
-
-			if ( $this->is_page_gutenberg() || has_block( 'coblocks/accordion' ) || has_block( 'core/block' ) ) {
-				wp_enqueue_script(
-					'coblocks-accordion-carousel',
-					$dir . 'coblocks-accordion-carousel.js',
-					array( 'coblocks-flickity' ),
-					COBLOCKS_VERSION,
-					true
-				);
-			}
 		}
 
 		// Post Carousel block.
 		if ( $this->is_page_gutenberg() || has_block( 'coblocks/post-carousel' ) || has_block( 'core/block' ) ) {
 			wp_enqueue_script(
-				'coblocks-slick',
-				$vendors_dir . '/slick.js',
-				array( 'jquery' ),
-				COBLOCKS_VERSION,
-				true
-			);
-			wp_enqueue_script(
-				'coblocks-slick-initializer-front',
-				$dir . 'coblocks-slick-initializer-front.js',
-				array( 'jquery' ),
+				'coblocks-post-carousel',
+				$dir . 'coblocks-post-carousel.js',
+				array(),
 				COBLOCKS_VERSION,
 				true
 			);
@@ -430,16 +396,9 @@ class CoBlocks_Block_Assets {
 		// Events block.
 		if ( $this->is_page_gutenberg() || has_block( 'coblocks/events' ) || has_block( 'core/block' ) ) {
 			wp_enqueue_script(
-				'coblocks-slick',
-				$vendors_dir . '/slick.js',
-				array( 'jquery' ),
-				COBLOCKS_VERSION,
-				true
-			);
-			wp_enqueue_script(
 				'coblocks-events',
 				$dir . 'coblocks-events.js',
-				array( 'jquery' ),
+				array(),
 				COBLOCKS_VERSION,
 				true
 			);
@@ -532,6 +491,21 @@ class CoBlocks_Block_Assets {
 	}
 
 	/**
+	 * Determine if the given post content contains any v1 Masonry block.
+	 *
+	 * @access public
+	 * @since  2.22.0
+	 *
+	 * @return boolean True when post content contains a v1 Masonry block.
+	 */
+	public function has_masonry_v1_block() {
+		$v1_regex = '/<!-- wp:coblocks\/gallery-masonry.*|\n*(coblocks-gallery--item).*|\n*<!-- \/wp:coblocks\/gallery-masonry -->/m';
+
+		preg_match_all( $v1_regex, get_the_content(), $matches );
+		return isset( $matches[0] ) && isset( $matches[0][2] ) && ! empty( $matches[0][2] );
+	}
+
+	/**
 	 * Return whether a post type should display the Block Editor.
 	 *
 	 * @param string $post_type The post_type slug to check.
@@ -558,14 +532,14 @@ class CoBlocks_Block_Assets {
 			return true;
 		}
 
-		if ( false !== strpos( $admin_page, 'post.php' ) ) {
+		if ( false !== strpos( $admin_page, 'post.php' ) && isset( $_GET['post'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$wp_post = get_post( $_GET['post'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			if ( isset( $wp_post ) && isset( $wp_post->post_type ) && $this->is_post_type_gutenberg( $wp_post->post_type ) ) {
 				return true;
 			}
 		}
 
-		if ( false !== strpos( $admin_page, 'revision.php' ) ) {
+		if ( false !== strpos( $admin_page, 'revision.php' ) && isset( $_GET['revision'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$wp_post     = get_post( $_GET['revision'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$post_parent = get_post( $wp_post->post_parent );
 			if ( isset( $post_parent ) && isset( $post_parent->post_type ) && $this->is_post_type_gutenberg( $post_parent->post_type ) ) {

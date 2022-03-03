@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper p-0  mt-4" id="full-width-page-wrapper">
 <!--mt-4 to comoensate for being covered by fixed-top navbar -->
-	<div class="container-fluid p-0" id="content">
+	<div class="container-fluid p-0 " id="content">
 
 		<div class="row">
 

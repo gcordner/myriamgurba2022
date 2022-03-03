@@ -174,7 +174,27 @@ label:(0,b.__)("Brush","coblocks"),keywords:[
 /* translators: icon keyword */
 (0,b.__)("paintbrush","coblocks"),
 /* translators: icon keyword */
-(0,b.__)("palette","coblocks")],icon:(0,t.createElement)(k,{icon:a.nvk.default}),icon_outlined:(0,t.createElement)(k,{icon:a.nvk.outlined})},build:{
+(0,b.__)("palette","coblocks")],icon:(0,t.createElement)(k,{icon:a.nvk.default}),icon_outlined:(0,t.createElement)(k,{icon:a.nvk.outlined})},bubble:{
+/* translators: icon label */
+label:(0,b.__)("Bubble","coblocks"),keywords:[
+/* translators: icon keyword */
+(0,b.__)("conversation","coblocks"),
+/* translators: icon keyword */
+(0,b.__)("head","coblocks"),
+/* translators: icon keyword */
+(0,b.__)("human","coblocks"),
+/* translators: icon keyword */
+(0,b.__)("people","coblocks"),
+/* translators: icon keyword */
+(0,b.__)("person","coblocks"),
+/* translators: icon keyword */
+(0,b.__)("speach","coblocks"),
+/* translators: icon keyword */
+(0,b.__)("speak","coblocks"),
+/* translators: icon keyword */
+(0,b.__)("talk","coblocks"),
+/* translators: icon keyword */
+(0,b.__)("testimonial","coblocks")],icon:(0,t.createElement)(k,{icon:a.oiC.default})},build:{
 /* translators: icon label */
 label:(0,b.__)("Tools","coblocks"),keywords:[
 /* translators: icon keyword */

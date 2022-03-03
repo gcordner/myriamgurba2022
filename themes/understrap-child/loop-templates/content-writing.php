@@ -20,14 +20,14 @@
 
 
 
-<div class="col-sm-12 col-md-6 col-lg-4">
+<div class="col-sm-12 col-md-6 col-lg-4 mb-5">
    <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
       <header class="entry-header">
          <!--FEATURED IMAGE -->
          <!-- MAGAZINE AND DATE --> 
          <div class="magazine">
  <?php if($magazine) {
-    echo '<p><a href="'.get_field("url").'" target="_blank" >'.$magazine.'</a></p>';
+    echo '<p><a href="'.get_field("url").'" target="_blank" >'.$magazine.'</a> <span class="date"> l '.$pubDate.'</span></p>';
  } else {
     echo  '<p>Yes, we have no bananas.</p>';
  }
@@ -89,12 +89,14 @@
       </div>
       <!-- .entry-content -->
       <footer class="entry-footer">
+          <div class="tags">
          
       <?php 
       // Refer to this page: https://developer.wordpress.org/reference/functions/the_tags/
-      the_tags( 'Tagged with: ',' , ' ); 
+    //   the_tags( 'Tagged with: ',' , ' ); 
+      the_tags( '',' ' );
       ?>
-
+</div>
             </footer>
       <!-- .entry-footer -->
    </article>

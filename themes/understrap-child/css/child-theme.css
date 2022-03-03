@@ -16083,6 +16083,11 @@ h5, .h5 {
   text-align: center;
   margin-bottom: 0;
 }
+.magazine .date {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
 
 .front-cover {
   margin-top: 30px;
@@ -16112,6 +16117,20 @@ h5, .h5 {
 }
 .archive a:hover {
   color: #B9537A;
+}
+
+.tags a {
+  color: #F2F2F2;
+  text-transform: lowercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  background-color: #261404;
+  padding: 2px 7px 2px 7px;
+}
+.tags a:hover {
+  color: #F2F2F2;
+  background-color: #000000;
+  text-decoration: underline !important;
 }
 
 @media (max-width: 575.98px) {
