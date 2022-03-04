@@ -94,7 +94,18 @@ function understrap_child_customize_controls_js() {
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
+/**
+ * Removes edit link from footer
+ */
 
+if ( ! function_exists( 'understrap_edit_post_link' ) ) {
+	/**
+	 * Displays the edit post link for post.
+	 */
+	function understrap_edit_post_link() {
+		echo '<!-- EDIT LINK USED TO BE HERE -->';
+	}
+}
 /**
  * Loads child theme styles in admin.
  */

@@ -53,3 +53,35 @@
         }
     }
 }
+
+// FOOTER // 
+#wrapper-footer {
+    background-color: $red;
+    text-align: center;
+    p {
+        color: $white;
+        font-size: 0.8rem;
+    }
+    a {
+        color: $white;
+        ;
+        text-decoration: underline;
+        &:hover {
+            color: $yellow;
+        }
+    }
+    .myriam-social {
+        // margin: 0 5px 0 5px;
+    }
+    .wp-block-social-links {
+        .wp-block-social-link {
+            .wp-block-social-link-anchor {
+                background-color: $red;
+                font-size: 2rem;
+                svg {
+                    // background-color: $red;
+                }
+            }
+        }
+    }
+}
