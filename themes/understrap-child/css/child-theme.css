@@ -13082,6 +13082,7 @@ h5, .h5 {
 .page-header {
   margin-top: 7rem !important;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .archive a {
@@ -13104,6 +13105,10 @@ h5, .h5 {
   color: #F2F2F2;
   background-color: #000000;
   text-decoration: underline !important;
+}
+
+.book h1, .book .h1, .book .navbar-brand {
+  font-style: normal;
 }
 
 #wrapper-footer {

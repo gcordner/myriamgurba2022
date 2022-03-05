@@ -106,6 +106,30 @@ if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 		echo '<!-- EDIT LINK USED TO BE HERE -->';
 	}
 }
+
+/**
+ * MULTIPLE POST TYPES IN TAG OR CATEGORY ARCHIVE
+ */
+
+ /**
+ * Add snippets CPT to category archive page
+ */
+
+function myriamgurba_multiple_post_type_in_tag($query)
+{
+    if($query->is_main_query() && is_tag()){
+        $query->set('post_type', ['post', 'writing']);
+        return;
+    }
+	elseif ($query->is_main_query() && is_category()){
+        $query->set('post_type', ['post', 'writing']);
+        return;
+    }
+}
+add_action('pre_get_posts', 'myriamgurba_multiple_post_type_in_tag');
+
+
+
 /**
  * Loads child theme styles in admin.
  */
