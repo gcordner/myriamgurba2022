@@ -1,0 +1,30 @@
+// .pagination-container {
+//     margin: auto;
+//     background-color: pink;
+//     text-align: center;
+// }
+.pagination {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 150px;
+    ul {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .page-link {
+        background-color: transparent;
+        border: 1px solid transparent;
+        font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+    }
+    .page-item {
+        a {
+            &:hover {
+                // text-decoration: underline !important;
+                color: $primary !important;
+                // background-color: $orange !important;
+                border-bottom: 1px dotted $primary;
+            }
+        }
+    }
+}

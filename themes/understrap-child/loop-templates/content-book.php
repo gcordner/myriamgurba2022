@@ -56,9 +56,9 @@ https://getbootstrap.com/docs/5.0/utilities/flex/#order -->
     <?php }; ?>
     <br>
 
-    <?php if( get_field('button_2_button_2_text') ){ ?>
+    <!-- <?php if( get_field('button_2_button_2_text') ){ ?>
     <a href="<?php the_field('button_2_button_2_url') ?>" target="_blank"><button class="button-green" role="button"><?php the_field('button_2_button_2_text') ?></button></a>
-    <?php }; ?>
+    <?php }; ?> -->
     <hr class="wp-block-separator mobi-show"/>
     
 

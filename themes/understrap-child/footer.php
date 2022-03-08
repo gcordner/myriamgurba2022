@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 
 					<div class="site-info">
-<p>copyright &copy; <?php echo date("Y"); ?> Myriam Gurba. Design by <a href="https://former-model.com" target="_blank">Former Model</a>. </p>
+<p>copyright &copy; <?php echo date("Y"); ?> Myriam Gurba. Design by <a href="http://former-model.com" target="_blank">Former Model</a>. </p>
 						<!-- <?php understrap_site_info(); ?> -->
 
 					</div><!-- .site-info -->

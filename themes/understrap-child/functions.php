@@ -115,9 +115,23 @@ if ( ! function_exists( 'understrap_edit_post_link' ) ) {
  * Add snippets CPT to category archive page
  */
 
-function myriamgurba_multiple_post_type_in_tag($query)
+// function myriamgurba_multiple_post_type_in_tag($query)
+// {
+//     if($query->is_main_query() && is_tag()){
+//         $query->set('post_type', ['post', 'writing']);
+//         return;
+//     }
+// 	elseif ($query->is_main_query() && is_category()){
+//         $query->set('post_type', ['post', 'writing']);
+//         return;
+//     }
+// }
+// add_action('pre_get_posts', 'myriamgurba_multiple_post_type_in_tag');
+
+function myriamgurba_multiple_post_type($query)
 {
-    if($query->is_main_query() && is_tag()){
+    
+if($query->is_main_query() && is_tag()){
         $query->set('post_type', ['post', 'writing']);
         return;
     }
@@ -125,10 +139,34 @@ function myriamgurba_multiple_post_type_in_tag($query)
         $query->set('post_type', ['post', 'writing']);
         return;
     }
+	elseif($query->is_main_query()){
+        $query->set('post_type', ['writing', 'post']);
+        return;
+    }
+
 }
-add_action('pre_get_posts', 'myriamgurba_multiple_post_type_in_tag');
+add_action('pre_get_posts', 'myriamgurba_multiple_post_type');
 
+/**
+ * REMOVES THE WORD ARCHIVE FROM ARCHIVES TITLE
+ */
 
+add_filter( 'get_the_archive_title', function ($title) {
+	if ( is_category() ) {
+	$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+	$title = single_tag_title( '', false );
+	} elseif ( is_author() ) {
+	$title = '<span class="vcard">' . get_the_author() . '</span>' ;
+	}
+	else {
+		$title = post_type_archive_title( '<h1 class="page-title">', '</h1>' );
+	
+	}
+	
+	return $title;
+
+   });
 
 /**
  * Loads child theme styles in admin.

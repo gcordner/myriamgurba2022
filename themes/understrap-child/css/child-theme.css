@@ -13062,6 +13062,26 @@ h5, .h5 {
   font-size: 0.8rem;
 }
 
+.pagination {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 150px;
+}
+.pagination ul {
+  margin-right: auto;
+  margin-left: auto;
+}
+.pagination .page-link {
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+.pagination .page-item a:hover {
+  color: #261404 !important;
+  border-bottom: 1px dotted #261404;
+}
+
 .front-cover {
   margin-top: 30px;
 }
@@ -13130,6 +13150,72 @@ h5, .h5 {
   background-color: #732424;
   font-size: 2rem;
 }
+/* CSS */
+.button-orange {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: #F2F2F2;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 1rem;
+  z-index: 6;
+}
+.button-orange:after {
+  content: "";
+  background-color: #F28705;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+.button-orange:hover:after {
+  content: "";
+  background-color: #F28705;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  transition: 0.2s;
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-orange {
+    padding: 13px 50px 13px;
+  }
+}
+.archive .button-orange {
+  border-bottom: 1px solid #000 !important;
+  background-color: transparent;
+}
+.archive .button-orange a {
+  border-bottom: 1px solid #000 !important;
+}
+.archive .button-orange a:hover {
+  color: #000 !important;
+}
+
+.readmore {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 @media (max-width: 575.98px) {
   .mobi-hide {
     display: none !important;
@@ -13141,6 +13227,10 @@ h5, .h5 {
 
   .front-cover h2, .front-cover .h2 {
     font-size: 3rem;
+  }
+
+  .page-header {
+    margin-bottom: 3rem !important;
   }
 }
 @media (min-width: 576px) {
