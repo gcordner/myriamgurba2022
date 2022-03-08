@@ -53,18 +53,18 @@
         }
         ?> -->
  
+ <?php if($articleUrl) { 
+the_title(
+    sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_field("url") ) ),
+    '</a></h2>'
+);        } else {
+    the_title(
+        sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+        '</a></h2>'
+    );        }
+        ?>
 
 
-
-
-
-
-         <?php
-            the_title(
-            	sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_field("url") ) ),
-            	'</a></h2>'
-            );
-            ?>
       </header>
       <!-- .entry-header -->
       <div class="entry-content">
