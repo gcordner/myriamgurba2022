@@ -139,10 +139,20 @@ if($query->is_main_query() && is_tag()){
         $query->set('post_type', ['post', 'writing']);
         return;
     }
-	elseif($query->is_main_query()){
-        $query->set('post_type', ['writing', 'post']);
-        return;
-    }
+
+	// elseif ($query->is_main_query() && is_archive()){
+    //     $query->set('post_type', ['post', 'writing']);
+    //     return;
+    // }
+	// elseif ($query->is_main_query() && get_post_type() == 'book') {
+	// 	$query->set('post_type', ['writing', 'post']);
+
+    //     return;
+	// }
+	// elseif($query->is_main_query()){
+    //     $query->set('post_type', ['writing', 'post']);
+    //     return;
+    // }
 
 }
 add_action('pre_get_posts', 'myriamgurba_multiple_post_type');

@@ -29,7 +29,7 @@
  <?php if($magazine) {
     echo '<p><a href="'.get_field("url").'" target="_blank" >'.$magazine.'</a> <span class="date"> l '.$pubDate.'</span></p>';
  } else {
-    echo  '<p>Yes, we have no bananas.</p>';
+    echo  '<p><span class="date">'.$pubDate.'</span></p>';
  }
 ?>
 </div>
@@ -39,7 +39,7 @@
          <?php if($articleUrl) {
             echo '<a href="'.$articleUrl.'" target="_blank" title="'.get_the_title().'">'.get_the_post_thumbnail( $post->ID, 'large' ).'</a>';
             } else {
-               echo get_the_post_thumbnail( $post->ID, 'large' );
+               echo'<a href="' . esc_url( get_post_permalink( get_the_ID() ) ).'">'. get_the_post_thumbnail( $post->ID, 'large' ).'</a>';
                }
                ?>
         </div>
