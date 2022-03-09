@@ -13,6 +13,13 @@
       $pubDate = get_the_date();
       $tags = get_tags();
 
+      if($articleUrl) {
+         $url = $articleUrl;
+      }
+      else {
+         $url = get_permalink();
+      }
+
 ?>
 
 
@@ -26,6 +33,7 @@
          <!--FEATURED IMAGE -->
          <!-- MAGAZINE AND DATE --> 
          <div class="magazine">
+
  <?php if($magazine) {
     echo '<p><a href="'.get_field("url").'" target="_blank" >'.$magazine.'</a> <span class="date"> l '.$pubDate.'</span></p>';
  } else {
@@ -36,22 +44,15 @@
  <!-- END MAGAZINE AND DATE -->
          <div class="featured-image">
          
-         <?php if($articleUrl) {
-            echo '<a href="'.$articleUrl.'" target="_blank" title="'.get_the_title().'">'.get_the_post_thumbnail( $post->ID, 'large' ).'</a>';
-            } else {
-               echo'<a href="' . esc_url( get_post_permalink( get_the_ID() ) ).'">'. get_the_post_thumbnail( $post->ID, 'large' ).'</a>';
-               }
+         <?php {
+            echo '<a href="'.$url.'" target="_blank" title="'.get_the_title().'">'.get_the_post_thumbnail( $post->ID, 'large' ).'</a>';
+                           }
                ?>
         </div>
 <!--END FEATURED IMAGE -->
 
 
-        <!-- <?php if($articleUrl) { 
-        echo '<a href="'.$articleUrl.'" target="_blank" title="'.get_the_title().'">'."I'm a little teapot short and stout".'</a>';
-        } else {
-            echo '<a href="' . esc_url( get_permalink( get_the_ID() ) ).'" target="_blank"> Here is my handle and here is my spout. </a>';
-        }
-        ?> -->
+
  
  <?php if($articleUrl) { 
 the_title(
