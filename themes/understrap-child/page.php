@@ -1,8 +1,11 @@
 <?php
 /**
- * Template Name: Full Width Page
+ * The template for displaying all pages
  *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
  *
  * @package Understrap
  */
@@ -11,44 +14,44 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+
 $container = get_theme_mod( 'understrap_container_type' );
 
-if ( is_front_page() ) {
-	get_template_part( 'global-templates/hero' );
-}
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="wrapper has-yellow-background-color" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+	<div class="container-full mt-4" id="content" tabindex="-1">
 
 		<div class="row">
 
-			<div class="col-md-12 content-area" id="primary">
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-				<main class="site-main" id="main" role="main">
+			<main class="site-main mt-4" id="main">
 
-					<?php
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'loop-templates/content', 'page' );
+				<?php
+				while ( have_posts() ) {
+					the_post();
+					get_template_part( 'loop-templates/content', 'emptypage' );
 
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
-					}
-					?>
+					// If comments are open or we have at least one comment, load up the comment template.
+					// if ( comments_open() || get_comments_number() ) {
+					// 	comments_template();
+					// }
+				}
+				?>
 
-				</main><!-- #main -->
+			</main><!-- #main -->
 
-			</div><!-- #primary -->
+			<!-- Do the right sidebar check -->
+			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
-		</div><!-- .row end -->
+		</div><!-- .row -->
 
 	</div><!-- #content -->
 
-</div><!-- #full-width-page-wrapper -->
+</div><!-- #page-wrapper -->
 
 <?php
 get_footer();

@@ -63,6 +63,31 @@
     }
 }
 
+// ALIGNMENT // 
+.baseline {
+    display: inline;
+    vertical-align: baseline;
+}
+
+.bottom {
+    display: inline;
+    vertical-align: bottom;
+}
+
+.padding-1 {
+    ul {
+        padding-left: 1rem !important;
+    }
+}
+
+.praise {
+    margin-top: 4rem;
+}
+
+ul {
+    padding-left: 1rem;
+}
+
 // FOOTER // 
 #wrapper-footer {
     background-color: $red;

@@ -93,6 +93,38 @@ h5 {
     .wp-block-post-date {
         display: none;
     }
+    p {
+        color: $yellow !important;
+    }
+}
+
+.media-box {
+    h2 {
+        color: $white !important;
+    }
+    .wp-block-post-date {
+        display: none;
+    }
+    p {
+        color: $white !important;
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.dark {
+    a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .magazine {

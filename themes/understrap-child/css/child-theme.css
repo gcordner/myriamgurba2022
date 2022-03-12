@@ -13046,6 +13046,34 @@ h5, .h5 {
 .book-box .wp-block-post-date {
   display: none;
 }
+.book-box p {
+  color: #F2B705 !important;
+}
+
+.media-box h2, .media-box .h2 {
+  color: #F2F2F2 !important;
+}
+.media-box .wp-block-post-date {
+  display: none;
+}
+.media-box p {
+  color: #F2F2F2 !important;
+}
+.media-box a {
+  color: #F2F2F2;
+  text-decoration: none;
+}
+.media-box a:hover {
+  text-decoration: underline;
+}
+
+.dark a {
+  color: #F2F2F2;
+  text-decoration: none;
+}
+.dark a:hover {
+  text-decoration: underline;
+}
 
 .magazine p {
   font-family: "Big Shoulders Display", Arial, Helvetica, sans-serif;
@@ -13129,6 +13157,28 @@ h5, .h5 {
 
 .book h1, .book .h1, .book .navbar-brand {
   font-style: normal;
+}
+
+.baseline {
+  display: inline;
+  vertical-align: baseline;
+}
+
+.bottom {
+  display: inline;
+  vertical-align: bottom;
+}
+
+.padding-1 ul {
+  padding-left: 1rem !important;
+}
+
+.praise {
+  margin-top: 4rem;
+}
+
+ul {
+  padding-left: 1rem;
 }
 
 #wrapper-footer {
