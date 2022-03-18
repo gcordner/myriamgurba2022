@@ -4,6 +4,9 @@ The point of this was to create a new theme no longer using outdated Genesis fra
 
 This theme uses bootstrap 5
 
+# Staging site:
+https://www.geoffcordner.com/mgstaging2/
+
 # Problems to solve:
 
 1). Using custom post types and custom fields, create a "writing" post type for Myriam's magazine work that in addition to the standard WordPress post or page also has a subtitle, a magazine field naming the magazine or website where the piece was published, a magazine logo, and a url to the externally published piece. Some blog posts will also be placed under writing.
