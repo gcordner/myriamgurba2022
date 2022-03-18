@@ -10,6 +10,9 @@ git fetch origin
 
 git checkout main
 
+#Active Theme
+Active Theme is understrap-child
+
 
 # NPM Build
 This theme uses understrap's build process.
