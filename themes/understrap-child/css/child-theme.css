@@ -13288,6 +13288,44 @@ ul {
     display: none !important;
   }
 }
+#woocommerce-wrapper {
+  background-color: #F2B705;
+}
+#woocommerce-wrapper .container {
+  margin-top: 64px;
+}
+#woocommerce-wrapper .woocommerce .woocommerce-breadcrumb {
+  color: #261404;
+}
+#woocommerce-wrapper .woocommerce .woocommerce-breadcrumb a {
+  color: #261404;
+  text-decoration: none;
+}
+#woocommerce-wrapper .woocommerce .woocommerce-breadcrumb a:hover {
+  color: #261404;
+  text-decoration: underline;
+}
+
+.woocommerce-breadcrumb {
+  color: #261404;
+}
+.woocommerce-breadcrumb a {
+  color: #261404 !important;
+  text-decoration: none !important;
+}
+.woocommerce-breadcrumb a:hover {
+  color: #261404 !important;
+  text-decoration: underline !important;
+}
+
+.woocommerce-tabs {
+  display: none;
+}
+
+.product_meta {
+  display: none;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
