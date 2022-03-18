@@ -11,25 +11,30 @@ git fetch origin
 git checkout main
 
 
-# wordpress-gulp
+# NPM Build
+This theme uses understrap's build process.
 
-Instructions for setting up gulp that work on linux as well as mac can be found here:
-https://robclark.io/automating-wordpress-theme-development-with-gulp/
+To install dependencies:
+npm install
 
-For the understrap inegration, we have gotten rid of their failed build and used the same build process as set up above.
+To work and compile npm on the fly:
+npm run watch
 
-Because understrap uses a lot of deprecated fractions, you will need to solve those using the instructions here:
-https://sass-lang.com/documentation/breaking-changes/slash-div
+To create a distributable copy of the theme:
+npm run dist
 
-Basically, you can use the Sass migrator to automatically update your stylesheets to use math.div() and list.slash(). To do that, run these two commands:
+To delete the /dist/ directory and its files:
+npm run dist-clean
 
-$ npm install -g sass-migrator
-$ sass-migrator division **/*.scss
 
-# for the understrap-child theme:
 
-Instructions for npm are here:
+Complete instructions for npm are here:
 https://docs.understrap.com/#/understrap-child/npm
+
+# Required Plugins
+
+Gutenberg plugin is required. 
+https://wordpress.org/plugins/gutenberg/
 
 
 
