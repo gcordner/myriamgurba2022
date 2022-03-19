@@ -1,0 +1,39 @@
+#woocommerce-wrapper {
+    background-color: $yellow;
+    .container {
+        margin-top: 64px;
+    }
+    .woocommerce {
+        .woocommerce-breadcrumb {
+            color: $primary;
+            a {
+                color: $primary;
+                text-decoration: none;
+                &:hover {
+                    color: $primary;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.woocommerce-breadcrumb {
+    color: $primary;
+    a {
+        color: $primary !important;
+        text-decoration: none !important;
+        &:hover {
+            color: $primary !important;
+            text-decoration: underline !important;
+        }
+    }
+}
+
+.woocommerce-tabs {
+    display: none;
+}
+
+.product_meta {
+    display: none;
+}
