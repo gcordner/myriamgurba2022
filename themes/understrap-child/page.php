@@ -28,12 +28,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main mt-4" id="main">
+			<main class="site-main" id="main">
 
 				<?php
 				while ( have_posts() ) {
 					the_post();
-					get_template_part( 'loop-templates/content', 'emptypage' );
+					get_template_part( 'loop-templates/content', 'woopage' );
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					// if ( comments_open() || get_comments_number() ) {

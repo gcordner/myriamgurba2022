@@ -37,3 +37,29 @@
 .product_meta {
     display: none;
 }
+
+table.cart {
+    img {
+        width: 300px;
+    }
+}
+
+.woocommerce-cart {
+    table.cart {
+        img {
+            width: 300px;
+        }
+    }
+}
+
+.woocommerce-checkout {
+    table.cart {
+        img {
+            width: 300px;
+        }
+    }
+}
+
+.woocontainer {
+    margin-top: 6rem !important;
+}

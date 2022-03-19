@@ -13326,6 +13326,22 @@ ul {
   display: none;
 }
 
+table.cart img {
+  width: 300px;
+}
+
+.woocommerce-cart table.cart img {
+  width: 300px;
+}
+
+.woocommerce-checkout table.cart img {
+  width: 300px;
+}
+
+.woocontainer {
+  margin-top: 6rem !important;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
