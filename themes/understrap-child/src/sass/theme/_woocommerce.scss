@@ -63,3 +63,20 @@ table.cart {
 .woocontainer {
     margin-top: 6rem !important;
 }
+
+.alert-info {
+    color: $white;
+    background-color: $alert;
+    border-color: $muertos2-05;
+}
+
+.woocommerce-info {
+    color: $primary;
+    background-color: $alert;
+    border-color: $muertos2-05;
+}
+
+.woocommerce-checkout #payment {
+    background-color: $yellow;
+    border-color: $muertos2-05;
+}

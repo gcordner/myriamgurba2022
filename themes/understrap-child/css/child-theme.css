@@ -13342,6 +13342,23 @@ table.cart img {
   margin-top: 6rem !important;
 }
 
+.alert-info, .woocommerce-info {
+  color: #F2F2F2;
+  background-color: #F28705;
+  border-color: #F25C05;
+}
+
+.woocommerce-info {
+  color: #261404;
+  background-color: #F28705;
+  border-color: #F25C05;
+}
+
+.woocommerce-checkout #payment {
+  background-color: #F2B705;
+  border-color: #F25C05;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
