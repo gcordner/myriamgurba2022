@@ -61,6 +61,12 @@ https://docs.understrap.com/#/understrap-child/npm
 Gutenberg plugin is required. 
 https://wordpress.org/plugins/gutenberg/
 
+ACF
+https://www.advancedcustomfields.com/
+
+Custom Post Type UI
+https://wordpress.org/plugins/custom-post-type-ui/
+
 
 
 
