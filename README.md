@@ -5,7 +5,7 @@ The point of this was to create a new theme no longer using outdated Genesis fra
 This theme uses bootstrap 5
 
 # Staging site:
-https://www.geoffcordner.com/mgstaging2/
+~~https://www.geoffcordner.com/mgstaging2/~~
 
 Active Theme is understrap-child
 
