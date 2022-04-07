@@ -1,3 +1,5 @@
+<img width="100%" alt="myriam2022" src="https://user-images.githubusercontent.com/240706/162228386-282c5dec-fd18-4ef2-ad71-099b1193c453.png">
+
 # About 
 This is a website update for Myriamgurba.com
 The point of this was to create a new theme no longer using outdated Genesis framework. The new theme is a child of understrap, which is a bootstrap ready version of Auttomatic's underscores starter theme.
