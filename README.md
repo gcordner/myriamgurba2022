@@ -1,10 +1,13 @@
 <img width="100%" alt="myriam2022" src="https://user-images.githubusercontent.com/240706/162228386-282c5dec-fd18-4ef2-ad71-099b1193c453.png">
 
 # About 
-This is a website update for Myriamgurba.com
-The point of this was to create a new theme no longer using outdated Genesis framework. The new theme is a child of understrap, which is a bootstrap ready version of Auttomatic's underscores starter theme.
+This is a website update for https://myriamgurba.com
 
-This theme uses bootstrap 5
+Myriam Gurba is a latine author and activist whose next book of essays is coming out via Simon & Schuster. Her audience is young, BIPOC, and trends female. Her previous site, using an outdated Genesis theme, was businesslike, and the theme was not block compatible. We wanted a new, fresh looking website, using ACF to create customs fields and post-types, a hub collecting all her essays on various websites like Time, Harpers Bazaar, Paris Review, LA Taco, etc., with excerpts and links out to all of the pieces, as well as information on her books and on upcoming public appearances.
+
+The new theme is a child of understrap, which is a bootstrap ready version of Automattic's underscores starter theme.
+
+This theme uses bootstrap 5.
 
 # Staging site:
 ~~https://www.geoffcordner.com/mgstaging2/~~
