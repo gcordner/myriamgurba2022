@@ -43,7 +43,9 @@ https://getbootstrap.com/docs/5.0/utilities/flex/#order -->
 <div class="order-sm-1 order-md-2 order-lg-2 col-sm-12 col-md-6 col-lg-5">
 <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 <div class="book-meta">
+<?php if( get_field('price') ){?>
     <h3 class="price">Price: <?php the_field('price'); ?></h3>
+    <?php }; ?>
     <hr class="wp-block-separator"/>
     <?php if( get_field('publisher') ){?>
     <p><strong>Publisher: </strong> <?php the_field('publisher'); ?></p>
@@ -62,9 +64,7 @@ https://getbootstrap.com/docs/5.0/utilities/flex/#order -->
     <?php }; ?>
     <br>
 
-    <!-- <?php if( get_field('button_2_button_2_text') ){ ?>
-    <a href="<?php the_field('button_2_button_2_url') ?>" target="_blank"><button class="button-green" role="button"><?php the_field('button_2_button_2_text') ?></button></a>
-    <?php }; ?> -->
+ 
     <hr class="wp-block-separator mobi-show"/>
     
 
