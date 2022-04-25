@@ -62,6 +62,13 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
+/**
+ * Include theme code files.
+ */
+
+// Custom post types and taxonomies.
+require_once( 'inc/custom-posts.php' );
+
 
 
 /**
@@ -190,3 +197,5 @@ function theme_styles() {
     } 
   </style>';
 }
+
+

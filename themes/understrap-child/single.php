@@ -53,7 +53,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                             get_template_part( 'loop-templates/content-book', get_post_format() );
 
                         }
-                        elseif ('writing' == get_post_type()) {
+                        elseif ( 'writing' == get_post_type() ) {
                             get_template_part( 'loop-templates/content', 'single' );
                         }
 					}
