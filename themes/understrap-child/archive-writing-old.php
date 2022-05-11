@@ -35,8 +35,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						?>
 					</header><!-- .page-header -->
-                    <div class="container">
-    <div class="row">
+					<div class="container">
+	<div class="row">
 					<?php
 					// Start the loop.
 					while ( have_posts() ) {
@@ -54,7 +54,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				}
 				?>
 </div>
-            </div>
+			</div>
 			</main><!-- #main -->
 
 			<?php

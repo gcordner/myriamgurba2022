@@ -64,7 +64,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 		}
 
 		?>
-    <div class="pagination-container">
+	<div class="pagination-container">
 		<nav aria-labelledby="posts-nav-label">
 
 			<h2 id="posts-nav-label" class="screen-reader-text">
@@ -86,7 +86,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 			</ul>
 
 		</nav>
-            </div>
+			</div>
 		<?php
 	}
 }

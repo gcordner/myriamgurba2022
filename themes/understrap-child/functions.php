@@ -46,13 +46,6 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-// /**
-//  * Typekit fonts
-//  */
-// function adobe_fonts() {
-//     wp_enqueue_style( 'adobe-fonts', 'https://use.typekit.net/qnb6jpd.css', false );
-// }
-// add_action( 'wp_enqueue_scripts', 'adobe_fonts' );
 
 /**
  * Load the child theme's text domain
@@ -67,7 +60,7 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
  */
 
 // Custom post types and taxonomies.
-require_once( 'inc/custom-posts.php' );
+require_once 'inc/custom-posts.php';
 
 
 
@@ -90,7 +83,7 @@ add_filter( 'theme_mod_understrap_bootstrap_version', 'understrap_default_bootst
 /**
  * Loads javascript for showing customizer warning dialog.
  */
-function understrap_child_customize_controls_js() {
+function mg_customize_controls_js() {
 	wp_enqueue_script(
 		'understrap_child_customizer',
 		get_stylesheet_directory_uri() . '/js/customizer-controls.js',
@@ -99,7 +92,7 @@ function understrap_child_customize_controls_js() {
 		true
 	);
 }
-add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+add_action( 'customize_controls_enqueue_scripts', 'mg_customize_controls_js' );
 
 /**
  * Removes edit link from footer
@@ -113,85 +106,57 @@ if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 		echo '<!-- EDIT LINK USED TO BE HERE -->';
 	}
 }
-
 /**
- * MULTIPLE POST TYPES IN TAG OR CATEGORY ARCHIVE
+ * Alter the posts query:
+ * - include writing post type
  */
 
- /**
- * Add snippets CPT to category archive page
- */
+function myriamgurba_multiple_post_type( $query ) {
+	// Abort if we're in the admin or if this is not the main query.
+	if ( ! $query->is_main_query() || is_admin() ) {
+		return;
+	}
 
-// function myriamgurba_multiple_post_type_in_tag($query)
-// {
-//     if($query->is_main_query() && is_tag()){
-//         $query->set('post_type', ['post', 'writing']);
-//         return;
-//     }
-// 	elseif ($query->is_main_query() && is_category()){
-//         $query->set('post_type', ['post', 'writing']);
-//         return;
-//     }
-// }
-// add_action('pre_get_posts', 'myriamgurba_multiple_post_type_in_tag');
-
-function myriamgurba_multiple_post_type($query)
-{
-    
-if($query->is_main_query() && is_tag()){
-        $query->set('post_type', ['post', 'writing']);
-        return;
-    }
-	elseif ($query->is_main_query() && is_category()){
-        $query->set('post_type', ['post', 'writing']);
-        return;
-    }
-
-	// elseif ($query->is_main_query() && is_archive()){
-    //     $query->set('post_type', ['post', 'writing']);
-    //     return;
-    // }
-	// elseif ($query->is_main_query() && get_post_type() == 'book') {
-	// 	$query->set('post_type', ['writing', 'post']);
-
-    //     return;
-	// }
-	// elseif($query->is_main_query()){
-    //     $query->set('post_type', ['writing', 'post']);
-    //     return;
-    // }
-
+	if ( is_archive() ) {
+		set_query_var( 'post_type', array( 'post', 'writing' ) );
+	}
 }
-add_action('pre_get_posts', 'myriamgurba_multiple_post_type');
+
+
+
+
+add_action( 'pre_get_posts', 'myriamgurba_multiple_post_type' );
 
 /**
- * REMOVES THE WORD ARCHIVE FROM ARCHIVES TITLE
+ * Removes the word archive from archives title
  */
 
-add_filter( 'get_the_archive_title', function ($title) {
-	if ( is_category() ) {
-	$title = single_cat_title( '', false );
-	} elseif ( is_tag() ) {
-	$title = single_tag_title( '', false );
-	} elseif ( is_author() ) {
-	$title = '<span class="vcard">' . get_the_author() . '</span>' ;
-	}
-	else {
-		$title = post_type_archive_title( '<h1 class="page-title">', '</h1>' );
-	
-	}
-	
-	return $title;
+add_filter(
+	'get_the_archive_title',
+	function ( $title ) {
+		if ( is_category() ) {
+			$title = single_cat_title( '', false );
+		} elseif ( is_tag() ) {
+			$title = single_tag_title( '', false );
+		} elseif ( is_author() ) {
+			$title = '<span class="vcard">' . get_the_author() . '</span>';
+		} else {
+			$title = post_type_archive_title( '<h1 class="page-title">', '</h1>' );
 
-   });
+		}
+
+		return $title;
+
+	}
+);
 
 /**
  * Loads child theme styles in admin.
  */
-add_action('admin_head', 'theme_styles');
+add_action( 'admin_head', 'theme_styles' );
 
 function theme_styles() {
-  echo '<style>
+	echo '<style>
     .napoleon {
 		font-size: 100px;
     } 

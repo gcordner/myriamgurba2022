@@ -273,32 +273,32 @@ if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
 // add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
 
 // if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
-// 	/**
-// 	 * Adds a custom read more link to all excerpts, manually or automatically generated
-// 	 *
-// 	 * @param string $post_excerpt Posts's excerpt.
-// 	 *
-// 	 * @return string
-// 	 */
-// 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
-// 		if ( ! is_admin() ) {
-//             if ($articleUrl) {
-//                 $post_excerpt = $post_excerpt . ' [...]<div class="readmore"><a class="button-orange" href="' . esc_url( get_field("url") ) . '">' . __(
-//                     'Read More...',
-//                     'understrap'
-//                 ) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></div>';
-//             }
+// **
+// * Adds a custom read more link to all excerpts, manually or automatically generated
+// *
+// * @param string $post_excerpt Posts's excerpt.
+// *
+// * @return string
+// */
+// function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+// if ( ! is_admin() ) {
+// if ($articleUrl) {
+// $post_excerpt = $post_excerpt . ' [...]<div class="readmore"><a class="button-orange" href="' . esc_url( get_field("url") ) . '">' . __(
+// 'Read More...',
+// 'understrap'
+// ) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></div>';
+// }
 
-//             else {
-//                 $post_excerpt = $post_excerpt . ' [...]<div class="readmore"><a class="button-orange" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
-//                     'Beat it!...',
-//                     'understrap'
-//                 ) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></div>';
-//             }
+// else {
+// $post_excerpt = $post_excerpt . ' [...]<div class="readmore"><a class="button-orange" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
+// 'Beat it!...',
+// 'understrap'
+// ) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></div>';
+// }
 
 
-			
-// 		}
-// 		return $post_excerpt;
-// 	}
+
+// }
+// return $post_excerpt;
+// }
 // }

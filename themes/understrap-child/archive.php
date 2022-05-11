@@ -14,7 +14,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 
 // if ( is_front_page() ) {
-// 	get_template_part( 'global-templates/hero' );
+// get_template_part( 'global-templates/hero' );
 // }
 ?>
 
@@ -34,21 +34,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<header class="page-header">
 
 							<?php
-						// post_type_archive_title( '<h1 class="page-title">', '</h1>' );
+							// post_type_archive_title( '<h1 class="page-title">', '</h1>' );
+							the_archive_title( '<h1 class="page-title">', '</h1>' );
+
+							the_archive_description( '<div class="taxonomy-description">', '</div>' );
+							?>
+
+
+
+					<!-- 
+					<?php
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
-
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?>
-
-
-
-                    <!-- <?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?> -->
+					?>
+						 -->
 					</header><!-- .page-header -->
-                    <div class="container overflow-hidden">
-    <div class="row gx-5 gy-3">
+					<div class="container overflow-hidden">
+	<div class="row gx-5 gy-3">
 					<?php
 					// Start the loop.
 					while ( have_posts() ) {
@@ -68,11 +70,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</main><!-- #main -->
 				<?php
-			// Display the pagination component.
-			understrap_pagination();
-			// Do the right sidebar check.
-			get_template_part( 'global-templates/right-sidebar-check' );
-			?>
+				// Display the pagination component.
+				understrap_pagination();
+				// Do the right sidebar check.
+				get_template_part( 'global-templates/right-sidebar-check' );
+				?>
 			</div><!-- #primary -->
 
 		</div><!-- .row end -->
