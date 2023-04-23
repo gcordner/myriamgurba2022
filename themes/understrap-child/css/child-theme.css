@@ -13200,6 +13200,16 @@ ul {
   background-color: #732424;
   font-size: 2rem;
 }
+.entry-meta {
+  font-size: 0.9rem;
+}
+
+.type-writing {
+  max-width: 1024px;
+  margin: auto;
+  margin-top: var(--bs-gutter-y);
+}
+
 /* CSS */
 .button-orange {
   font-size: 16px;

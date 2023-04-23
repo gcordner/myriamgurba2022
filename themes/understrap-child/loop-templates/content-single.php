@@ -23,9 +23,13 @@ defined( 'ABSPATH' ) || exit;
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php
+	if ( get_post_type() !== 'writing' ) {
+		echo get_the_post_thumbnail( $post->ID, 'large' );
+	}
+	?>
 
-	<div class="entry-content">
+	<div class="entry-content post__entry-content">
 
 		<?php
 		the_content();

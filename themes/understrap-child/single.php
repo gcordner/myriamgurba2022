@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper p-0  mt-4" id="full-width-page-wrapper">
 <!--mt-4 to comoensate for being covered by fixed-top navbar -->
 	<div class="container-fluid p-0 has-yellow-background-color archive" id="content">
-
+<!--ZEPHYR! -->
 		<div class="row">
 
 			<div class="col-md-12 content-area" id="primary">
@@ -32,12 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				if ( have_posts() ) {
 					?>
 					<header class="page-header">
-					<!-- 
-					<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-					?>
-						 -->
+
 					</header><!-- .page-header -->
 					<div class="container overflow-hidden">
 	<div class="row gx-5 gy-3">
