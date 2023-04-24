@@ -132,11 +132,23 @@ ul {
 // POST TYPE WRITING (BLOG POSTS) 
 
 .entry-meta {
-    font-size: 0.9rem;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: .8rem;
+    margin-bottom: 1rem;
 }
 
 .type-writing {
     max-width: 1024px;
     margin: auto;
     margin-top: var(--bs-gutter-y);
+}
+
+.post__entry-content {
+    p {
+        max-width: 800px;
+        margin: auto;
+        margin-bottom: 1rem;
+
+    }
 }
