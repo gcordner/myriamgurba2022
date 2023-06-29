@@ -11,16 +11,13 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php
-	if ( ! is_page_template( 'page-templates/no-title.php' ) ) {
-		the_title(
-			'<header class="entry-header"><h1 class="entry-title">',
-			'</h1></header><!-- .entry-header -->'
-		);
-	}
+	<header class="entry-header">
 
-	echo get_the_post_thumbnail( $post->ID, 'large' );
-	?>
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+	</header><!-- .entry-header -->
+
+	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
 
@@ -37,4 +34,4 @@ defined( 'ABSPATH' ) || exit;
 
 	</footer><!-- .entry-footer -->
 
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post-## -->

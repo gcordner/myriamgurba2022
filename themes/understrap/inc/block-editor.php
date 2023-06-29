@@ -3,8 +3,8 @@
  * Block editor (gutenberg) specific functionality
  *
  * @package Understrap
- * @since 1.0.0
  */
+
 
 add_action( 'after_setup_theme', 'understrap_block_editor_setup' );
 
@@ -12,8 +12,6 @@ if ( ! function_exists( 'understrap_block_editor_setup' ) ) {
 
 	/**
 	 * Sets up our default theme support for the WordPress block editor.
-	 *
-	 * @since 1.0.0
 	 */
 	function understrap_block_editor_setup() {
 
@@ -35,9 +33,7 @@ if ( ! function_exists( 'understrap_generate_color_palette' ) ) {
 	/**
 	 * Checks for our JSON file of color values. If exists, creates a color palette array.
 	 *
-	 * @since 1.0.0
-	 *
-	 * @return array
+	 * @return array|bool
 	 */
 	function understrap_generate_color_palette() {
 		$color_palette = array();
@@ -47,25 +43,18 @@ if ( ! function_exists( 'understrap_generate_color_palette' ) ) {
 
 		if ( $color_palette_json ) {
 			$color_palette_json = json_decode( $color_palette_json, true );
-			if ( is_array( $color_palette_json ) ) {
-				foreach ( $color_palette_json as $key => $value ) {
-					if ( ! is_string( $key ) ) {
-						continue;
-					}
-					$key             = str_replace( array( '--bs-', '--' ), '', $key );
-					$color_palette[] = array(
-						'name'  => $key,
-						'slug'  => $key,
-						'color' => $value,
-					);
-				}
+			foreach ( $color_palette_json as $key => $value ) {
+				$key             = str_replace( array( '--bs-', '--' ), '', $key );
+				$color_palette[] = array(
+					'name'  => $key,
+					'slug'  => $key,
+					'color' => $value,
+				);
 			}
 		}
 
 		/**
-		 * Filters the default bootstrap color palette so it can be overriden by child themes or plugins when we add theme support for editor-color-palette.
-		 *
-		 * @since 1.0.0
+		 * Filters the default bootstrap color palette so it can be overriden by child themes or plugins when we add theme support for editor-color-palette. This array can also be generated via gulp.
 		 *
 		 * @param array $color_palette An array of color options for the editor-color-palette setting.
 		 */

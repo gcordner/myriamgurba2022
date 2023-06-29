@@ -13,9 +13,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<!-- ******************* The Hero Widget Area ******************* -->
 
-	<div id="carouselExampleControls" class="carousel slide" data-interval="false" data-bs-ride="false">
+	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-bs-ride="carousel" data-interval="false" data-bs-interval="false">
 
-		<div class="carousel-inner">
+		<div class="carousel-inner" role="listbox">
 
 			<?php dynamic_sidebar( 'hero' ); ?>
 
@@ -38,6 +38,10 @@ defined( 'ABSPATH' ) || exit;
 		</a>
 
 	</div><!-- .carousel -->
+
+	<script>
+	jQuery( ".carousel-item" ).first().addClass( "active" );
+	</script>
 
 	<?php
 endif;

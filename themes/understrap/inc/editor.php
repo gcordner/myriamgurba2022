@@ -76,9 +76,7 @@ if ( ! function_exists( 'understrap_tiny_mce_before_init' ) ) {
 
 		if ( isset( $settings['style_formats'] ) ) {
 			$orig_style_formats = json_decode( $settings['style_formats'], true );
-			if ( is_array( $orig_style_formats ) ) {
-				$style_formats = array_merge( $orig_style_formats, $style_formats );
-			}
+			$style_formats      = array_merge( $orig_style_formats, $style_formats );
 		}
 
 		$settings['style_formats'] = wp_json_encode( $style_formats );
@@ -94,8 +92,6 @@ if ( ! function_exists( 'understrap_tiny_mce_blockquote_button' ) ) {
 	 *
 	 * We provide the blockquote via the style formats. Using the style formats
 	 * blockquote receives the proper Bootstrap classes.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @see understrap_tiny_mce_before_init()
 	 *
