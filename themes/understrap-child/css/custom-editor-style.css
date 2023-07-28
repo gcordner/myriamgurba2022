@@ -1156,4 +1156,8 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   font-weight: 500;
 }
 
+.tribe-events-single-event-description h2, .tribe-events-single-event-description .h2 {
+  font-size: 1.75rem !important;
+}
+
 /*# sourceMappingURL=custom-editor-style.css.map */

@@ -13090,6 +13090,18 @@ h5, .h5 {
   font-size: 0.8rem;
 }
 
+.tribe-events-single-event-description h2, .tribe-events-single-event-description .h2 {
+  font-size: 1.75rem !important;
+}
+
+.tribe-events-meta-group .tribe-events-single-section-title {
+  font-size: 1.5rem;
+}
+
+.tribe-events-event-meta {
+  font-size: 1rem;
+}
+
 .pagination {
   margin-right: auto;
   margin-left: auto;
@@ -13217,6 +13229,54 @@ ul {
   max-width: 800px;
   margin: auto;
   margin-bottom: 1rem;
+}
+
+.tribe-common {
+  font-family: Montserrat, "Times New Roman", Times, serif;
+}
+.tribe-common p {
+  font-size: 1rem;
+  font-family: Montserrat, "Times New Roman", Times, serif;
+}
+.tribe-common .tribe-event-time,
+.tribe-common .tribe-events-calendar-list__event-venue {
+  font-family: Montserrat, "Times New Roman", Times, serif;
+}
+.tribe-common .tribe-common-h5,
+.tribe-common .tribe-common-h6 {
+  color: var(--tec-color-text-primary);
+  font-family: "Bebas Neue", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2rem !important;
+}
+.tribe-common .tribe-events-c-top-bar__datepicker-desktop,
+.tribe-common .tribe-events-c-top-bar__datepicker-mobile {
+  font-family: "Big Shoulders Display", Arial, Helvetica, sans-serif;
+}
+.tribe-common .tribe-common .tribe-common-c-btn-icon--caret-left:disabled .tribe-common-c-btn-icon__icon-svg path {
+  fill: #000 !important;
+}
+.tribe-common .tribe-common .tribe-common-c-btn-icon--caret-right:disabled .tribe-common-c-btn-icon__icon-svg path {
+  fill: #000 !important;
+}
+.tribe-common .tribe-events .tribe-events-c-nav__next:disabled {
+  background-color: transparent !important;
+  color: transparent !important;
+  background-image: none;
+  border: none;
+  cursor: default;
+  outline: none;
+  pointer-events: none;
+}
+.tribe-common .tribe-events button.tribe-events-c-nav__next:disabled {
+  background-color: transparent !important;
+  color: transparent !important;
+  background-image: none;
+  border: none;
+  cursor: default;
+  outline: none;
+  pointer-events: none;
 }
 
 /* CSS */

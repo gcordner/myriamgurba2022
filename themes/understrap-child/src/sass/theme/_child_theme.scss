@@ -152,3 +152,85 @@ ul {
 
     }
 }
+
+// TRIBE EVENTS CALENDAR //
+
+.tribe-common {
+    font-family: Montserrat, "Times New Roman", Times, serif;
+
+    p {
+        font-size: 1rem;
+        font-family: Montserrat, "Times New Roman", Times, serif;
+    }
+
+    .tribe-event-time,
+    .tribe-events-calendar-list__event-venue {
+        font-family: Montserrat, "Times New Roman", Times, serif;
+    }
+
+    .tribe-common-h5,
+    .tribe-common-h6 {
+        color: var(--tec-color-text-primary);
+        font-family: "Bebas Neue", serif;
+        // font-family: "Big Shoulders Display", Arial, Helvetica, sans-serif; //
+        font-style: italic;
+        font-weight: 500;
+        font-size: 2rem !important;
+    }
+
+    .tribe-events-c-top-bar__datepicker-desktop,
+    .tribe-events-c-top-bar__datepicker-mobile {
+        font-family: "Big Shoulders Display", Arial, Helvetica, sans-serif;
+    }
+
+
+    .tribe-common {
+        .tribe-common-c-btn-icon--caret-left {
+            &:disabled {
+                .tribe-common-c-btn-icon__icon-svg {
+                    path {
+                        fill: $black !important;
+                    }
+                }
+            }
+        }
+
+        .tribe-common-c-btn-icon--caret-right {
+            &:disabled {
+                .tribe-common-c-btn-icon__icon-svg {
+                    path {
+                        fill: $black !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .tribe-events {
+        .tribe-events-c-nav__next {
+            &:disabled {
+                background-color: transparent !important;
+                color: transparent !important;
+                background-image: none;
+                border: none;
+                cursor: default;
+                outline: none;
+                pointer-events: none;
+            }
+        }
+
+        button.tribe-events-c-nav__next {
+            &:disabled {
+                background-color: transparent !important;
+                color: transparent !important;
+                background-image: none;
+                border: none;
+                cursor: default;
+                outline: none;
+                pointer-events: none;
+            }
+        }
+    }
+
+
+}
