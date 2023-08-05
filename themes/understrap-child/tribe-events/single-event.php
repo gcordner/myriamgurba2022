@@ -141,3 +141,14 @@ $cost  = tribe_get_formatted_cost( $event_id );
 	<!-- #tribe-events-footer -->
 
 </div><!-- #tribe-events-content -->
+<script>
+	// Get all anchor elements on the page
+const anchorElements = document.querySelectorAll('a');
+
+// Loop through each anchor element and change the target attribute if it is "_self"
+anchorElements.forEach(anchor => {
+  if (anchor.getAttribute('target') === '_self') {
+	anchor.setAttribute('target', '_blank');
+  }
+});
+</script>
