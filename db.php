@@ -1,1 +1,0 @@
-/home/geoffcordner/Local Sites/myriamgurba/app/public/wp-content/plugins/query-monitor/wp-content/db.php
