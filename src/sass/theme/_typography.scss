@@ -84,6 +84,7 @@ h5 {
             font-size: 1.2rem;
             letter-spacing: 2px;
             font-style: normal;
+            margin-top: 0 !important;
         }
     }
 }
@@ -154,7 +155,7 @@ h5 {
     }
 }
 
-// Events Calendar
+// Events Calendar Party Time
 .tribe-events-single-event-description {
     h2 {
         font-size: 1.75rem !important;
@@ -171,74 +172,23 @@ h5 {
     font-size: 1rem;
 }
 
-// .has-gray-dark-background-color {
-//     color: $yellow;
-//     a {
-//         color: $white;
-//     }
-//     p {
-//         color: $white;
-//     }
-//     h2 {
-//         color: $yellow;
-//         a {
-//             color: $yellow;
-//         }
-//     }
-//     .archive {
-//         color: $yellow;
-//     }
-// }
-// IMPORTANT!!!
-// BECAUSE WORDPRESS VARIABLES IN BLOCK EDITOR ARE SET AS INLINE STYLES, YOU CAN'T OVERRIDE THEM EASILY
-// ON THIS STYLE SHEET. INSTEAD, THEY NEED TO BE ADDED TO THE ADDN CSS VIA CUSTOMIZER
-// SO THAT THEY LOAD INLINE **BELOW** THE BLOCK STYLES. FUCKING ANNOYING.
-// THIS HAS BEEN ADDED TO CUSTOM STYLES: 
-// .has-x-large-font-size {
-// 	font-size: 3.5rem !important
-// }
-// 
-// 
-//
-// font-family: obviously-condensed, sans-serif;
-// font-weight: 400;
-// font-style: normal;
-// font-family: obviously-condensed, sans-serif;
-// font-weight: 400;
-// font-style: italic;
-// font-family: obviously-condensed, sans-serif;
-// font-weight: 700;
-// font-style: normal;
-// font-family: obviously-condensed, sans-serif;
-// font-weight: 700;
-// font-style: italic;
-// font-family: obviously-narrow, sans-serif;
-// font-weight: 400;
-// font-style: normal;
-// font-family: obviously-narrow, sans-serif;
-// font-weight: 400;
-// font-style: italic;
-// font-family: obviously-narrow, sans-serif;
-// font-weight: 700;
-// font-style: normal;
-// font-family: obviously-narrow, sans-serif;
-// font-weight: 700;
-// font-style: italic;
-// font-family: obviously, sans-serif;
-// font-weight: 300;
-// font-style: normal;
-// font-family: obviously, sans-serif;
-// font-weight: 300;
-// font-style: italic;
-// font-family: obviously, sans-serif;
-// font-weight: 400;
-// font-style: normal;
-// font-family: obviously, sans-serif;
-// font-weight: 400;
-// font-style: italic;
-// font-family: obviously, sans-serif;
-// font-weight: 700;
-// font-style: normal;
-// font-family: obviously, sans-serif;
-// font-weight: 800;
-// font-style: normal;
+.blurb-box .wp-block-quote cite {
+    margin-top: 10 !important;
+}
+
+.pulitzer {
+    font-size: 164px;
+}
+
+// Block quote citation top margin.
+
+.blockquote-footer {
+    margin-top: 0rem;
+}
+
+.wp-block-quote {
+    cite {
+        margin-top: 0rem;
+        padding-top: 0.5rem;
+    }
+}

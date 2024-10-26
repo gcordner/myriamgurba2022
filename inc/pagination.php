@@ -2,7 +2,7 @@
 /**
  * Pagination layout
  *
- * @package Understrap
+ * @package MyriamGurba
  */
 
 // Exit if accessed directly.

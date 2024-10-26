@@ -13038,6 +13038,7 @@ h5, .h5 {
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-style: normal;
+  margin-top: 0 !important;
 }
 
 .book-box h2, .book-box .h2 {
@@ -13100,6 +13101,23 @@ h5, .h5 {
 
 .tribe-events-event-meta {
   font-size: 1rem;
+}
+
+.blurb-box .wp-block-quote cite {
+  margin-top: 10 !important;
+}
+
+.pulitzer {
+  font-size: 164px;
+}
+
+.blockquote-footer, .wp-block-quote cite {
+  margin-top: 0rem;
+}
+
+.wp-block-quote cite {
+  margin-top: 0rem;
+  padding-top: 0.5rem;
 }
 
 .pagination {

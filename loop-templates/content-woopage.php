@@ -2,7 +2,7 @@
 /**
  * Partial template for content in page.php
  *
- * @package Understrap
+ * @package MyriamGurba
  */
 
 // Exit if accessed directly.
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 	</header><!end-- entry-header --end>
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
- -->
+-->
 	<div class="entry-content">
 
 		<?php

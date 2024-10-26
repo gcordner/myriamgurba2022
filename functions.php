@@ -2,7 +2,7 @@
 /**
  * Understrap Child Theme functions and definitions
  *
- * @package UnderstrapChild
+ * @package MyriamGurbaChild
  */
 
 // Exit if accessed directly.
@@ -110,7 +110,6 @@ if ( ! function_exists( 'understrap_edit_post_link' ) ) {
  * Alter the posts query:
  * - include writing post type
  */
-
 function myriamgurba_multiple_post_type( $query ) {
 	// Abort if we're in the admin or if this is not the main query.
 	if ( ! $query->is_main_query() || is_admin() ) {
@@ -146,7 +145,6 @@ add_filter(
 		}
 
 		return $title;
-
 	}
 );
 
@@ -162,5 +160,3 @@ function theme_styles() {
     } 
   </style>';
 }
-
-

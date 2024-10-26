@@ -2,7 +2,7 @@
 /**
  * Header Navbar (bootstrap5)
  *
- * @package Understrap
+ * @package MyriamGurba
  */
 
 // Exit if accessed directly.

@@ -2,7 +2,7 @@
 /**
  * Single post partial template
  *
- * @package Understrap
+ * @package MyriamGurba
  */
 
 // Exit if accessed directly.

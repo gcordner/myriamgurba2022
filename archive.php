@@ -4,7 +4,7 @@
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
- * @package Understrap
+ * @package MyriamGurba
  */
 
 // Exit if accessed directly.
@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 					?>
-						 -->
+						-->
 					</header><!-- .page-header -->
 					<div class="container overflow-hidden">
 	<div class="row gx-5 gy-3">

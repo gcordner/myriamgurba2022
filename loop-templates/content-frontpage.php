@@ -2,7 +2,7 @@
 /**
  * Partial template for content in page.php
  *
- * @package Understrap
+ * @package MyriamGurba
  */
 
 // Exit if accessed directly.
