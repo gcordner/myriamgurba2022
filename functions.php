@@ -148,11 +148,11 @@ add_filter(
 	}
 );
 
+
+add_action( 'admin_head', 'theme_styles' );
 /**
  * Loads child theme styles in admin.
  */
-add_action( 'admin_head', 'theme_styles' );
-
 function theme_styles() {
 	echo '<style>
     .napoleon {
@@ -160,3 +160,8 @@ function theme_styles() {
     } 
   </style>';
 }
+
+/**
+ * Block patterns.
+ */
+require_once get_stylesheet_directory() . '/patterns/myriam-blurbs.php';
