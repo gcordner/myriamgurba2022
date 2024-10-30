@@ -7,23 +7,43 @@
 			"palette": [
 				{
 					"slug": "base",
-					"color": "#1e1e1e",
-					"name": "Base"
+					"color": "#261404",
+					"name": "Black"
 				},
 				{
 					"slug": "contrast",
-					"color": "#f0f0f0",
-					"name": "Contrast"
+					"color": "#F2EFEB",
+					"name": "White"
 				},
 				{
 					"slug": "primary",
-					"color": "#0073aa",
-					"name": "Primary"
+					"color": "#B9537A",
+					"name": "Rosewood"
 				},
 				{
 					"slug": "secondary",
-					"color": "#00a0d2",
-					"name": "Secondary"
+					"color": "#B9537A",
+					"name": "Rosewood"
+				},
+				{
+					"slug": "goldenrod",
+					"color": "#F2B705",
+					"name": "Goldenrod"
+				},
+				{
+					"slug": "tangerine",
+					"color": "#F28705",
+					"name": "Tangerine"
+				},
+				{
+					"slug": "flame",
+					"color": "#F25C05",
+					"name": "Flame"
+				},
+				{
+					"slug": "burnt-sienna",
+					"color": "#bc4704",
+					"name": "Burnt Sienna"
 				},
 				{
 					"slug": "transparent",
@@ -108,23 +128,29 @@
 			"fontSizes": [
 				{
 					"slug": "small",
-					"size": "1.125rem",
+					"size": ".85rem",
 					"name": "Small",
 					"fluid": false
 				},
 				{
 					"slug": "medium",
-					"size": "1.5rem",
+					"size": "1rem",
 					"name": "Medium",
 					"fluid": false
 				},
 				{
+					"slug": "medium-large",
+					"size": "1.125rem",
+					"name": "Medium-Large",
+					"fluid": false
+				},
+				{
 					"slug": "large",
-					"size": "2rem",
+					"size": "1.25rem",
 					"name": "Large",
 					"fluid": {
-						"min": "1.75rem",
-						"max": "2rem"
+						"min": "1.15rem",
+						"max": "1.25rem"
 					}
 				},
 				{
@@ -274,8 +300,8 @@
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--base)",
-			"text": "var(--wp--preset--color--contrast)"
+			"background": "var(--wp--preset--color--contrast)",
+			"text": "var(--wp--preset--color--base)"
 		},
 		"elements": {
 			"button": {
@@ -320,7 +346,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--contrast)"
+					"text": "var(--wp--preset--color--base)"
 				},
 				":hover": {
 					"color": {
